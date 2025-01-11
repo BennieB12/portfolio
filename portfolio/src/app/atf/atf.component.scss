@@ -1,4 +1,9 @@
 
+$color : rgba(89, 136, 255, 1);
+
+#section-atf {
+  height: 100vh;
+}
 .img-atf {
   position: absolute;
   width: 892px;
@@ -8,3 +13,36 @@
   z-index: 3;
 }
 
+.atf-content {
+  position: absolute;
+  width: 645px;
+  height: 221px;
+  top: 305px;
+  left: 731px;
+}
+
+.social-links {
+  position: absolute;
+  top: 600px;
+  left: 800px;
+  img {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.atf-scroll {
+  position: absolute;
+  top: 450px;
+  left: 900px;
+  .atf-span {
+    $color:$color;
+  }
+  .atf-line {
+    height: 1px;
+    width: 330px;
+    background-color: rgba(89, 136, 255, 1);
+    transform: rotate(90deg);
+    transform-origin: left center;
+  }
+}
