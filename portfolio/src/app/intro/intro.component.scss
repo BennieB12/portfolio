@@ -1,0 +1,26 @@
+.intro {
+  height: 50vh;
+  // width: 100vw;
+  display: flex;
+  flex-direction: row;
+
+  .intro-left {
+    width: 50%;
+  }
+  .intro-right {
+    width: 50%;
+    height: 406px;
+  }
+  .intro-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+.skillset {
+  height: 50vh;
+  background-color: blue;
+}
