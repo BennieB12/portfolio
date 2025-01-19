@@ -4,6 +4,7 @@ $color: rgba(89, 136, 255, 1);
   height: 100vh;
   display: flex;
   background-color: rgba(234, 240, 255, 1);
+  z-index: 1000;
 
   .img-atf {
     position: absolute;
@@ -61,7 +62,7 @@ $color: rgba(89, 136, 255, 1);
   position: absolute;
   height: 61px;
   top: 227px;
-  left: 731px;
+  left: 860px;
 
   h1 {
     font-family: "Montserrat";
@@ -76,7 +77,7 @@ $color: rgba(89, 136, 255, 1);
   width: 645px;
   height: 221px;
   top: 305px;
-  left: 731px;
+  left: 860px;
 
   h2 {
     font-family: "Baloo 2";
