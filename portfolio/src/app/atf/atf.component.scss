@@ -38,9 +38,10 @@ $color: rgba(89, 136, 255, 1);
   }
 
   .atf-scroll {
+    height: 330px;
     position: absolute;
-    bottom: 330px;
-    right: 20%;
+    left: 1034px;
+    top: 694px;
     .atf-span {
       color: $color;
       font-weight: 500;
@@ -50,7 +51,7 @@ $color: rgba(89, 136, 255, 1);
     }
     .atf-line {
       height: 1px;
-      width: 330px;
+      width: 180px;
       background-color: $color;
       transform: rotate(90deg);
       transform-origin: left center;
@@ -62,7 +63,7 @@ $color: rgba(89, 136, 255, 1);
   position: absolute;
   height: 61px;
   top: 227px;
-  left: 860px;
+  left: 731px;
 
   h1 {
     font-family: "Montserrat";
@@ -77,7 +78,7 @@ $color: rgba(89, 136, 255, 1);
   width: 645px;
   height: 221px;
   top: 305px;
-  left: 860px;
+  left: 731px;
 
   h2 {
     font-family: "Baloo 2";

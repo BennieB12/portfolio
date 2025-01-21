@@ -1,5 +1,5 @@
 header {
-  position: fixed;
+  position: absolute;
   height: 117px;
   width: 100%;
   top: 0;
@@ -9,13 +9,13 @@ header {
   align-items: center;
   justify-content: space-between;
   gap: 36px;
-  background-color: aliceblue;
+  background-color: transparent;
 
   img {
     height: 64px;
     padding-left: 64px;
     width: 69px;
-    z-index: 10005;
+    z-index: 11;
     a {
       cursor: pointer;
     }
