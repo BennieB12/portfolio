@@ -11,8 +11,8 @@ header {
   gap: 36px;
 
   img {
-    width: 64;
-    height: 69;
+    width: 64px;
+    height: 69px;
     position: absolute;
     top: 24px;
     left: 100px;
@@ -24,17 +24,18 @@ header {
 }
 
 nav {
-  width: 418px;
-  height: 32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  top: 42.5px;
+  left: 996.5px;
   gap: 36px;
+  display: flex;
+  align-items: center;
   a {
+    width: 120px;
     text-decoration: none;
     color: rgba(89, 136, 255, 1);
     font-family: "Montserrat";
-    font-size: 23px;
+    font-size: 21px;
     line-height: 27.6px;
     font-weight: 400;
     animation: fontsizing-reverse 70ms ease-in-out forwards;
