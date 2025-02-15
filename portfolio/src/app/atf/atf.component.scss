@@ -1,7 +1,9 @@
 $color: rgba(89, 136, 255, 1);
 
+
 #section-atf {
   height: 100vh;
+  width: 1440px;
   display: flex;
   background-color: rgba(234, 240, 255, 1);
   z-index: 1000;
@@ -15,17 +17,24 @@ $color: rgba(89, 136, 255, 1);
     z-index: 3;
   }
 
-  .social-links {
+  .prof-img {
+    width: 550px;
+    height: 703px;
     position: absolute;
-    right: 7.5%;
-    top: 75%;
+    top: 198px;
+    left: 93px;
+    z-index: 4;
+  }
+
+  .social-links {
     width: 40px;
-    height: 180px;
-    gap: 25px;
+    height: 170px;
+    position: absolute;
+    left: 1300px;
+    top: 672px;
     display: flex;
-    align-items: end;
-    justify-content: end;
     flex-direction: column;
+    gap: 25px;
     img {
       height: 40px;
       width: 40px;

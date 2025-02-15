@@ -2,7 +2,7 @@
   height: 680px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-direction: row;
   gap: 40px;
 }
@@ -27,16 +27,17 @@
 
 .intro-left {
   height: 407px;
-  width: 606px;
+  width: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  justify-content: space-evenly;
 
   h1 {
     font-family: "Baloo 2";
     color: rgba(89, 136, 255, 1);
-    font-size: 121px;
+    font-size: 135px;
     font-weight: 800;
     line-height: 107.6px;
     letter-spacing: -0.025em;
@@ -69,28 +70,25 @@
 
   .intro-icon {
     width: 581px;
-    height: 51px;
+    // height: 51px;
     gap: 48px;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: baseline;
   }
   .intro-icons {
-    width: 53.58px;
-    height: 46.99px;
     display: flex;
     flex-direction: row;
     gap: 16px;
 
     p {
       color: rgba(89, 136, 255, 1);
-      width: 125px;
-      height: 42px;
-      // font-family: Poppins;
       font-size: 16px;
+      width: 120px;
       font-weight: 400;
       line-height: 19.2px;
       text-align: left;
+      align-self: self-end;
       text-underline-position: from-font;
       text-decoration-skip-ink: none;
       display: block;
@@ -99,7 +97,6 @@
       margin-inline-start: 0px;
       margin-inline-end: 0px;
       unicode-bidi: isolate;
-  
     }
   }
 }
@@ -129,18 +126,17 @@
   }
 
   button {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 27.6px;
     align-self: self-start;
     width: 254px;
     height: 58px;
     padding: 15px 30px 15px 30px;
     border-radius: 10px;
     border: 2px solid rgba(89, 136, 255, 1);
-    opacity: 0px;
     color: rgba(89, 136, 255, 1);
-    &:hover {
-      cursor: pointer;
-      opacity: 80%;
-    }
   }
 }
 
