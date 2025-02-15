@@ -7,18 +7,21 @@
     <h1>Let's work <br />together</h1>
     <h2>I am</h2>
     <div class="intro-icon">
-      <div class="intro-icons">
+      <div class="intro-icons" (mouseenter)="introChangeImg($event, true)" (mouseleave)="introChangeImg($event, false)">
         <img src="../../assets/img/location.png" alt="" />
         <p>located in Duesseldorf</p>
       </div>
-      <div class="intro-icons">
+      
+      <div class="intro-icons"  (mouseenter)="introChangeImg($event, true)" (mouseleave)="introChangeImg($event, false)" >
         <img src="../../assets/img/remote.png" alt="" />
         <p>open to work<br> remote</p>
       </div>
-      <div class="intro-icons">
-        <img src="../../assets/img/move.png" />
+      
+      <div class="intro-icons"  (mouseenter)="introChangeImg($event, true)" (mouseleave)="introChangeImg($event, false)" >
+        <img src="../../assets/img/move.png" alt="" />
         <p>open to relocate</p>
       </div>
+      
     </div>
   </div>
   <div class="intro-right">

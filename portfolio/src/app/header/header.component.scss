@@ -11,10 +11,12 @@ header {
   gap: 36px;
 
   img {
-    height: 64px;
-    margin-left: 36px;
-    width: 69px;
-    z-index: 11;
+    width: 64;
+    height: 69;
+    position: absolute;
+    top: 24px;
+    left: 100px;
+    z-index: 10;
     a {
       cursor: pointer;
     }
@@ -22,14 +24,13 @@ header {
 }
 
 nav {
+  width: 418px;
   height: 32px;
-  margin-right: 36px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 36px;
   a {
-    width: 120px;
     text-decoration: none;
     color: rgba(89, 136, 255, 1);
     font-family: "Montserrat";
