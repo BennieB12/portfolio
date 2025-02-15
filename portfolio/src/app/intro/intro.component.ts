@@ -9,4 +9,5 @@ import { SkillsComponent } from './skills/skills.component';
 })
 export class IntroComponent {
 
+ 
 }

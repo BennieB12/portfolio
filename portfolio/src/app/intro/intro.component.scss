@@ -124,21 +124,127 @@
     margin-inline-end: 0px;
     unicode-bidi: isolate;
   }
+}
 
-  button {
-    font-family: Poppins;
-    font-weight: 400;
-    font-size: 23px;
-    line-height: 27.6px;
-    align-self: self-start;
-    width: 254px;
-    height: 58px;
-    padding: 15px 30px 15px 30px;
-    border-radius: 10px;
-    border: 2px solid rgba(89, 136, 255, 1);
+@keyframes gradientToBlue {
+  0% {
+    background: linear-gradient(
+      104.85deg,
+      #5988ff -90.22%,
+      #5988ff -49.45%,
+      #0043f0 27.88%,
+      #ffffff 33.64%,
+      #ffffff 39.44%,
+      #ffffff 90.08%
+    );
+    color: rgba(89, 136, 255, 1);
+  }
+  80% {
+    background: linear-gradient(
+      104.4deg,
+      #5988ff 9.21%,
+      #5988ff 27.52%,
+      #0043f0 62.24%,
+      #ffffff 64.83%,
+      #ffffff 67.43%,
+      #ffffff 90.18%
+    );
+  }
+  100% {
+    background: radial-gradient(
+        74.22% 74.22% at 19.79% 22.42%,
+        #5988ff 6.25%,
+        #5988ff 51.56%,
+        #0043f0 100%
+      )
+      ;
+
+    color: white;
+  }
+}
+
+@keyframes gradientback {
+  100% {
+    background: radial-gradient(
+        74.22% 74.22% at 19.79% 22.42%,
+        #5988ff 6.25%,
+        #5988ff 51.56%,
+        #0043f0 100%
+      )
+      ;
+
+    color: white;
+  }
+
+  80% {
+    background: linear-gradient(
+      104.4deg,
+      #5988ff 9.21%,
+      #5988ff 27.52%,
+      #0043f0 62.24%,
+      #ffffff 64.83%,
+      #ffffff 67.43%,
+      #ffffff 90.18%
+    );
+  }
+
+  0% {
+    background: linear-gradient(
+      104.85deg,
+      #5988ff -90.22%,
+      #5988ff -49.45%,
+      #0043f0 27.88%,
+      #ffffff 33.64%,
+      #ffffff 39.44%,
+      #ffffff 90.08%
+    );
     color: rgba(89, 136, 255, 1);
   }
 }
+
+@keyframes growButton {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(20px, 10px) scale(1.2, 1.2);
+  }
+}
+
+@keyframes shrinkButton {
+  0% {
+    transform: translate(20px, 10px) scale(1.2, 1.2);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+#intro-btn {
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 27.6px;
+  align-self: self-start;
+  width: 254px;
+  height: 58px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  border: 2px solid rgba(89, 136, 255, 1);
+  color: rgba(89, 136, 255, 1);
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    animation: gradientToBlue 0.1s forwards, 
+               growButton 0.1s ease-in-out forwards;
+  }
+
+  &:not(:hover) {
+    animation: shrinkButton 0.1s ease-in-out forwards;
+  }
+}
+
 
 .skillset {
   display: flex;
