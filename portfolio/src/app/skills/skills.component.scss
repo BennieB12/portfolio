@@ -34,14 +34,16 @@ h4 {
 }
 
 .skillset-content {
-  width: 1036px;
+  // width: 1036px;
   height: 340px;
   display: flex;
-  justify-content: center ;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 104px;
 }
 .content-item {
+  width: 120px;
+  height: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,5 +58,18 @@ h4 {
     letter-spacing: 0%;
     color: rgb(255, 255, 255);
     text-align: center;
+    transition: font-weight 120ms ease-in-out;
+  }
+  img {
+    transition: transform 120ms ease-in-out;
+  }
+
+  &:hover {
+    span {
+      font-weight: 600;
+    }
+    img {
+      transform: translateY(-20px);
+    }
   }
 }
