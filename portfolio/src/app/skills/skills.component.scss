@@ -1,32 +1,60 @@
 .skillset {
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 1440px;
+  height: 632px;
+  object-fit: cover;
+  background-image: url("../../assets/img/Background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+h4 {
+  justify-self: center;
+  width: 353px;
+  height: 96px;
+  z-index: 10;
+  font-family: "Baloo 2";
+  font-size: 96px;
+  line-height: 96px;
+  letter-spacing: 0.01em;
+  color: rgb(255, 255, 255);
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  display: block;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+
+.skillset-content {
+  width: 1036px;
+  height: 340px;
+  display: flex;
+  justify-content: center ;
+  flex-wrap: wrap;
+  gap: 104px;
+}
+.content-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+
+  span {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.2px;
+    letter-spacing: 0%;
+    color: rgb(255, 255, 255);
+    text-align: center;
   }
-  
-  .intro-bg {
-    position: relative;
-    z-index: 1;
-    width: 1440px;
-    height: 632px;
-    object-fit: cover;
-  }
-  
-  .intro-headl {
-    position: absolute;
-    width: 353px;
-    height: 96px;
-    z-index: 5;
-  
-    h4 {
-      font-family: "Baloo 2";
-      font-size: 96px;
-      line-height: 96px;
-      letter-spacing: 0.01em;
-      color: rgb(255, 255, 255);
-      text-align: left;
-      text-underline-position: from-font;
-      text-decoration-skip-ink: none;
-    }
-  }
-  
+}
