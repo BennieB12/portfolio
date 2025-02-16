@@ -8,29 +8,22 @@ import { Component } from '@angular/core';
   styleUrl: './intro.component.scss'
 })
 export class IntroComponent {
-
-  private originalImages: { [key: string]: string } = {
-    location: '../../assets/img/location.png',
-    remote: '../../assets/img/remote.png',
-    move: '../../assets/img/move.png'
+  private imageMap: { [key: string]: string[] } = {
+    location: ['../../assets/img/location.png', '../../assets/img/location-hover.png'],
+    remote: ['../../assets/img/remote.png', '../../assets/img/remote-hover.png'],
+    move: ['../../assets/img/move.png', '../../assets/img/move-hover.png']
   };
 
-  private hoverImages: { [key: string]: string } = {
-    location: '../../assets/img/location-hover.png',
-    remote: '../../assets/img/remote-hover.png',
-    move: '../../assets/img/move-hover.png'
-  };
-
-  introChangeImg(event: Event, isHover: boolean) {
-    const imgElement = event.target as HTMLImageElement;
+  introChangeImg(event: Event, hover: boolean) {
+    const targetElement = event.currentTarget as HTMLElement;
+    const imgElement = targetElement.querySelector('img');
     if (!imgElement) return;
 
-    const imgKey = Object.keys(this.originalImages).find(key => 
-      imgElement.src.includes(this.originalImages[key].split('/').pop()!)
-    );
-
-    if (imgKey) {
-      imgElement.src = isHover ? this.hoverImages[imgKey] : this.originalImages[imgKey];
+    const imgId = imgElement.id;
+    if (this.imageMap[imgId]) {
+      imgElement.src = hover ? this.imageMap[imgId][1] : this.imageMap[imgId][0];
     }
   }
 }
+
+

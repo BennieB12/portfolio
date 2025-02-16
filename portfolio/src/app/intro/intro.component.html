@@ -7,22 +7,22 @@
     <h2>Let's work <br />together</h2>
     <h3>I am</h3>
     <div class="intro-icon">
-      <div class="intro-icons" (mouseenter)="introChangeImg($event, true)" (mouseleave)="introChangeImg($event, false)">
-        <img src="../../assets/img/location.png" alt="" />
+      <div class="intro-icons" (mouseover)="introChangeImg($event, true)" (mouseout)="introChangeImg($event, false)">
+        <img id="location" src="../../assets/img/location.png" />
         <p>located in Duesseldorf</p>
       </div>
-      
-      <div class="intro-icons"  (mouseenter)="introChangeImg($event, true)" (mouseleave)="introChangeImg($event, false)" >
-        <img src="../../assets/img/remote.png" alt="" />
-        <p>open to work<br> remote</p>
+    
+      <div class="intro-icons" (mouseover)="introChangeImg($event, true)" (mouseout)="introChangeImg($event, false)">
+        <img id="remote" src="../../assets/img/remote.png" />
+        <p>open to work<br/>remote</p>
       </div>
-      
-      <div class="intro-icons"  (mouseenter)="introChangeImg($event, true)" (mouseleave)="introChangeImg($event, false)" >
-        <img src="../../assets/img/move.png" alt="" />
+    
+      <div class="intro-icons" (mouseover)="introChangeImg($event, true)" (mouseout)="introChangeImg($event, false)">
+        <img id="move" src="../../assets/img/move.png" />
         <p>open to relocate</p>
       </div>
-      
     </div>
+    
   </div>
   <div class="intro-right">
     <p>
