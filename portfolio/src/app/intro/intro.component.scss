@@ -15,6 +15,14 @@
   justify-content: center;
   top: 90%;
   z-index: -1;
+  border-radius: 50%;
+  background: radial-gradient(
+    74.22% 74.22% at 19.79% 22.42%,
+    #5988ff 6.25%,
+    #5988ff 51.56%,
+    #0043f0 100%
+  );
+  transform: rotate(0deg);
 }
 
 .intro-ell2 {
@@ -23,6 +31,15 @@
   height: 82px;
   top: 936px;
   left: 1034px;
+  z-index: -1;
+  border-radius: 50%;
+  background: radial-gradient(
+    74.22% 74.22% at 19.79% 22.42%,
+    #5988ff 6.25%,
+    #5988ff 51.56%,
+    #0043f0 100%
+  );
+  transform: rotate(0deg);
 }
 
 .intro-left {
@@ -70,27 +87,36 @@
 
 .intro-icon {
   width: 581px;
-  gap: 48px;
+  gap: 24px;
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-
+  // align-items: baseline;
+  justify-content: space-around;
+  
   .intro-icons {
     display: flex;
-    align-items: center;
+    align-items: baseline;
+    height: 40px;
     gap: 16px;
 
-    img {
-      width: 40px;
-      height: 40px; 
-      object-fit: contain;
-      transition: transform 0.1s ease-in-out;
+    .icon1 {
+      height: 40px;
+      width: 30px;
+
+    }
+    .icon2 {
+      height: 50px;
+      width: 55px;
+    }
+    .icon3 {
+      height: 50px;
+      width: 30px;
     }
 
     p {
       color: rgba(89, 136, 255, 1);
       font-size: 16px;
-      width: 110px;
+      // height: auto;
+      // width: 110px;
       font-weight: 400;
       line-height: 19.2px;
       text-align: left;
@@ -180,18 +206,6 @@
     color: white;
   }
 
-  80% {
-    background: linear-gradient(
-      104.4deg,
-      #5988ff 9.21%,
-      #5988ff 27.52%,
-      #0043f0 62.24%,
-      #ffffff 64.83%,
-      #ffffff 67.43%,
-      #ffffff 90.18%
-    );
-  }
-
   0% {
     background: linear-gradient(
       104.85deg,
@@ -209,18 +223,21 @@
 @keyframes growButton {
   0% {
     transform: translate(0, 0) scale(1);
+    transform-origin: top left;
   }
   100% {
-    transform: translate(20px, 10px) scale(1.2, 1.2);
+    transform: translate(0px, 0px) scale(1.2, 1.2);
+    transform-origin: top left;
   }
 }
-
 @keyframes shrinkButton {
   0% {
-    transform: translate(20px, 10px) scale(1.2, 1.2);
+    transform: translate(0, 0) scale(1.2);
+    transform-origin: top left;
   }
   100% {
     transform: translate(0, 0) scale(1);
+    transform-origin: top left;
   }
 }
 
@@ -237,15 +254,13 @@
   border-radius: 10px;
   border: 2px solid rgba(89, 136, 255, 1);
   color: rgba(89, 136, 255, 1);
-  transition: all 0.1s ease-in-out;
-
+  transition: transform 90ms ease-out;
   &:hover {
     cursor: pointer;
-    animation: gradientToBlue 0.1s forwards,
-      growButton 0.1s ease-in-out forwards;
+    animation: gradientToBlue 70ms forwards,
+      growButton 90ms ease-in forwards;
   }
-
   &:not(:hover) {
-    animation: shrinkButton 0.1s ease-in-out forwards;
+    animation: shrinkButton 90ms ease-out forwards;
   }
 }

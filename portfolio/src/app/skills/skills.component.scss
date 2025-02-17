@@ -5,12 +5,10 @@
   justify-content: space-evenly;
   width: 1440px;
   height: 632px;
-  object-fit: cover;
-  background-image: url("../../assets/img/Background.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: linear-gradient(128.94deg, #5988FF -33.96%, #5988FF 36.71%, #0043F0 112.25%);
 }
+
+
 h4 {
   justify-self: center;
   width: 353px;
