@@ -87,49 +87,41 @@
 
 .intro-icon {
   width: 581px;
-  gap: 24px;
+  height: 51px;
   display: flex;
-  // align-items: baseline;
-  justify-content: space-around;
+  gap: 48px;
+}
+
+.intro-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  // height: 51px;
   
-  .intro-icons {
-    display: flex;
-    align-items: baseline;
-    height: 40px;
-    gap: 16px;
-
-    .icon1 {
-      height: 40px;
-      width: 30px;
-
-    }
-    .icon2 {
-      height: 50px;
-      width: 55px;
-    }
-    .icon3 {
-      height: 50px;
-      width: 30px;
-    }
-
-    p {
-      color: rgba(89, 136, 255, 1);
-      font-size: 16px;
-      // height: auto;
-      // width: 110px;
-      font-weight: 400;
-      line-height: 19.2px;
-      text-align: left;
-      align-self: self-end;
-      text-underline-position: from-font;
-      text-decoration-skip-ink: none;
-      display: block;
-      margin-block-start: 0;
-      margin-block-end: 0;
-      margin-inline-start: 0px;
-      margin-inline-end: 0px;
-      unicode-bidi: isolate;
-    }
+  #remote {
+    width: 50px;
+    height: 50px;
+  }
+  #move {
+    width: 40px;
+    width: 44px;
+  }
+  p {
+    color: rgba(89, 136, 255, 1);
+    min-width: 110px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 17.2px;
+    text-align: left;
+    align-self: self-end;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    display: block;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
   }
 }
 
@@ -257,8 +249,8 @@
   transition: transform 90ms ease-out;
   &:hover {
     cursor: pointer;
-    animation: gradientToBlue 70ms forwards,
-      growButton 90ms ease-in forwards;
+    border: unset;
+    animation: gradientToBlue 70ms forwards, growButton 90ms ease-in forwards;
   }
   &:not(:hover) {
     animation: shrinkButton 90ms ease-out forwards;

@@ -1,0 +1,4 @@
+@mixin bag-color {
+    $color: rgb (255,255,255);
+    background-color: rgba($color,0.1);
+}

@@ -5,23 +5,28 @@
     <h2>Let's work <br />together</h2>
     <h3>I am</h3>
     <div class="intro-icon">
-      <div class="intro-icons" (mouseover)="introChangeImg($event, true)" (mouseout)="introChangeImg($event, false)">
-        <div class="icon1"><img id="location" src="../../assets/img/location.png" /></div>
-        
+      <div class="intro-icons"
+           (mouseenter)="hoverImage('location', true)"
+           (mouseleave)="hoverImage('location', false)">
+        <img id="location" [src]="currentImages['location']" />
         <p>located in Duesseldorf</p>
       </div>
-    
-      <div class="intro-icons" (mouseover)="introChangeImg($event, true)" (mouseout)="introChangeImg($event, false)">
-        <div class="icon2"><img id="remote" src="../../assets/img/remote.png" /></div>
+
+      <div class="intro-icons"
+           (mouseenter)="hoverImage('remote', true)"
+           (mouseleave)="hoverImage('remote', false)">
+        <img id="remote" [src]="currentImages['remote']" />
         <p>open to work remote</p>
       </div>
-    
-      <div class="intro-icons" (mouseover)="introChangeImg($event, true)" (mouseout)="introChangeImg($event, false)">
-      <div class="icon3"><img id="move" src="../../assets/img/move.png" /></div>  
+      
+      <div class="intro-icons"
+           (mouseenter)="hoverImage('move', true)"
+           (mouseleave)="hoverImage('move', false)">
+        <img id="move" [src]="currentImages['move']" />
         <p>open to relocate</p>
       </div>
     </div>
-    
+ 
   </div>
   <div class="intro-right">
     <p>

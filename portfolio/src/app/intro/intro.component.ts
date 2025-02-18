@@ -8,22 +8,21 @@ import { Component } from '@angular/core';
   styleUrl: './intro.component.scss'
 })
 export class IntroComponent {
-  private imageMap: { [key: string]: string[] } = {
-    location: ['../../assets/img/location.png', '../../assets/img/location-hover.png'],
-    remote: ['../../assets/img/remote.png', '../../assets/img/remote-hover.png'],
-    move: ['../../assets/img/move.png', '../../assets/img/move-hover.png']
+  imageMap: Record<string, { default: string; hover: string }> = {
+    location: { default: 'assets/img/location.png', hover: 'assets/img/location-hover.png' },
+    remote: { default: 'assets/img/remote.png', hover: 'assets/img/remote-hover.png' },
+    move: { default: 'assets/img/move.png', hover: 'assets/img/move-hover.png' }
   };
 
-  introChangeImg(event: Event, hover: boolean) {
-    const targetElement = event.currentTarget as HTMLElement;
-    const imgElement = targetElement.querySelector('img');
-    if (!imgElement) return;
+  currentImages: Record<string, string> = {
+    location: this.imageMap['location'].default,
+    remote: this.imageMap['remote'].default,
+    move: this.imageMap['move'].default
+  };
 
-    const imgId = imgElement.id;
-    if (this.imageMap[imgId]) {
-      imgElement.src = hover ? this.imageMap[imgId][1] : this.imageMap[imgId][0];
+  hoverImage(icon: string, hover: boolean) {
+    if (this.imageMap[icon]) {
+      this.currentImages[icon] = hover ? this.imageMap[icon].hover : this.imageMap[icon].default;
     }
   }
 }
-
-
