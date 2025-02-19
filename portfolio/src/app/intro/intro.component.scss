@@ -87,8 +87,9 @@
 
 .intro-icon {
   width: 581px;
-  height: 51px;
+  height: 55px;
   display: flex;
+  align-items: flex-end;
   gap: 48px;
 }
 
@@ -96,15 +97,13 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  // height: 51px;
   
   #remote {
-    width: 50px;
-    height: 50px;
+    width: 63px;
+    height: 55px;
   }
   #move {
-    width: 40px;
-    width: 44px;
+    width: 30px;
   }
   p {
     color: rgba(89, 136, 255, 1);

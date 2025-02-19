@@ -6,9 +6,19 @@
   <div class="ell-skill-5"></div>
   <div class="ell-skill-6"></div>
   <div class="ell-skill-7"></div>
-  
-  <div class="headl-projects ">
-    <h5>My work</h5>
+
+  <div class="headl-projects">
+    <h5>My Work</h5>
     <span>Explore a selection of my work here - Interact with projects to see my skills in action.</span>
   </div>
+
+  <app-project
+    *ngFor="let project of projects"
+    [imageSrc]="project.imageSrc"
+    [imageAlt]="project.imageAlt"
+    [title]="project.title"
+    [subtitle]="project.subtitle"
+    [description]="project.description"
+    [buttonText]="project.buttonText">
+  </app-project>
 </section>
