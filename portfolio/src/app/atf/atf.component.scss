@@ -1,5 +1,5 @@
-$color: rgba(89, 136, 255, 1);
-
+@import '../../mixins.scss';
+@import'../../fonts.scss';
 
 #section-atf {
   height: 100vh;
@@ -7,23 +7,6 @@ $color: rgba(89, 136, 255, 1);
   display: flex;
   background-color: rgba(234, 240, 255, 1);
   z-index: 1000;
-
-  .img-atf {
-    position: absolute;
-    width: 892px;
-    height: 892px;
-    top: -71px;
-    left: -199px;
-    z-index: 3;
-    border-radius: 50%;
-    background: radial-gradient(
-      74.22% 74.22% at 19.79% 22.42%,
-      #5988ff 6.25%,
-      #5988ff 51.56%,
-      #0043f0 100%
-    );
-    transform: rotate(0deg);
-  }
 
   .prof-img {
     width: 550px;
@@ -83,6 +66,7 @@ $color: rgba(89, 136, 255, 1);
   left: 731px;
 
   h1 {
+    @include margin-font;
     font-family: "Montserrat";
     font-size: 64px;
     font-weight: 400;
@@ -98,20 +82,11 @@ $color: rgba(89, 136, 255, 1);
   left: 731px;
 
   h2 {
+    @include margin-font;
     font-family: "Baloo 2";
     font-size: 128px;
     font-weight: 600;
     line-height: 107.6px;
     letter-spacing: -0.025em;
   }
-}
-
-.mar-uni {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  unicode-bidi: isolate;
-  color: $color;
-  text-align: left;
 }

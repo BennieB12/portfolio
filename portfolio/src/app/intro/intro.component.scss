@@ -1,45 +1,13 @@
-.intro {
+@import '../../mixins.scss';
+@import'../../fonts.scss';
+
+#intro {
   height: 680px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-direction: row;
   gap: 40px;
-}
-
-.intro-ell1 {
-  position: absolute;
-  width: 206px;
-  height: 206px;
-  display: flex;
-  justify-content: center;
-  top: 90%;
-  z-index: -1;
-  border-radius: 50%;
-  background: radial-gradient(
-    74.22% 74.22% at 19.79% 22.42%,
-    #5988ff 6.25%,
-    #5988ff 51.56%,
-    #0043f0 100%
-  );
-  transform: rotate(0deg);
-}
-
-.intro-ell2 {
-  position: absolute;
-  width: 82px;
-  height: 82px;
-  top: 936px;
-  left: 1034px;
-  z-index: -1;
-  border-radius: 50%;
-  background: radial-gradient(
-    74.22% 74.22% at 19.79% 22.42%,
-    #5988ff 6.25%,
-    #5988ff 51.56%,
-    #0043f0 100%
-  );
-  transform: rotate(0deg);
 }
 
 .intro-left {
@@ -233,25 +201,5 @@
 }
 
 #intro-btn {
-  font-family: "Poppins";
-  background-color: #ffffff;
-  font-weight: 300;
-  font-size: 22px;
-  line-height: 27.6px;
-  align-self: self-start;
-  width: 254px;
-  height: 58px;
-  padding: 15px 30px;
-  border-radius: 10px;
-  border: 2px solid rgba(89, 136, 255, 1);
-  color: rgba(89, 136, 255, 1);
-  transition: transform 90ms ease-out;
-  &:hover {
-    cursor: pointer;
-    border: unset;
-    animation: gradientToBlue 70ms forwards, growButton 90ms ease-in forwards;
-  }
-  &:not(:hover) {
-    animation: shrinkButton 90ms ease-out forwards;
-  }
+@include button;
 }

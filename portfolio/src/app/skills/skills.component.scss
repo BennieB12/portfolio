@@ -1,10 +1,17 @@
-.skillset {
+@import '../../mixins.scss';
+@import'../../fonts.scss';
+
+#skillset {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   width: 1440px;
   height: 632px;
+}
+
+.bg {
+  width: 1440px;
   background: linear-gradient(128.94deg, #5988FF -33.96%, #5988FF 36.71%, #0043F0 112.25%);
 }
 

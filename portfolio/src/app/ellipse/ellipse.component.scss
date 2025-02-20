@@ -1,0 +1,11 @@
+.ellipse {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(
+      74.22% 74.22% at 19.79% 22.42%,
+      #5988ff 6.25%,
+      #5988ff 51.56%,
+      #0043f0 100%
+    );
+    transform: rotate(0deg); 
+}

@@ -9,6 +9,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './ellipse.component.scss'
 })
 export class EllipseComponent {
-  @Input() ellipse: { width: string; height: string; top: string; left?: string }[] = [];
-
+  @Input() ellipse: { width: string; height: string; top: string; left?: string; zIndex?: number }[] = [];
 }
+
