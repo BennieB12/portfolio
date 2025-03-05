@@ -13,5 +13,6 @@ export class ProjectComponent {
   @Input() title: string = 'Project Title';
   @Input() subtitle: string = 'Project Subtitle';
   @Input() description: string = 'Project description goes here.';
-  @Input() buttonText: string = 'View More';
+  @Input() btngit: string = 'Github';
+  @Input() btntest: string = 'View Project';
 }

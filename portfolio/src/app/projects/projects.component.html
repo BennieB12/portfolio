@@ -4,15 +4,16 @@
     <span>Explore a selection of my work here - Interact with projects to see my skills in action.</span>
   </div>
 
-  <div class="projects-container">
-    <app-project
-      *ngFor="let project of projects"
-      [imageSrc]="project.imageSrc"
-      [imageAlt]="project.imageAlt"
-      [title]="project.title"
-      [subtitle]="project.subtitle"
-      [description]="project.description"
-      [buttonText]="project.buttonText">
-    </app-project>
-  </div>
 </section>
+<div class="projects-container">
+  <app-project
+    *ngFor="let project of projects"
+    [imageSrc]="project.imageSrc"
+    [imageAlt]="project.imageAlt"
+    [title]="project.title"
+    [subtitle]="project.subtitle"
+    [description]="project.description"
+    [btngit]="project.btngit"
+    [btntest]="project.btntest">
+  </app-project>
+</div>

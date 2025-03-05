@@ -8,7 +8,8 @@ interface Project {
   title: string;
   subtitle: string;
   description: string;
-  buttonText: string;
+  btngit: string;
+  btntest: string;
 }
 
 @Component({
@@ -22,27 +23,30 @@ export class ProjectsComponent {
   projects: Project[] = [
     {
       imageSrc: 'assets/img/project1.png',
-      imageAlt: 'JOIN',
+      imageAlt: 'Project 1',
       title: 'JOIN',
       subtitle: 'JavaScript | HTML | CSS | Firebase',
       description: 'Task manager, inspired by the Kanban system. Create and organize tasks using drag and drop functions, assign users and categorys.',
-      buttonText: 'Github'
+      btngit: 'Github',
+      btntest: 'View project'
     },
     {
       imageSrc: 'assets/img/project2.jpg',
       imageAlt: 'Project 2',
-      title: 'Project Two',
-      subtitle: 'App Design',
-      description: 'An innovative mobile app that I designed and built.',
-      buttonText: 'See Project'
+      title: 'El Pollo Loco',
+      subtitle: 'JavaScript | HTML | CSS',
+      description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+      btngit: 'Github',
+      btntest: 'View project'
     },
     {
       imageSrc: 'assets/img/project3.jpg',
       imageAlt: 'Project 3',
-      title: 'Project Three',
-      subtitle: 'Graphic Design',
-      description: 'A collection of branding and design projects I worked on.',
-      buttonText: 'View Work'
+      title: 'Pokédex',
+      subtitle: 'JavaScript | HTML | CSS | API',
+      description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
+      btngit: 'Github',
+      btntest: 'View project'
     }
   ];
 }

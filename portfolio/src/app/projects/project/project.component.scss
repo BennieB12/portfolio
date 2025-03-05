@@ -1,12 +1,18 @@
 .project {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     gap: 20px;
   }
   
   .project-image {
-    width: 200px;
-    border-radius: 10px;
+      width: 720px;
+      height: 460px;
+      gap: 10px;
+      box-shadow: #555;
+      &:hover {
+        scale: 1.2;
+      }
+      
   }
   
   .project-info {
