@@ -1,36 +1,29 @@
 @import '../../mixins.scss';
-@import'../../fonts.scss';
 
 #section-atf {
   height: 100vh;
-  width: 1440px;
-  display: flex;
-  background-color: rgba(234, 240, 255, 1);
+  width: 100%;
+  max-width: $max-width;
+  background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%);
   z-index: 1000;
 
   .prof-img {
+    @include absolute-position(198px, 93px, 4);
     width: 550px;
     height: 703px;
-    position: absolute;
-    top: 198px;
-    left: 93px;
-    z-index: 4;
   }
 
   .social-links {
+    @include absolute-position(672px, 1300px);
     width: 40px;
     height: 170px;
-    position: absolute;
-    left: 1300px;
-    top: 672px;
     display: flex;
     flex-direction: column;
     gap: 25px;
     img {
-      height: 40px;
       width: 40px;
+      height: 40px;
       transition: transform 120ms ease-in-out;
-
       &:hover {
         transform: translateX(-8px);
       }
@@ -38,10 +31,8 @@
   }
 
   .atf-scroll {
+    @include absolute-position(694px, 1034px);
     height: 330px;
-    position: absolute;
-    left: 1034px;
-    top: 694px;
     .atf-span {
       color: $color;
       font-weight: 500;
@@ -59,11 +50,9 @@
   }
 }
 
-.atf-content {
-  position: absolute;
-  height: 61px;
-  top: 227px;
-  left: 731px;
+
+.atf-headline {
+  @include absolute-position(305px, 731px, 10);
 
   h1 {
     @include margin-font;
@@ -72,15 +61,6 @@
     font-weight: 400;
     line-height: 64px;
   }
-}
-
-.atf-headline {
-  position: absolute;
-  width: 645px;
-  height: 221px;
-  top: 305px;
-  left: 731px;
-
   h2 {
     @include margin-font;
     font-family: "Baloo 2";

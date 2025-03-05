@@ -1,42 +1,9 @@
 @import '../../mixins.scss';
-@import'../../fonts.scss';
 
 #projects {
   width: 1440px;
   height: 1985px;
 
-
-  .ell-skill-1 {
-    position: absolute;
-    width: 108.75001525878906px;
-    height: 108.75001525878906px;
-    top: 2290px;
-    left: 540px;
-    border-radius: 50%;
-    background: radial-gradient(
-      74.22% 74.22% at 19.79% 22.42%,
-      #5988ff 6.25%,
-      #5988ff 51.56%,
-      #0043f0 100%
-    );
-    transform: rotate(0deg);
-  }
-
-  .ell-skill-2 {
-    position: absolute;
-    width: 183px;
-    height: 183px;
-    top: 2515px;
-    left: 1134px;
-    border-radius: 50%;
-    background: radial-gradient(
-      74.22% 74.22% at 19.79% 22.42%,
-      #5988ff 6.25%,
-      #5988ff 51.56%,
-      #0043f0 100%
-    );
-    transform: rotate(0deg);
-  }
 
   .ell-skill-3 {
     position: absolute;
@@ -55,18 +22,6 @@
   }
 
   .ell-skill-4 {
-    position: absolute;
-    width: 393.32px;
-    height: 393.32px;
-    top: 3030px;
-    left: 1124px;
-    border-radius: 50%;
-    background: radial-gradient(
-      74.22% 74.22% at 19.79% 22.42%,
-      #5988ff 6.25%,
-      #5988ff 51.56%,
-      #0043f0 100%
-    );
     transform: rotate(0deg);
     clip-path: polygon(0% 0%, 80% 0%, 80% 100%, 0% 100%);
   }

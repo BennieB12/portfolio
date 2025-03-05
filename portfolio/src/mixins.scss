@@ -1,9 +1,5 @@
 $color: rgba(89, 136, 255, 1);
-
-
-@mixin bag-color {
-  background-color: rgba(255,255,255, 0.1);
-}
+$max-width: 1440px;
 
 @mixin margin-font {
   margin-block-start: 0;
@@ -37,6 +33,13 @@ $color: rgba(89, 136, 255, 1);
     &:not(:hover) {
       animation: shrinkButton 90ms ease-out forwards;
     }
+}
+
+@mixin absolute-position($top, $left, $z-index: auto) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  z-index: $z-index;
 }
 
 @mixin flex-center {

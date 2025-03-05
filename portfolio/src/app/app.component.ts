@@ -29,10 +29,19 @@ import { EllipseComponent } from './ellipse/ellipse.component';
 export class AppComponent {
   title = 'portfolio';
 
-
   ellipse = [
-    { width: '892px', height: '892px', top: '-79px', left: '-199px',zIndex: 3 },
+    {
+      width: '892px',
+      height: '892px',
+      top: '-79px',
+      left: '-199px',
+      zIndex: 3,
+    },
     { width: '206px', height: '206px', top: '90%', left: '700px', zIndex: -1 },
-    { width: '82px', height: '82px', top: '936px', left: '1034px',zIndex: -1 },
+    { width: '82px', height: '82px', top: '936px', left: '1034px', zIndex: -1 },
+    { width: '108.75001525878906px', height: '108.75001525878906px', top: '2290px', left: '540px'},
+    { width: '183px', height: '183px', top: '2515px', left: '1134px'},
+    { width: '393.32px', height: '393.32px', top: '3000px', left: '1124px'},
+    { width: '393.3196119958484px', height: '393.3196119958484px', top: '2680px', left: '-300.07px'},
   ];
 }

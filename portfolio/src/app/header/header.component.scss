@@ -1,38 +1,32 @@
 @import '../../mixins.scss';
-@import'../../fonts.scss';
 
 header {
-  position: absolute;
   height: 117px;
-  width: 1440px;
-  top: 0;
-  left: 0;
-  z-index: 10;
+  width: 100%;
+  max-width: $max-width;
+  @include absolute-position(0, 0, 10);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 36px;
+}
 
+
+.img-logo {
+  // width: 64px;
+  // height: 69px;
+  // display: flex;
+  // z-index: 10;
+  a {
+    cursor: pointer;
+  }
   img {
-    width: 64px;
-    height: 69px;
-    position: absolute;
-    top: 24px;
-    left: 100px;
-    z-index: 10;
-    a {
-      cursor: pointer;
-    }
+  margin-left: 36px;    
   }
 }
 
 nav {
-  position: absolute;
-  top: 42.5px;
-  left: 996.5px;
+  @include flex-center;
   gap: 36px;
-  display: flex;
-  align-items: center;
   a {
     width: 120px;
     text-decoration: none;
