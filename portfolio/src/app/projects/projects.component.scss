@@ -4,23 +4,6 @@
   width: 1440px;
   height: 1985px;
 
-
-  .ell-skill-3 {
-    position: absolute;
-    width: 393.3196119958484px;
-    height: 393.3196119958484px;
-    top: 2700px;
-    left: -194px;
-    border-radius: 50%;
-    background: radial-gradient(
-      74.22% 74.22% at 19.79% 22.42%,
-      #5988ff 6.25%,
-      #5988ff 51.56%,
-      #0043f0 100%
-    );
-    transform: rotate(81.57deg);
-  }
-
   .ell-skill-4 {
     transform: rotate(0deg);
     clip-path: polygon(0% 0%, 80% 0%, 80% 100%, 0% 100%);
@@ -53,5 +36,35 @@
       font-size: 23px;
       line-height: 27.6px;
     }
+  }
+}
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+
+app-project {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  &:nth-child(odd) {
+    flex-direction: row;
+  }
+
+  &:nth-child(even) {
+    flex-direction: row-reverse;
   }
 }
