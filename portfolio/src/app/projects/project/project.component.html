@@ -1,12 +1,15 @@
-<div class="project">
-  <img [src]="imageSrc" [alt]="imageAlt" class="project-image" loading="lazy"/>
+<div class="project" [ngClass]="{'reverse-layout': isMiddleProject(index)}">
+  <img [src]="imageSrc" [alt]="imageAlt" class="project-image" loading="lazy" />
   
   <div class="project-info">
     <h5>{{ title }}</h5>
     <h6>{{ subtitle }}</h6>
     <span>{{ description }}</span>
-    <button>{{ btngit }}</button>
-    <button>{{ btntest }}</button>
+    <a *ngIf="gitLink" [href]="gitLink" target="_blank">
+      <button>{{ btngit }}</button>
+    </a>
+    <a *ngIf="testLink" [href]="testLink" target="_blank">
+      <button>{{ btntest }}</button>
+    </a>
   </div>
 </div>
-

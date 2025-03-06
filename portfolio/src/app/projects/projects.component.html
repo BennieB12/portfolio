@@ -5,15 +5,17 @@
   </div>
 
 </section>
-<div class="projects-container">
+<div class="projects-container"*ngFor="let project of projects; let i = index">
   <app-project
-    *ngFor="let project of projects"
     [imageSrc]="project.imageSrc"
     [imageAlt]="project.imageAlt"
     [title]="project.title"
     [subtitle]="project.subtitle"
     [description]="project.description"
     [btngit]="project.btngit"
-    [btntest]="project.btntest">
-  </app-project>
+    [btntest]="project.btntest"
+    [gitLink]="project.gitLink"
+    [testLink]="project.testLink"
+    [index]="i" 
+  ></app-project>
 </div>
