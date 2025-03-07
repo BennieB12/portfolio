@@ -1,11 +1,11 @@
-<section class="commentsss">
+<section id="comments" [@slideInFromBottom]="isVisible ? 'visible' : 'hidden'">
   <div class="headline-comments">
     <h6>Need a teamplayer?</h6>
-    <span>Here what my colleagues said about me</span>
+    <span>Here is what my colleagues said about me</span>
   </div>
 
-  <div class="commentarys">
-    <div class="comments">
+  <div class="commentarys" [class.visible]="isVisible">
+    <div class="commentarys-content">
       <h5>Peter Pfautsch</h5>
       <span>Project Join</span>
       <p>
@@ -13,7 +13,7 @@
         to the project's success. Thank you for your reliable and precise work!"
       </p>
     </div>
-    <div class="comments">
+    <div class="commentarys-content">
       <h5>Dennis Freyer</h5>
       <span>Project Join</span>
       <p>

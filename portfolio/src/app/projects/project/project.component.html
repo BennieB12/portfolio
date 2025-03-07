@@ -1,4 +1,4 @@
-<div class="project" [ngClass]="{'reverse-layout': isMiddleProject(index)}">
+<div class="project" [ngClass]="{'reverse-layout': isMiddleProject(index)}" [@slideInLeft]="isVisible ? 'hidden' : 'visible'">
   <img [src]="imageSrc" [alt]="imageAlt" class="project-image" loading="lazy" />
   
   <div class="project-info">
