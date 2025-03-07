@@ -1,7 +1,65 @@
 @import "../../mixins.scss";
 
-.comments {
+.commentsss {
   @include background;
-  width: 1440PX;
-  height: 532PX;
+  width: 100%;
+  max-width: 1440px;
+  height: 532px;
+  margin: 0 auto;
+}
+
+.headline-comments {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  h6 {
+    font-family: "Baloo 2";
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 141%;
+    margin: 0;
+  }
+  span {
+    font-family: "Montserrat";
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+    line-height: 141%;
+    text-align: center;
+    margin: 0;
+  }
+}
+
+.commentarys {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 32px;
+  .comments {
+    font-family: Montserrat;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    width: 301px;
+    // gap: 32px;
+    h5 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 120%;
+    }
+    span {
+      font-size: 16px;
+      line-height: 140%;
+    }
+    p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 120%;
+    }
+  }
 }

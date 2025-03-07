@@ -3,12 +3,13 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { AtfComponent } from './atf/atf.component';
 import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
 import { IntroComponent } from './intro/intro.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { EllipseComponent } from './ellipse/ellipse.component';
 import { CommentsComponent } from './comments/comments.component';
+import {ContactComponent} from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -21,10 +22,11 @@ import { CommentsComponent } from './comments/comments.component';
     IntroComponent,
     SkillsComponent,
     ProjectsComponent,
-    FooterComponent,
     EllipseComponent,
-    CommentsComponent
-  ],
+    CommentsComponent,
+    ContactComponent,
+    FooterComponent
+    ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
