@@ -1,10 +1,5 @@
 @import "../../mixins.scss";
 
-#projects {
-  width: 1440px;
-  // height: 285px;
-}
-
 .headl-projects {
   display: flex;
   flex-direction: column;
@@ -32,6 +27,5 @@
 }
 
 .projects-container {
-  margin-left: 77px;
   margin-top: 40px;
 }

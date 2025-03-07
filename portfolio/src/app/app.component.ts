@@ -8,6 +8,7 @@ import { IntroComponent } from './intro/intro.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { EllipseComponent } from './ellipse/ellipse.component';
+import { CommentsComponent } from './comments/comments.component';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +23,7 @@ import { EllipseComponent } from './ellipse/ellipse.component';
     ProjectsComponent,
     FooterComponent,
     EllipseComponent,
+    CommentsComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

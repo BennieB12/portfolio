@@ -1,0 +1,7 @@
+@import "../../mixins.scss";
+
+.comments {
+  @include background;
+  width: 1440PX;
+  height: 532PX;
+}

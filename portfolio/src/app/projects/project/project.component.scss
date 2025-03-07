@@ -3,7 +3,8 @@
 .project {
   display: flex;
   align-items: flex-end;
-  gap: 180px;
+  justify-content: center;
+  gap: 100px;
   margin-bottom: 80px;
 }
 .project.reverse-layout {
@@ -12,13 +13,14 @@
 
 
 .project-image {
-  width: 720px;
-  height: 460px;
+  width: 640px;
+  height: 480px;
   transition: transform 0.3s ease-in-out;
   box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
 
+
   &:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 }
 
