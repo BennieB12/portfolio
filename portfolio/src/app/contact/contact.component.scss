@@ -1,0 +1,13 @@
+@import "../../mixins.scss";
+
+#contact {
+ width: 100%;
+ max-width: $max-width;
+
+  background: linear-gradient(179.99deg, #ffffff 12.89%, #eaf0ff 91.39%);
+}
+
+#contact-form {
+    width: 1241px;
+    height: 697px;
+}
