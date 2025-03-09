@@ -45,4 +45,5 @@ export class IntroComponent {
       this.isVisible = rect.top < window.innerHeight - 100 && rect.bottom > 100;
     }
   }
+  
 }

@@ -1,4 +1,4 @@
-@import "../../mixins.scss";
+@import "../../../../mixins.scss";
 
 footer {
   width: 100%;
@@ -7,15 +7,13 @@ footer {
   max-width: $max-width;
   display: flex;
   align-items: center;
-  // flex-direction: row;
   justify-content: space-around;
   @include background;
 
   .legal-notice {
     display: flex;
     align-items: center;
-    flex-direction: column;
-    gap: 24px;
+    position: relative;
     p {
       color: rgb(255, 255, 255);
       font-weight: 400;
@@ -27,10 +25,16 @@ footer {
       color: rgb(255, 255, 255);
       cursor: pointer;
       text-decoration: none;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -40px;
     }
   }
-  #social-links{
+
+  #social-links {
     display: flex;
     gap: 42px;
+    align-items: center;
   }
 }

@@ -1,5 +1,6 @@
 import { Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 @Component({
   selector: 'app-atf',
   standalone: true,
@@ -7,6 +8,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './atf.component.html',
   styleUrl: './atf.component.scss'
 })
+
 export class AtfComponent {
 
 }
