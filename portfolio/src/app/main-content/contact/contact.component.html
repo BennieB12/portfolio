@@ -1,15 +1,25 @@
+<h5 [@slideInLeft]="isVisible ? 'visible' : 'hidden'">Contact</h5>
 <section id="contact">
-  <div id="contact-left">
-    <h5></h5>
-    <h6></h6>
-    <span></span>
-    <p></p>
+  <div id="contact-left" [@slideInLeft]="isVisible ? 'visible' : 'hidden'">
+    <h6>Got a problem to solve?</h6>
+    <span>Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.</span>
+    <p>Need a Frontend developer? <b>Contact me!</b></p>
   </div>
-  <form action="" id="contact-form">
-    <input type="text" name="name" id="" placeholder="Your name">
-    <input type="text" name="mail" id="" placeholder="Your email">
-    <textarea placeholder="Your message"></textarea>
-    <input type="checkbox">
-    <input type="submit" value="submit"><button></button>
+
+  <form action="" id="contact-right" [@slideInRight]="isVisible ? 'visible' : 'hidden'">
+    <input type="text" name="name" id="contact-name" placeholder="Your name">
+    <input type="text" name="mail" id="contact-mail" placeholder="Your email">
+    <textarea placeholder="Your message" id="contact-text"></textarea>
+    
+    <div class="privacy-policy" [@fadeIn]="isVisible ? 'visible' : 'hidden'">
+      <input type="checkbox" id="privacy-checkbox">
+      <label for="privacy-checkbox">
+        I have read the
+        <a href="/privacy-policy" target="_blank">Privacy Policy</a>
+        and agree to the possesing my data as outlined.
+      </label>
+    </div>
+
+    <input type="submit" value="Say hello ;)" id="contact-submit" [@fadeIn]="isVisible ? 'visible' : 'hidden'">
   </form>
 </section>

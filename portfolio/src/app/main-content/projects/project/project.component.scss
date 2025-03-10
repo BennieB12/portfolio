@@ -9,6 +9,10 @@
 }
 .project.reverse-layout {
   flex-direction: row-reverse;
+  img {
+
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
+  }
 }
 
 
