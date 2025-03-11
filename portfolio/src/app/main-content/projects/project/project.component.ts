@@ -1,7 +1,7 @@
-import { Component, Input, HostListener} from '@angular/core';
-import { NgIf, NgClass } from '@angular/common'; 
-import { CommonModule } from '@angular/common';
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import { Component, Input} from '@angular/core';
+import { NgIf, NgClass, CommonModule} from '@angular/common'; 
+import { ScrollVisibilityDirective } from '../.././scroll-visibility.directive';
+import { slideInLeft, slideInRight, fadeIn } from '../../../animations';
 
 
 @Component({
@@ -9,14 +9,8 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   standalone: true,
   templateUrl: './project.component.html',
   styleUrl: './project.component.scss',
-  imports: [NgIf, NgClass, CommonModule],
-    animations: [
-      trigger('slideInLeft', [
-        state('hidden', style({ opacity: 0, transform: 'translateX(-160px)' })),
-        state('visible', style({ opacity: 1, transform: 'translateX(0)' })),
-        transition('hidden <=> visible', animate('400ms ease-out')) 
-      ])
-    ]
+  imports: [NgIf, NgClass, CommonModule, ScrollVisibilityDirective],
+  animations: [slideInLeft, slideInRight, fadeIn]
 })
 export class ProjectComponent {
   isVisible = false;
@@ -36,12 +30,7 @@ export class ProjectComponent {
     return index % 2 !== 0;
     }
 
-      @HostListener('window:scroll', ['$event'])
-      onScroll() {
-        const element = document.getElementById('intro');
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          this.isVisible = rect.top < window.innerHeight - 100 && rect.bottom > 100;
-        }
-      }
+    onVisibilityChange(isVisible: boolean) {
+      this.isVisible = isVisible;
+    }
 }

@@ -1,7 +1,7 @@
-<div class="project" [ngClass]="{'reverse-layout': isMiddleProject(index)}" [@slideInLeft]="isVisible ? 'hidden' : 'visible'">
-  <img [src]="imageSrc" [alt]="imageAlt" class="project-image" loading="lazy" />
+<div class="project" [ngClass]="{'reverse-layout': isMiddleProject(index)}" appScrollVisibility (isVisibleChange)="onVisibilityChange($event)">
+  <img [src]="imageSrc" [alt]="imageAlt" class="project-image" loading="lazy" [@slideInLeft]="isVisible ? 'visible' : 'hidden'" [@fadeIn]="isVisible ? 'visible' : 'hidden'"/>
   
-  <div class="project-info">
+  <div class="project-info" [@slideInRight]="isVisible ? 'visible' : 'hidden'" [@fadeIn]="isVisible ? 'visible' : 'hidden'">
     <h5>{{ title }}</h5>
     <h6>{{ subtitle }}</h6>
     <span>{{ description }}</span>

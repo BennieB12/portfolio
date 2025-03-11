@@ -1,5 +1,4 @@
 @import "../../../mixins.scss";
-@import '../../../animations.scss'; 
 
 #contact {
   width: 100%;
@@ -10,15 +9,6 @@
   align-items: flex-start;
   padding-top: 60px;
   padding-bottom: 60px;
-  &.visible {
-    .contact-left {
-      animation: slideInLeft 0.4s ease-out forwards, fadeIn 0.4s ease-out forwards;
-    }
-  
-    .contact-right {
-      animation: slideInRight 0.4s ease-out forwards, fadeIn 0.4s ease-out forwards;
-    }
-  }
 }
 
 h5 {

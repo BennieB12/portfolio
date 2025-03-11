@@ -7,8 +7,7 @@ import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { CommentsComponent } from './comments/comments.component';
 import { ContactComponent } from './contact/contact.component';
-import { ScrollVisibilityDirective } from './scroll-visibility.directive';
-
+ 
 @Component({
   selector: 'app-main-content',
   standalone: true,
@@ -21,7 +20,6 @@ import { ScrollVisibilityDirective } from './scroll-visibility.directive';
     ProjectsComponent,
     CommentsComponent,
     ContactComponent,
-    ScrollVisibilityDirective
   ],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss',

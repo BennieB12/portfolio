@@ -1,13 +1,15 @@
-import { Component, HostListener } from '@angular/core';
+import { Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ScrollVisibilityDirective } from '.././scroll-visibility.directive';
+import { slideInLeft, slideInRight, fadeIn } from '../../animations';
 
 @Component({
   selector: 'app-intro',
   standalone: true,
   imports: [CommonModule, ScrollVisibilityDirective],
   templateUrl: './intro.component.html',
-  styleUrl: './intro.component.scss'
+  styleUrl: './intro.component.scss',
+  animations: [slideInLeft, slideInRight, fadeIn]
 })
 export class IntroComponent {
   isVisible = false;

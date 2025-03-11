@@ -1,11 +1,11 @@
 <h5> Contact</h5>
-<section id="contact" appScrollVisibility (isVisibleChange)="onVisibilityChange($event)" [class.visible]="isVisible">
-  <div id="contact-left" class="contact-left">
+<section id="contact" appScrollVisibility (isVisibleChange)="onVisibilityChange($event)">
+  <div id="contact-left" class="contact-left" [@slideInLeft]="isVisible ? 'visible' : 'hidden'" [@fadeIn]="isVisible ? 'visible' : 'hidden'">
     <h6> Got a problem to solve?</h6>
     <span>Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.</span>
     <p>Need a Frontend developer? <b>Contact me!</b></p>
   </div>
-  <form action="" id="contact-right" class="contact-right">
+  <form action="" id="contact-right" class="contact-right" [@slideInRight]="isVisible ? 'visible' : 'hidden'" [@fadeIn]="isVisible ? 'visible' : 'hidden'">
     <input type="text" name="name" id="contact-name" placeholder="Your name">
     <input type="text" name="mail" id="contact-mail" placeholder="Your email">
     <textarea placeholder="Your message" id="contact-text"></textarea>
