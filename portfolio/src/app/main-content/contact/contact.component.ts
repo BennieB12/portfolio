@@ -3,6 +3,7 @@ import { NgIf } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { ScrollVisibilityDirective } from '.././directives/scroll-visibility.directive';
 import { slideInLeft, slideInRight, fadeIn } from '../../animations/animations';
+import { EmailService } from '../../../app/services/mail-service'; 
 
 @Component({
   selector: 'app-contact',
@@ -14,9 +15,10 @@ import { slideInLeft, slideInRight, fadeIn } from '../../animations/animations';
 })
 export class ContactComponent {
   isVisible = false;
+  messageSent = false;
   contactForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private emailService: EmailService) {
     this.contactForm = this.fb.group({
       name: ['', [Validators.required, Validators.pattern(/^[a-zA-Z\s]+$/)]],
       mail: ['', [Validators.required, Validators.email]],
@@ -30,6 +32,17 @@ export class ContactComponent {
   }
 
   onSubmit() {
-    window.location.reload();
+    if (this.contactForm.valid) {
+      this.emailService.sendEmail(this.contactForm.value).subscribe({
+        next: (response) => {
+          console.log("E-Mail erfolgreich gesendet:", response);
+          this.messageSent = true;
+          this.contactForm.reset();
+        },
+        error: (error) => {
+          console.error("Fehler beim Senden der E-Mail:", error);
+        }
+      });
+    }
   }
 }
