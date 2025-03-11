@@ -1,20 +1,13 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import { ScrollVisibilityDirective } from '.././scroll-visibility.directive';
 
 @Component({
   selector: 'app-intro',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ScrollVisibilityDirective],
   templateUrl: './intro.component.html',
-  styleUrl: './intro.component.scss',
-  animations: [
-    trigger('slideInLeft', [
-      state('hidden', style({ opacity: 0, transform: 'translateX(-160px)' })),
-      state('visible', style({ opacity: 1, transform: 'translateX(0)' })),
-      transition('hidden <=> visible', animate('400ms ease-out')) 
-    ])
-  ]
+  styleUrl: './intro.component.scss'
 })
 export class IntroComponent {
   isVisible = false;
@@ -37,13 +30,8 @@ export class IntroComponent {
     }
   }
 
-  @HostListener('window:scroll', ['$event'])
-  onScroll() {
-    const element = document.getElementById('intro');
-    if (element) {
-      const rect = element.getBoundingClientRect();
-      this.isVisible = rect.top < window.innerHeight - 100 && rect.bottom > 100;
-    }
+  onVisibilityChange(isVisible: boolean) {
+    this.isVisible = isVisible;
   }
   
 }

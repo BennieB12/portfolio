@@ -1,4 +1,4 @@
-<section id="intro" [@slideInLeft]="isVisible ? 'visible' : 'hidden'">
+<section id="intro" appScrollVisibility (isVisibleChange)="onVisibilityChange($event)" [class.visible]="isVisible">
   <div class="intro-left">
     <h2>Let's work <br />together</h2>
     <h3>I am</h3>
