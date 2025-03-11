@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { slideInFromBottom, fadeIn } from '../../animations'; 
-import { ScrollVisibilityDirective } from '../scroll-visibility.directive'; 
+import { slideInFromBottom, fadeIn } from '../../animations/animations'; 
+import { ScrollVisibilityDirective } from '../directives/scroll-visibility.directive'; 
 
 @Component({
   selector: 'app-comments',

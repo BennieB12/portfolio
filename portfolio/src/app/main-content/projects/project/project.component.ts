@@ -1,7 +1,7 @@
 import { Component, Input} from '@angular/core';
 import { NgIf, NgClass, CommonModule} from '@angular/common'; 
-import { ScrollVisibilityDirective } from '../.././scroll-visibility.directive';
-import { slideInLeft, slideInRight, fadeIn } from '../../../animations';
+import { ScrollVisibilityDirective } from '../.././directives/scroll-visibility.directive';
+import { slideInLeft, slideInRight, fadeIn } from '../../../animations/animations';
 
 
 @Component({
