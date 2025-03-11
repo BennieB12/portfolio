@@ -32,8 +32,7 @@
   </div>
 
   <input type="submit" value="Say hello ;)" id="contact-submit" 
-  [disabled]="!contactForm.valid || messageSent"
-  (click)="onSubmit()">
+  [disabled]="!contactForm.valid || messageSent">
 </form>
 <p *ngIf="messageSent" class="success-message">Danke für deine Nachricht! Ich melde mich bald.</p>
 </section>

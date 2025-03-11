@@ -32,7 +32,8 @@ export class ContactComponent {
   }
 
   onSubmit() {
-    if (this.contactForm.valid) {
+    if (this.contactForm.valid && !this.messageSent) {
+      this.messageSent = true;
       this.emailService.sendEmail(this.contactForm.value).subscribe({
         next: (response) => {
           console.log("E-Mail erfolgreich gesendet:", response);
@@ -41,8 +42,10 @@ export class ContactComponent {
         },
         error: (error) => {
           console.error("Fehler beim Senden der E-Mail:", error);
+          this.messageSent = false;
         }
       });
     }
   }
+  
 }

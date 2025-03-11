@@ -3,8 +3,13 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
-import { TranslateModule } from "@ngx-translate/core";
-import { TranslateService } from "@ngx-translate/core";
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @Component({
   selector: 'app-root',
@@ -14,26 +19,26 @@ import { TranslateService } from "@ngx-translate/core";
     RouterOutlet,
     HeaderComponent,
     FooterComponent,
-    TranslateModule
-    ],
+    TranslateModule,
+    HttpClientModule
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'portfolio';
 
-  // constructor(private translate: TranslateService) {
-  //   this.translate.addLangs(['de', 'en']);
-  //   this.translate.setDefaultLang('en');
-  //   this.translate.use('en');
-  // }
+  constructor(private translate: TranslateService, private http: HttpClient) {
+    this.translate.addLangs(['de', 'en']);
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
+  }
 
-  //  useLanguage(event: Event, language: string): void {
-  //   event.preventDefault();
-  //   this.translate.use(language);
-  // }
+  useLanguage(language: string): void {
+    this.translate.use(language);
+  }
 
-  // get currentLanguage(): string {
-  //   return this.translate.currentLang;
-  // }
+  get currentLanguage(): string {
+    return this.translate.currentLang;
+  }
 }

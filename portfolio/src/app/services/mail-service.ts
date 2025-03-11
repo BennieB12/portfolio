@@ -10,7 +10,8 @@ export class EmailService {
   constructor(private http: HttpClient) {}
 
   sendEmail(formData: any): Observable<any> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' });
     const body = new URLSearchParams(formData).toString();
-    return this.http.post(this.apiUrl, body);
+    return this.http.post(this.apiUrl, body, { headers });
   }
 }
