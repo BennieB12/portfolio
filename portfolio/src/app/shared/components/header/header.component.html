@@ -1,12 +1,15 @@
 <header>
   <div class="img-logo">
     <a href="">
-      <img src="../../assets/img/Group.png">
+      <img src="../../assets/img/Group.png" />
     </a>
   </div>
   <nav>
     <a (click)="scrollToSection('intro')"> About me</a>
     <a (click)="scrollToSection('skillset')">Skill set</a>
     <a (click)="scrollToSection('projects')">My work</a>
+
+    <button (click)="switchLanguage('en')">English</button>
+    <button (click)="switchLanguage('de')">Deutsch</button>
   </nav>
 </header>
