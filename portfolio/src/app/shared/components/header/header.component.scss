@@ -67,3 +67,20 @@ nav {
     }
   }
 }
+
+nav div {
+  display: inline-block;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+nav div.active svg {
+  border: 1px solid $color;
+  border-radius: 100%;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+nav svg {
+  width: 20px;
+  height: 20px;
+}
