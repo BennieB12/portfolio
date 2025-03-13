@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
-import { ProjectComponent } from "../projects/project/project.component";
-import { CommonModule} from '@angular/common';
+import { Component, Input } from '@angular/core';
+import { NgIf, NgClass, CommonModule } from '@angular/common';
+import { ScrollVisibilityDirective } from '.././directives/scroll-visibility.directive';
+import { slideInLeft, slideInRight, fadeIn } from '../../animations/animations';
+import { TranslateModule } from '@ngx-translate/core';
 
 interface Project {
   imageSrc: string;
@@ -17,44 +19,51 @@ interface Project {
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [ProjectComponent, CommonModule],
+  imports: [CommonModule, ScrollVisibilityDirective, NgIf, NgClass, TranslateModule],
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss']
+  styleUrls: ['./projects.component.scss'],
+  animations: [slideInLeft, slideInRight, fadeIn],
 })
 export class ProjectsComponent {
-  projects: Project[] = [
+  visibleProjects: { [key: number]: boolean } = {};
+
+  @Input() imageSrc: string = '';
+  @Input() imageAlt: string = '';
+  @Input() title: string = '';
+  @Input() subtitle: string = '';
+  @Input() description: string = '.';
+  @Input() btngit: string = '';
+  @Input() btntest: string = '';
+  @Input() gitLink: string = '';
+  @Input() testLink: string = '';
+  @Input() index: number = 0;
+
+  projects = [
     {
       imageSrc: 'assets/img/project_1.png',
       imageAlt: 'Project 1',
-      title: 'JOIN',
-      subtitle: 'JavaScript | HTML | CSS | Firebase',
-      description: 'Task manager, inspired by the Kanban system. Create and organize tasks using drag and drop functions, assign users and categorys.',
-      btngit: 'Github',
-      btntest: 'View project',
       gitLink: 'https://github.com/BennieB12',
-      testLink: 'https://Benjamin-Kloss.de'
+      testLink: 'https://Benjamin-Kloss.de',
     },
     {
       imageSrc: 'assets/img/project_2.png',
       imageAlt: 'Project 2',
-      title: 'El Pollo Loco',
-      subtitle: 'JavaScript | HTML | CSS',
-      description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
-      btngit: 'Github',
-      btntest: 'View project',
       gitLink: 'https://github.com/BennieB12',
-      testLink: 'https://Benjamin-Kloss.de'
+      testLink: 'https://Benjamin-Kloss.de',
     },
     {
       imageSrc: 'assets/img/project_3.png',
       imageAlt: 'Project 3',
-      title: 'Pokédex',
-      subtitle: 'JavaScript | HTML | CSS | API',
-      description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
-      btngit: 'Github',
-      btntest: 'View project',
       gitLink: 'https://github.com/BennieB12',
-      testLink: 'https://Benjamin-Kloss.de'
-    }
+      testLink: 'https://Benjamin-Kloss.de',
+    },
   ];
+
+  isMiddleProject(index: number): boolean {
+    return index % 2 !== 0;
+  }
+
+  onVisibilityChange(index: number, isVisible: boolean) {
+    this.visibleProjects[index] = isVisible;
+  }
 }

@@ -1,41 +1,39 @@
 <section id="intro" appScrollVisibility (isVisibleChange)="onVisibilityChange($event)">
   <div class="intro-left" [@slideInLeft]="isVisible ? 'visible' : 'hidden'" [@fadeIn]="isVisible ? 'visible' : 'hidden'">
-    <h2>Let's work <br />together</h2>
-    <h3>I am</h3>
+    <h2>{{ 'intro.headline' | translate }}</h2>
+    <h3>{{ 'intro.subHeadline' | translate }}</h3>
+
     <div class="intro-icon">
       <div class="intro-icons"
            (mouseenter)="hoverImage('location', true)"
            (mouseleave)="hoverImage('location', false)">
         <img id="location" [src]="currentImages['location']" />
-        <p>located in Duesseldorf</p>
+        <p>{{ 'intro.location' | translate }}</p>
       </div>
 
       <div class="intro-icons"
            (mouseenter)="hoverImage('remote', true)"
            (mouseleave)="hoverImage('remote', false)">
         <img id="remote" [src]="currentImages['remote']" />
-        <p>open to work remote</p>
+        <p>{{ 'intro.remote' | translate }}</p>
       </div>
       
       <div class="intro-icons"
            (mouseenter)="hoverImage('move', true)"
            (mouseleave)="hoverImage('move', false)">
         <img id="move" [src]="currentImages['move']" />
-        <p>open to relocate</p>
+        <p>{{ 'intro.relocate' | translate }}</p>
       </div>
     </div>
   </div>
   
   <div class="intro-right" [@slideInRight]="isVisible ? 'visible' : 'hidden'" [@fadeIn]="isVisible ? 'visible' : 'hidden'">
     <p>
-      I am a Front-end developer based in Duesseldorf, Germany. I enjoy helping
-      designers and companies bring their ideas into real life. I am looking
-      forward to continuing my developer career with a job in a junior web
-      developer position. My ability to solve complex problems and my passion
-      for programming make me a valuable member for your team.
+      {{ 'intro.description' | translate }}
+      <br /><br />
+      {{ 'intro.contactText' | translate }}
       <br />
-      <br />If you think I´d be a good match for your projects, contact me.<br />
     </p>
-    <button id="intro-btn">Send a message</button>
+    <button id="intro-btn">{{ 'intro.button' | translate }}</button>
   </div>
 </section>

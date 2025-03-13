@@ -2,11 +2,12 @@ import { Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ScrollVisibilityDirective } from '.././directives/scroll-visibility.directive';
 import { slideInLeft, slideInRight, fadeIn } from '../../animations/animations';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-intro',
   standalone: true,
-  imports: [CommonModule, ScrollVisibilityDirective],
+  imports: [CommonModule, ScrollVisibilityDirective, TranslateModule],
   templateUrl: './intro.component.html',
   styleUrl: './intro.component.scss',
   animations: [slideInLeft, slideInRight, fadeIn]

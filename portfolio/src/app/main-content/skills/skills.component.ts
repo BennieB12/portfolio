@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule, NgFor  } from '@angular/common';
 import { slideInFromBottom, fadeIn } from '../../animations/animations'; 
-import { ScrollVisibilityDirective } from '../directives/scroll-visibility.directive'; 
-
+import { ScrollVisibilityDirective } from '../directives/scroll-visibility.directive';
+import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [NgFor, CommonModule, ScrollVisibilityDirective],
+  imports: [NgFor, CommonModule, ScrollVisibilityDirective, TranslateModule],
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss'],
   animations: [slideInFromBottom, fadeIn]

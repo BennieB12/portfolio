@@ -6,9 +6,8 @@ import { Component, Input } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './ellipse.component.html',
-  styleUrl: './ellipse.component.scss'
+  styleUrls: ['./ellipse.component.scss']
 })
 export class EllipseComponent {
   @Input() ellipse: { width: string; height: string; top: string; left?: string; zIndex?: number }[] = [];
 }
-

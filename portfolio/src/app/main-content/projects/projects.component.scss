@@ -28,3 +28,71 @@
 .projects-container {
   margin-top: 40px;
 }
+
+.project {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 100px;
+  margin-bottom: 80px;
+}
+
+.project.reverse-layout {
+  flex-direction: row-reverse;
+  img {
+
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
+  }
+}
+
+
+.project-image {
+  width: 640px;
+  height: 480px;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
+
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  width: 536px;
+  gap: 15px;
+}
+
+.project-info h5 {
+  color: $color;
+  font-family: "Baloo 2";
+  font-weight: 800;
+  font-size: 45px;
+  line-height: 120%;
+  letter-spacing: 0%;
+
+  margin: 0;
+}
+
+.project-info h6 {
+  margin: 0;
+  color: $color;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  
+}
+
+.project-info span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0%;
+}
+
+.project-info button {
+  @include button;
+}

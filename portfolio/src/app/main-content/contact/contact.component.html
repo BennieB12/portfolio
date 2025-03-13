@@ -1,38 +1,35 @@
-<h5> Contact</h5>
+<h5>{{ 'contact.headline' | translate }}</h5>
 <section id="contact" appScrollVisibility (isVisibleChange)="onVisibilityChange($event)">
   <div id="contact-left" class="contact-left" [@slideInLeft]="isVisible ? 'visible' : 'hidden'" [@fadeIn]="isVisible ? 'visible' : 'hidden'">
-    <h6> Got a problem to solve?</h6>
-    <span>Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.</span>
-    <p>Need a Frontend developer? <b>Contact me!</b></p>
+    <h6>{{ 'contact.gotProblem' | translate }}</h6>
+    <span>{{ 'contact.description' | translate }}</span>
+    <p>{{ 'contact.callToAction' | translate }} <b>{{'contact.contact' | translate}}</b> </p>
   </div>
 
   <form [formGroup]="contactForm" id="contact-right" class="contact-right"
   [@slideInRight]="isVisible ? 'visible' : 'hidden'" [@fadeIn]="isVisible ? 'visible' : 'hidden'" (ngSubmit)="onSubmit()">
   
-  <input type="text" formControlName="name" placeholder="Your name"
+  <input type="text" formControlName="name" placeholder="{{ 'contact.name' | translate }}"
     [class.invalid]="contactForm.controls['name'].invalid && contactForm.controls['name'].touched"
     [class.valid]="contactForm.controls['name'].valid">
 
-  <input type="email" formControlName="mail" placeholder="Your email"
+  <input type="email" formControlName="mail" placeholder="{{ 'contact.email' | translate }}"
     [class.invalid]="contactForm.controls['mail'].invalid && contactForm.controls['mail'].touched"
     [class.valid]="contactForm.controls['mail'].valid">
     
-  <textarea formControlName="message" placeholder="Your message" id="contact-text"
+  <textarea formControlName="message" placeholder="{{ 'contact.message' | translate }}" id="contact-text"
     [class.invalid]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched"
     [class.valid]="contactForm.get('message')?.valid">
   </textarea>
 
   <div class="privacy-policy">
     <input type="checkbox" formControlName="privacy" id="privacy-checkbox">
-    <label for="privacy-checkbox">
-      I have read the
-      <a href="/privacy-policy" target="_blank">Privacy Policy</a>
-      and agree to the processing of my data as outlined.
+    <label for="privacy-checkbox" [innerHTML]="'contact.privacy' | translate">
     </label>
   </div>
 
-  <input type="submit" value="Say hello ;)" id="contact-submit" 
+  <input type="submit" value="{{ 'contact.submit' | translate }}" id="contact-submit" 
   [disabled]="!contactForm.valid || messageSent">
 </form>
-<p *ngIf="messageSent" class="success-message">Danke für deine Nachricht! Ich melde mich bald.</p>
+<p *ngIf="messageSent" class="success-message">{{ 'contact.successMessage' | translate }}</p>
 </section>

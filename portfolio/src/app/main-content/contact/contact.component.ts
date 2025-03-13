@@ -3,14 +3,15 @@ import { NgIf } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { ScrollVisibilityDirective } from '.././directives/scroll-visibility.directive';
 import { slideInLeft, slideInRight, fadeIn } from '../../animations/animations';
-import { EmailService } from '../../../app/services/mail-service'; 
+import { EmailService } from '../../../app/services/mail-service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
-  imports: [ScrollVisibilityDirective, ReactiveFormsModule, NgIf],
+  imports: [ScrollVisibilityDirective, ReactiveFormsModule, NgIf, TranslateModule],
   animations: [slideInLeft, slideInRight, fadeIn]
 })
 export class ContactComponent {

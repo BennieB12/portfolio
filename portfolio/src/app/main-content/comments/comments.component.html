@@ -1,25 +1,19 @@
 <section id="comments" appScrollVisibility (isVisibleChange)="isVisible = $event" [@slideInFromBottom]="isVisible ? 'visible' : 'hidden'">
   <div class="headline-comments">
-    <h6>Need a teamplayer?</h6>
-    <span>Here is what my colleagues said about me</span>
+    <h6>{{ 'comments.headline' | translate }}</h6>
+    <span>{{ 'comments.subHeadline' | translate }}</span>
   </div>
 
   <div class="commentarys" [class.visible]="isVisible">
     <div class="commentarys-content">
-      <h5>Peter Pfautsch</h5>
-      <span>Project Join</span>
-      <p>
-        "Benjamin, your structured approach and quick problem-solving were key
-        to the project's success. Thank you for your reliable and precise work!"
-      </p>
+      <h5>{{ 'comments.feedback.0.name' | translate }}</h5>
+      <span>{{ 'comments.feedback.0.project' | translate }}</span>
+      <p>{{ 'comments.feedback.0.text' | translate }}</p>
     </div>
     <div class="commentarys-content">
-      <h5>Dennis Freyer</h5>
-      <span>Project Join</span>
-      <p>
-        "He is very helpful and always has a solution ready when problems
-        arise."
-      </p>
+      <h5>{{ 'comments.feedback.1.name' | translate }}</h5>
+      <span>{{ 'comments.feedback.1.project' | translate }}</span>
+      <p>{{ 'comments.feedback.1.text' | translate }}</p>
     </div>
   </div>
 </section>
