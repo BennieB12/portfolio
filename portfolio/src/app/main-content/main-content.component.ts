@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, Renderer2 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AtfComponent } from './atf/atf.component';
 import { EllipseComponent } from './ellipse/ellipse.component';
@@ -24,8 +24,62 @@ import { ContactComponent } from './contact/contact.component';
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss',
 })
-export class MainContentComponent {
+export class MainContentComponent implements AfterViewInit {
+  private blubberContainer!: HTMLElement;
+  private currentBlubberIndex = 0;
+  private maxBubbles = 5;
 
+  constructor(private el: ElementRef, private renderer: Renderer2) {}
+
+  ngAfterViewInit(): void {
+    this.blubberContainer = this.el.nativeElement.querySelector('.blubber-container');
+    if (!this.blubberContainer) return;
+    this.createBubble();
+    this.createBubble();
+    this.createBubble();
+  }
+
+  private createBubble() {
+    if (this.currentBlubberIndex >= this.maxBubbles) return;
+
+    const blubber = this.renderer.createElement('div');
+    this.renderer.addClass(blubber, 'blubber');
+    this.setRandomSize(blubber);
+    this.setRandomPosition(blubber);
+
+    this.renderer.listen(blubber, 'click', () => this.burstBubble(blubber));
+
+    this.renderer.appendChild(this.blubberContainer, blubber);
+    this.currentBlubberIndex++;
+
+    setTimeout(() => this.createBubble(), 1000);
+  }
+
+  private setRandomSize(blubber: HTMLElement) {
+    const size = Math.random() * (180 - 80) + 60;
+    this.renderer.setStyle(blubber, 'width', `${size}px`);
+    this.renderer.setStyle(blubber, 'height', `${size}px`);
+  }
+
+  private setRandomPosition(blubber: HTMLElement) {
+    const x = Math.random() * (window.innerWidth - 120); 
+    const y = Math.random() * (window.innerHeight - 120);
+
+    this.renderer.setStyle(blubber, 'left', `${x}px`);
+    this.renderer.setStyle(blubber, 'top', `${y}px`);
+  }
+
+  private burstBubble(blubber: HTMLElement) {
+    this.renderer.setStyle(blubber, 'animation', 'burstBubble 0.5s forwards');
+    setTimeout(() => {
+      this.renderer.removeChild(this.blubberContainer, blubber);
+      this.createBubble();
+    }, 500);
+  }
+
+
+
+  
   ellipse = [
     {
       width: '892px',
