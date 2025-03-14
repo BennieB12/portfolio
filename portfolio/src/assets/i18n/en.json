@@ -1,9 +1,83 @@
 {
-    "header": {
-      "aboutMe": "About me",
-      "skillSet": "Skill set",
-      "myWork": "My work",
-      "english": "English",
-      "deutsch": "German"
-    }
+  "header": {
+    "aboutMe": "About me",
+    "skillSet": "Skill set",
+    "myWork": "My work",
+    "english": "English",
+    "deutsch": "German"
+  },
+  "atf": {
+    "greeting": "Hello! I am Benjamin",
+    "role": "FRONTEND DEVELOPER",
+    "scroll": "SCROLL"
+  },
+  "intro": {
+    "headline": "Let's work together",
+    "subHeadline": "I am",
+    "location": "located in Duesseldorf",
+    "remote": "open to work remote",
+    "relocate": "open to relocate",
+    "description": "I am a Front-end developer based in Duesseldorf, Germany. I enjoy helping designers and companies bring their ideas into real life. I am looking forward to continuing my developer career with a job in a junior web developer position. My ability to solve complex problems and my passion for programming make me a valuable member for your team.",
+    "contactText": "If you think I´d be a good match for your projects, contact me.",
+    "button": "Send a message"
+  },
+  "skills": {
+    "headline": "Skill set"
+  },
+  "comments": {
+    "headline": "Need a team player?",
+    "subHeadline": "Here is what my colleagues said about me",
+    "feedback": [
+      {
+        "name": "Peter Pfautsch",
+        "project": "Project Join",
+        "text": "Benjamin, your structured approach and quick problem-solving were key to the project's success. Thank you for your reliable and precise work!"
+      },
+      {
+        "name": "Dennis Freyer",
+        "project": "Project Join",
+        "text": "He is very helpful and always has a solution ready when problems arise."
+      }
+    ]
+  },
+  "projects": {
+    "headline": "My Work",
+    "subHeadline": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+    "projects": [
+  {
+    "title": "JOIN",
+    "subtitle": "JavaScript | HTML | CSS | Firebase",
+    "description": "Task manager, inspired by the Kanban system. Create and organize tasks using drag and drop functions, assign users and categories.",
+    "btngit": "Github",
+    "btntest": "View project"
+  },
+  {
+    "title": "El Pollo Loco",
+    "subtitle": "JavaScript | HTML | CSS",
+    "description": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+    "btngit": "Github",
+    "btntest": "View project"
+  },
+  {
+    "title": "Pokédex",
+    "subtitle": "JavaScript | HTML | CSS | API",
+    "description": "Based on the PokéAPI, a simple library that provides and catalogues Pokémon information.",
+    "btngit": "Github",
+    "btntest": "View project"
   }
+]
+  },
+  "contact": {
+    "headline": "Contact",
+    "gotProblem": "Got a problem to solve?",
+    "description": "Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.",
+    "callToAction": "Need a Frontend developer?",
+    "contact": "Contact me",
+    "name": "Your name",
+    "email": "Your email",
+    "message": "Your message",
+    "privacy": "I have read the <a href='/privacy-policy' target='_blank'>Privacy Policy</a> and agree to the processing of my data as outlined.",
+    "submit": "Say hello ;)",
+    "successMessage": "Thank you for your message! I will get back to you soon."
+  }
+}

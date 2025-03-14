@@ -1,5 +1,9 @@
-<section id="section-atf" appScrollAnimate>
-  <img class="prof-img" src="../../../assets/img/prof.png">
+<section id="section-atf" appScrollAnimate
+  [@fadeIn]="sectionState">
+  <img class="prof-img"
+  src="../../../assets/img/prof.png"
+  alt="profile-image"
+  [@fadeIn]="profImgState">
 
   <div class="atf-headline">
     <h1 class="mar-uni">{{ 'atf.greeting' | translate }}</h1>

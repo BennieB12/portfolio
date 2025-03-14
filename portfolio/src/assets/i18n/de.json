@@ -1,9 +1,84 @@
 {
-    "header": {
-      "aboutMe": "Über mich",
-      "skillSet": "Fähigkeiten",
-      "myWork": "Projekte",
-      "english": "Englisch",
-      "deutsch": "Deutsch"
-    }
+  "header": {
+    "aboutMe": "Über mich",
+    "skillSet": "Fähigkeiten",
+    "myWork": "Projekte",
+    "english": "Englisch",
+    "deutsch": "Deutsch"
+  },
+
+  "atf": {
+    "greeting": "Hallo! Ich bin Benjamin",
+    "role": "FRONTEND ENTWICKLER",
+    "scroll": "SCROLLEN"
+  },
+  "intro": {
+    "headline": "Lass uns zusammenarbeiten",
+    "subHeadline": "Ich bin",
+    "location": "ansässig in Düsseldorf",
+    "remote": "bereit für Remote-Arbeit",
+    "relocate": "bereit für einen Umzug",
+    "description": "Ich bin ein Frontend-Entwickler mit Sitz in Düsseldorf, Deutschland. Ich helfe gerne Designern und Unternehmen, ihre Ideen in die Realität umzusetzen. Ich freue mich darauf, meine Entwicklerkarriere mit einer Junior-Webentwickler-Position fortzusetzen. Meine Fähigkeit, komplexe Probleme zu lösen, und meine Leidenschaft für Programmierung machen mich zu einem wertvollen Mitglied für Ihr Team.",
+    "contactText": "Wenn Sie denken, dass ich gut zu Ihren Projekten passe, kontaktieren Sie mich.",
+    "button": "Nachricht senden"
+  },
+  "skills": {
+    "headline": "Fähigkeiten"
+  },
+  "comments": {
+    "headline": "Brauchen Sie einen Teamplayer?",
+    "subHeadline": "Das sagen meine Kollegen über mich",
+    "feedback": [
+      {
+        "name": "Peter Pfautsch",
+        "project": "Projekt Join",
+        "text": "Benjamin, dein strukturierter Ansatz und deine schnelle Problemlösung waren entscheidend für den Erfolg des Projekts. Vielen Dank für deine zuverlässige und präzise Arbeit!"
+      },
+      {
+        "name": "Dennis Freyer",
+        "project": "Projekt Join",
+        "text": "Er ist sehr hilfsbereit und hat immer eine Lösung parat, wenn Probleme auftreten."
+      }
+    ]
+  },
+  "projects": {
+    "headline": "Meine Projekte",
+    "subHeadline": "Entdecken Sie eine Auswahl meiner Arbeiten hier – Interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+    "projects": [
+      {
+        "title": "JOIN",
+        "subtitle": "JavaScript | HTML | CSS | Firebase",
+        "description": "Task-Manager, inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzern und Kategorien zu.",
+        "btngit": "Github",
+        "btntest": "Projekt anzeigen"
+      },
+      {
+        "title": "El Pollo Loco",
+        "subtitle": "JavaScript | HTML | CSS",
+        "description": "Jump-, Run- und Throw-Spiel auf Basis eines objektorientierten Ansatzes. Helfen Sie Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.",
+        "btngit": "Github",
+        "btntest": "Projekt anzeigen"
+      },
+      {
+        "title": "Pokédex",
+        "subtitle": "JavaScript | HTML | CSS | API",
+        "description": "Basierend auf der PokéAPI eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.",
+        "btngit": "Github",
+        "btntest": "Projekt anzeigen"
+      }
+    ]
+  },
+  "contact": {
+    "headline": "Kontakt",
+    "gotProblem": "Hast du ein Problem zu lösen?",
+    "description": "Ermutige die Leute, dich zu kontaktieren und beschreibe, welche Rolle du interessierst. Zeige, dass du durch deine Arbeit einen Mehrwert für ihre Projekte schaffen wirst.",
+    "callToAction": "Brauchen Sie einen Frontend-Entwickler?",
+    "contact": "kontaktiere mich",
+    "name": "Ihre Name",
+    "email": "Ihre E-Mail",
+    "message": "Ihre Nachricht",
+    "privacy": "Ich habe die <a href='/privacy-policy' target='_blank'>Datenschutzrichtlinie</a> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+    "submit": "Sag Hallo ;)",
+    "successMessage": "Danke für Ihre Nachricht! Ich melde mich bald."
   }
+}

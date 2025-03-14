@@ -1,4 +1,4 @@
-<div *ngFor="let ellipse of ellipse" 
+<div *ngFor="let ellipse of ellipse; let i = index"
      class="ellipse"
      [ngStyle]="{
        'width': ellipse.width,
@@ -6,5 +6,6 @@
        'top': ellipse.top,
        'left': ellipse.left || 'auto',
        'z-index': ellipse.zIndex
-     }">
+     }"
+     [@shrinkAndCircle]="i === 0 ? animationState : ''">
 </div>

@@ -27,7 +27,7 @@ import { ContactComponent } from './contact/contact.component';
 export class MainContentComponent implements AfterViewInit {
   private blubberContainer!: HTMLElement;
   private currentBlubberIndex = 0;
-  private maxBubbles = 5;
+  private maxBubbles = 12;
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
@@ -74,7 +74,9 @@ export class MainContentComponent implements AfterViewInit {
     setTimeout(() => {
       this.renderer.removeChild(this.blubberContainer, blubber);
       this.createBubble();
-    }, 500);
+      this.createBubble();
+      this.createBubble();
+    }, 200);
   }
 
 
