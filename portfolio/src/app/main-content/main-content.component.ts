@@ -35,8 +35,6 @@ export class MainContentComponent implements AfterViewInit {
     this.blubberContainer = this.el.nativeElement.querySelector('.blubber-container');
     if (!this.blubberContainer) return;
     this.createBubble();
-    this.createBubble();
-    this.createBubble();
   }
 
   private createBubble() {
@@ -52,7 +50,7 @@ export class MainContentComponent implements AfterViewInit {
     this.renderer.appendChild(this.blubberContainer, blubber);
     this.currentBlubberIndex++;
 
-    setTimeout(() => this.createBubble(), 1000);
+    setTimeout(() => this.createBubble(), 100);
   }
 
   private setRandomSize(blubber: HTMLElement) {
@@ -62,26 +60,21 @@ export class MainContentComponent implements AfterViewInit {
   }
 
   private setRandomPosition(blubber: HTMLElement) {
-    const x = Math.random() * (window.innerWidth - 120); 
+    const x = Math.random() * (window.innerWidth - 220);
     const y = Math.random() * (window.innerHeight - 120);
 
     this.renderer.setStyle(blubber, 'left', `${x}px`);
     this.renderer.setStyle(blubber, 'top', `${y}px`);
   }
 
-  private burstBubble(blubber: HTMLElement) {
-    this.renderer.setStyle(blubber, 'animation', 'burstBubble 0.5s forwards');
-    setTimeout(() => {
-      this.renderer.removeChild(this.blubberContainer, blubber);
-      this.createBubble();
-      this.createBubble();
-      this.createBubble();
-    }, 200);
-  }
+private burstBubble(blubber: HTMLElement) {
+  this.renderer.addClass(blubber, 'blubber.burst');
 
+  setTimeout(() => {
+    this.renderer.removeChild(this.blubberContainer, blubber);
+  }, 100);
+}
 
-
-  
   ellipse = [
     {
       width: '892px',
