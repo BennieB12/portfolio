@@ -1,29 +1,29 @@
 .blubber-container {
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-end;
-    pointer-events: none;
-  }
-  
-  .blubber {
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 10%, rgba(0, 172, 255, 0.5) 40%, rgba(0, 122, 255, 0.4) 100%);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3), 
-                0 0 25px rgba(255, 255, 255, 0.7), 
-                inset 0 0 20px rgba(255, 255, 255, 0.5);
-    position: absolute;
-    pointer-events: auto;
-    cursor: pointer;
-    opacity: 0.8;
-    animation: floatUp 10s infinite ease-in-out, shimmer 2s infinite ease-in-out;
-  }
-  
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  pointer-events: none;
+  z-index: 100000;
+}
+
+.blubber {
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 20%, rgba(173, 216, 230, 0.3) 50%, rgba(0, 172, 255, 0.2) 80%);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), 
+              0 0 45px rgba(255, 255, 255, 0.6),
+              inset 0 0 30px rgba(255, 255, 255, 0.4);
+  position: absolute;
+  pointer-events: auto;
+  cursor: pointer;
+  opacity: 0.7; /* Transparenter */
+  animation: swaySide 12s ease-in-out infinite,floatUp 12s linear infinite, shimmer 2s infinite ease-in-out;
+}
   @keyframes floatUp {
     0% {
       transform: translateY(0);
@@ -35,24 +35,51 @@
   
   @keyframes shimmer {
     0% {
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3), 0 0 30px rgba(255, 255, 255, 0.7), inset 0 0 25px rgba(255, 255, 255, 0.5);
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), 0 0 45px rgba(255, 255, 255, 0.6), inset 0 0 30px rgba(255, 255, 255, 0.4);
     }
     50% {
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3), 0 0 40px rgba(255, 255, 255, 0.8), inset 0 0 40px rgba(255, 255, 255, 0.6);
+        box-shadow: 0 0 35px rgba(0, 0, 0, 0.15), 0 0 60px rgba(255, 255, 255, 0.9), inset 0 0 45px rgba(255, 255, 255, 0.6);
     }
     100% {
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3), 0 0 25px rgba(255, 255, 255, 0.7), inset 0 0 25px rgba(255, 255, 255, 0.5);
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), 0 0 45px rgba(255, 255, 255, 0.6), inset 0 0 30px rgba(255, 255, 255, 0.4);
     }
-  }
-  
-  @keyframes burstBubble {
+}
+
+@keyframes swaySide {
     0% {
-      transform: scale(1);
-      opacity: 1;
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(20px); /* kleinere Schlängelbewegung */
+    }
+    50% {
+        transform: translateX(-20px);
+    }
+    75% {
+        transform: translateX(20px);
     }
     100% {
-      transform: scale(0);
-      opacity: 0;
+        transform: translateX(0);
     }
-  }
+}
+  
+  .blubber.burst {
+    animation: burstBubble 0.1s forwards;
+}
+
+@keyframes burstBubble {
+    0% {
+        transform: scale(1);
+        opacity: 0.85;
+    }
+    // 50% {
+    //     transform: scale(1.2);
+    //     opacity: 0.5;
+    // }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+        display: none;
+    }
+}
   

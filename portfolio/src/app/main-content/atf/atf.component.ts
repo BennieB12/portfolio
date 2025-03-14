@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
-import { fadeIn } from '../../animations/animations';
+import { fadeIn} from '../../animations/animations';
 
 @Component({
   selector: 'app-atf',
