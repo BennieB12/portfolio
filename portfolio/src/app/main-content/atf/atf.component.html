@@ -1,5 +1,4 @@
-<section id="section-atf" appScrollAnimate
-  [@fadeIn]="sectionState">
+<section id="section-atf">
 
   <img class="prof-img"
   src="../../../assets/img/prof.png"
@@ -7,11 +6,15 @@
   [@fadeIn]="profImgState">
 
   <div class="atf-headline">
-    <h1 class="mar-uni">{{ 'atf.greeting' | translate }}</h1>
-    <h2>{{ 'atf.role' | translate }}</h2>
+    <h1 class="mar-uni"
+    appScrollAnimate
+    [@fadeIn]="sectionState">{{ 'atf.greeting' | translate }}</h1>
+    <h2 [@fadeIn]="profImgState">{{ 'atf.role' | translate }}</h2>
   </div>
 
-  <div class="social-links">
+  <div class="social-links"
+  appScrollAnimate
+  [@fadeIn]="sectionState">
     <a href="https://www.linkedin.com/in/ben-kloss" target="_blank">
       <img src="../../assets/img/Linkedin button s2.png" />
     </a>
@@ -23,7 +26,9 @@
     </a>
   </div>
 
-  <div class="atf-scroll">
+  <div class="atf-scroll"
+  appScrollAnimate
+  [@fadeIn]="sectionState">
     <span class="atf-span">{{ 'atf.scroll' | translate }}</span>
     <div class="atf-line"></div>
   </div>

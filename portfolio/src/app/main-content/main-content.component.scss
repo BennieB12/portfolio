@@ -13,24 +13,24 @@
 }
 
 .blubber {
+  will-change: transform;
   border-radius: 50%;
-  background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,0) 0%, rgba(255,255,255,0) 40%, rgba(255,255,255,1) 100%);
-background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 40%,rgba(255,255,255,1) 100%);
+  background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,0) 0%, rgba(255,255,255,0) 40%, rgba(255,255,255,3) 100%);
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 40%,rgba(255,255,255,2) 100%);
 background: radial-gradient(ellipse at center,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 40%,rgba(255,255,255,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
  
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 20%, rgba(173, 216, 230, 0.3) 50%, rgba(0, 172, 255, 0.2) 80%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 20%, rgba(173, 216, 230, 0.3) 50%, rgba(0, 172, 255, 0.2) 80%);
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), 
-              0 0 45px rgba(255, 255, 255, 0.6),
-              inset 0 0 30px rgba(255, 255, 255, 0.4);
+              0 0 45px rgba(255, 255, 255, 0.2),
+              inset 0 0 30px rgba(255, 255, 255, 0.2);
   position: absolute;
   pointer-events: auto;
   cursor: pointer;
   opacity: 0.7;
-  animation: swaySide 12s ease-in-out infinite,floatUp 12s linear infinite, shimmer 2s infinite ease-in-out;
+  animation: floatUp 12s linear infinite;
 }
 .blubber:after {
-  content: "";
   position: absolute;
   background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0) 100%);
   background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,0) 100%);
@@ -82,57 +82,26 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
         transform: translateX(0);
     }
 }
-  
-  .blubber.burst {
-    animation: burstBubble 0.1s forwards;
-}
-.bubble-pop {
-  -webkit-animation: burstBubble 0.1s ease;
-  -moz-animation: burstBubble 0.1s ease;
-  animation: burstBubble 0.1s ease;
-  opacity: 0;
-}
-    @-webkit-keyframes burstBubble {
-    0% {
-    -webkit-transform: scale(1);
-    opacity: 1;
-    }
-    20% {
-    -webkit-transform: scale(0);
-    opacity: 0.6;
-    }
-    100% {
-    -webkit-transform: scale(0.5);
-    opacity: 0;
-    }
-    }
-    @-moz-keyframes burstBubble {
-    0% {
-    -moz-transform: scale(1);
-    opacity: 1;
-    }
-    20% {
-    -moz-transform: scale(0);
-    opacity: 0.6;
-    }
-    100% {
-    -moz-transform: scale(0.5);
-    opacity: 0;
-    }
-    }
-    @keyframes burstBubble {
-    0% {
-    transform: scale(1);
-    opacity: 1;
-    }
-    20% {
-    transform: scale(0);
-    opacity: 0.6;
-    }
-    100% {
-    transform: scale(0.5);
-    opacity: 0;
-    }
-    }
 
+.burst {
+  animation: burstBubble 0.4s ease-in-out forwards;
+}
+
+@keyframes burstBubble {
+  0% { transform: scale(1); opacity: 1; }
+  20% { transform: scale(1.2); opacity: 0.8; }
+  100% { transform: scale(0); opacity: 0; }
+}
+
+// .bubble-wobble {
+//   animation: wobble 0.5s ease-in-out infinite;
   
+// }
+
+// @keyframes wobble {
+//   0% { transform: scale(1); }
+//   25% { transform: scale(1.1) rotate(3deg); }
+//   50% { transform: scale(1.05) rotate(-3deg); }
+//   75% { transform: scale(1.1) rotate(3deg); }
+//   100% { transform: scale(1); }
+// }
