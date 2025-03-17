@@ -29,7 +29,7 @@ import { BubbleEffectComponent } from '../main-content/bubbles/bubbles.component
 export class MainContentComponent implements AfterViewInit {
   private blubberContainer!: HTMLElement;
   private currentBlubberIndex = 0;
-  private maxBubbles = 8;
+  private maxBubbles = 12;
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
@@ -61,32 +61,23 @@ export class MainContentComponent implements AfterViewInit {
     this.setRandomSize(blubber);
     this.setRandomPosition(blubber);
 
-    this.renderer.listen(blubber, 'click', () => this.burstBubble(blubber));
-    this.renderer.listen(blubber, 'mouseenter', () =>
-      this.onBubbleMouseOver(blubber)
-    );
-    this.renderer.listen(blubber, 'mouseleave', () =>
-      this.onBubbleMouseLeave(blubber)
-    );
-
+    this.renderer.listen(blubber, 'mouseenter', () => this.burstBubble(blubber));    
     this.renderer.appendChild(this.blubberContainer, blubber);
     this.currentBlubberIndex++;
-
-    setTimeout(() => this.createBubble(), 100);
+    
+    setTimeout(() => this.createBubble(), 120);
   }
-
-
+  
   private burstBubble(blubber: HTMLElement) {
     const width = parseFloat(blubber.style.width);
     const height = parseFloat(blubber.style.height);
     if (this.shouldRemoveBubble(width, height, blubber)) return;
     const { originalX, originalY } = this.getBubblePosition(blubber);
     this.removeBubble(blubber);
-    const newSize = this.calculateNewBubbleSize(width);
     for (let i = 0; i < 2; i++) {
-      const newBubble = this.createNewBubble(newSize, originalX, originalY);
-      this.animateBubble(newBubble);
-    }
+        const newSize = this.calculateNewBubbleSize(width);
+        this.createNewBubble(newSize, originalX, originalY);
+      }
   }
   
   private shouldRemoveBubble(width: number, height: number, blubber: HTMLElement): boolean {
@@ -98,6 +89,7 @@ export class MainContentComponent implements AfterViewInit {
   }
   
   private removeBubble(blubber: HTMLElement) {
+        blubber.classList.add('pop');
     this.renderer.removeChild(this.blubberContainer, blubber);
     this.currentBlubberIndex--;
   }
@@ -124,30 +116,26 @@ export class MainContentComponent implements AfterViewInit {
     this.renderer.setStyle(newBubble, 'position', 'absolute');
     this.renderer.setStyle(newBubble, 'left', `${originalX + offsetX}px`);
     this.renderer.setStyle(newBubble, 'top', `${originalY + offsetY}px`);
-    this.renderer.setStyle(newBubble, 'transform', 'scale(0)');
-    this.renderer.setStyle(newBubble, 'transition', 'transform 0.3s ease-in-out');
+    this.renderer.setStyle(newBubble, 'opacity', '0');
+    this.renderer.setStyle(newBubble, 'transform', 'scale(0.3)');
+    this.renderer.setStyle(newBubble, 'transition', 'transform 0.3s ease-out, opacity 0.3s ease-out');
   
     this.renderer.appendChild(this.blubberContainer, newBubble);
     this.currentBlubberIndex++;
-  
-    this.renderer.listen(newBubble, 'click', () => this.burstBubble(newBubble));
+    this.renderer.listen(newBubble, 'mouseenter', () => this.burstBubble(newBubble));
+    setTimeout(() => {
+      this.renderer.setStyle(newBubble, 'opacity', '1');
+      this.renderer.setStyle(newBubble, 'transform', 'scale(1)');
+    }, 70);
   
     return newBubble;
   }
   
+  
   private animateBubble(newBubble: HTMLElement) {
     setTimeout(() => {
-      this.renderer.setStyle(newBubble, 'transform', 'scale(1)');
-    }, 10);
-  }
-  
-
-  private onBubbleMouseOver(bubble: HTMLElement): void {
-    this.renderer.addClass(bubble, 'bubble-wobble');
-  }
-
-  private onBubbleMouseLeave(bubble: HTMLElement): void {
-    this.renderer.removeClass(bubble, 'bubble-wobble');
+      this.renderer.setStyle(newBubble, 'transform', 'scale(4.5)');
+    }, 1000);
   }
 
   private checkBubbles() {
