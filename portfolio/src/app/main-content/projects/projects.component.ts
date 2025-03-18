@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { NgIf, NgClass, CommonModule } from '@angular/common';
 import { ScrollVisibilityDirective } from '.././directives/scroll-visibility.directive';
-import { slideInLeft, slideInRight, fadeIn } from '../../animations/animations';
+import { slideInLeft, slideInRight, fadeIn, hoverAnimation} from '../../animations/animations';
 import { TranslateModule } from '@ngx-translate/core';
 
 interface Project {
@@ -22,10 +22,11 @@ interface Project {
   imports: [CommonModule, ScrollVisibilityDirective, NgIf, NgClass, TranslateModule],
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
-  animations: [slideInLeft, slideInRight, fadeIn],
+  animations: [slideInLeft, slideInRight, fadeIn, hoverAnimation],
 })
 export class ProjectsComponent {
   visibleProjects: { [key: number]: boolean } = {};
+  hoverStates: { [key: number]: 'normal' | 'hover' } = {};
 
   @Input() imageSrc: string = '';
   @Input() imageAlt: string = '';
@@ -65,5 +66,13 @@ export class ProjectsComponent {
 
   onVisibilityChange(index: number, isVisible: boolean) {
     this.visibleProjects[index] = isVisible;
+  }
+
+  onMouseEnter(index: number) {
+    this.hoverStates[index] = 'hover';
+  }
+
+  onMouseLeave(index: number) {
+    this.hoverStates[index] = 'normal';
   }
 }

@@ -10,6 +10,16 @@ export const shrinkAndCircle = trigger('shrinkAndCircle', [
   ])))
 ]);
 
+export const hoverAnimation = trigger('hoverAnimation', [
+  state('normal', style({
+    transform: 'scale(1)',
+  })),
+  state('hover', style({
+    transform: 'scale(1.2)',
+  })),
+  transition('normal <=> hover', animate('300ms ease-in-out')),
+]);
+
 export const slideInFromBottom = trigger('slideInFromBottom', [
   state('hidden', style({
     opacity: 0,

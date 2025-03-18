@@ -10,24 +10,15 @@ header {
   justify-content: space-between;
 }
 
-
 .img-logo {
-  // width: 64px;
-  // height: 69px;
-  // display: flex;
-  // z-index: 10;
-  a {
-    cursor: pointer;
-  }
-  img {
-  margin-left: 36px;    
-  }
+  cursor: pointer;
 }
 
 nav {
   @include flex-center;
   gap: 36px;
-  a, button {
+  a,
+  button {
     width: 120px;
     text-decoration: none;
     color: rgba(89, 136, 255, 1);
@@ -36,12 +27,12 @@ nav {
     line-height: 27.6px;
     font-weight: 400;
     animation: fontsizing-reverse 70ms ease-in-out forwards;
-     button {
+    button {
       background: none;
       border: none;
       padding: 0;
       outline: none;
-     }
+    }
 
     &:hover {
       cursor: pointer;

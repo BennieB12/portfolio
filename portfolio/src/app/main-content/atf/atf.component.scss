@@ -18,14 +18,19 @@
     width: 40px;
     height: 170px;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     gap: 25px;
-    img {
+    a {
       width: 40px;
       height: 40px;
+      
+      img {
       transition: transform 120ms ease-in-out;
       &:hover {
         transform: translateX(-8px);
+      }
       }
     }
   }
@@ -52,7 +57,7 @@
 
 
 .atf-headline {
-  max-width: 700px;
+  max-width: 760px;
   @include absolute-position(305px, 731px, 10);
 
   h1 {

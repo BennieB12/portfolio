@@ -11,6 +11,11 @@
   padding-bottom: 60px;
 }
 
+
+.headl-contact {
+  margin-top: 40px;
+  text-align: left;
+
 h5 {
   font-family: "Baloo 2";
   color: $color;
@@ -18,10 +23,9 @@ h5 {
   font-size: 90px;
   line-height: 120%;
   letter-spacing: 0%;
-  text-align: left;
   margin-left: 77px;
-  margin-top: 40px;
-}
+  margin-block-end: 0;
+}}
 
 #contact-left {
   width: 473px;
@@ -71,6 +75,9 @@ h5 {
     &:focus {
       outline: $color;
     }
+    &::placeholder{
+      font-family: Montserrat !important;
+    }
   }
 
   input.invalid{
@@ -78,6 +85,9 @@ h5 {
   }
 
   textarea {
+    &::placeholder{
+      font-family: Montserrat !important;
+    }
     &.valid {
       border: 2px solid green !important;
     }

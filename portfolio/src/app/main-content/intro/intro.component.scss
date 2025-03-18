@@ -1,16 +1,15 @@
-@import '../../../mixins.scss';
+@import "../../../mixins.scss";
 #intro {
   height: 680px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  flex-direction: row;
-  gap: 40px;
+  justify-content: center;
+  gap: 100px;
 }
 
 .intro-left {
-  height: 407px;
-  width: 600px;
+  max-width: 600px;
+  gap: 16px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -30,13 +29,14 @@
     margin-inline-end: 0px;
     font-weight: bold;
     unicode-bidi: isolate;
+    text-align: left;
   }
 
   h3 {
     font-family: "Baloo 2";
     color: rgba(89, 136, 255, 1);
     font-size: 45px;
-    line-height: 45px;
+    line-height: 33px;
     letter-spacing: 0.01em;
     text-align: center;
     text-underline-position: from-font;
@@ -52,8 +52,6 @@
 }
 
 .intro-icon {
-  width: 581px;
-  // height: 51px;
   display: flex;
   align-items: flex-end;
   gap: 48px;
@@ -61,18 +59,20 @@
 
 .intro-icons {
   display: flex;
-  align-items: center;
+  align-items: end;
+  min-height: 75px;
+  max-height: 75px;
   gap: 16px;
 
   img {
-    width: 50px;
-    height: 50px;
+    min-width: 62px;
+    max-width: 80px;
+    height: 75px;
     object-fit: contain;
     transition: transform 70ms ease-in-out;
   }
   p {
     color: rgba(89, 136, 255, 1);
-    width: 110px;
     font-size: 16px;
     font-weight: 400;
     line-height: 17.2px;
@@ -114,7 +114,6 @@
     unicode-bidi: isolate;
   }
 }
-
 
 #intro-btn {
   @include button;

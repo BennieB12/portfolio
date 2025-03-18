@@ -20,6 +20,9 @@
       loading="lazy"
       [@slideInLeft]="visibleProjects[i] ? 'visible' : 'hidden'"
       [@fadeIn]="visibleProjects[i] ? 'visible' : 'hidden'"
+      [@hoverAnimation]="hoverStates[i] || 'normal'"
+      (mouseenter)="onMouseEnter(i)"
+      (mouseleave)="onMouseLeave(i)"
     />
 
     <div 
