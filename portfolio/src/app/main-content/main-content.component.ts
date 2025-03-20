@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ElementRef, Renderer2 } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AtfComponent } from './atf/atf.component';
 import { EllipseComponent } from './ellipse/ellipse.component';
@@ -32,8 +32,8 @@ export class MainContentComponent {
 
   ellipse = [
     {
-      width: '892px',
-      height: '892px',
+      width: '793px',
+      height: '793px',
       top: '-79px',
       left: '-199px',
       zIndex: 3,

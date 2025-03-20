@@ -15,8 +15,17 @@ header {
 }
 
 nav {
-  @include flex-center;
-  gap: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  // width: 80vw;
+  gap: 40px;
+  margin-right: 10vw;
+  cursor: pointer;
+  .header-lang {
+    margin: 0;
+
+  }
   a,
   button {
     width: 120px;
@@ -59,11 +68,6 @@ nav {
   }
 }
 
-nav div {
-  display: inline-block;
-  margin: 0 10px;
-  cursor: pointer;
-}
 
 nav div.active svg {
   border: 1px solid $color;
