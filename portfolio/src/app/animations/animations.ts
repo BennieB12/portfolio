@@ -1,4 +1,5 @@
-import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
+import { trigger, state, style, transition, animate, keyframes} from '@angular/animations';
+
 
 export const shrinkAndCircle = trigger('shrinkAndCircle', [
   transition('start => end', animate('1.5s ease-out', keyframes([

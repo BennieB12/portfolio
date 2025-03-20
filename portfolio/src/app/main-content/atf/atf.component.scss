@@ -1,64 +1,93 @@
-@import '../../../mixins.scss';
+@import "../../../mixins.scss";
 
 #section-atf {
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   max-width: $max-width;
-  background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%);
+  background: linear-gradient(179.99deg, #ffffff 12.89%, #eaf0ff 91.39%);
   z-index: 1000;
-
-  .prof-img {
-    @include absolute-position(198px, 93px, 4);
-    width: 550px;
-    height: 703px;
-  }
-
-  .social-links {
-    @include absolute-position(672px, 1300px);
-    width: 40px;
-    height: 170px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 25px;
-    a {
-      width: 40px;
-      height: 40px;
-      
-      img {
-      transition: transform 120ms ease-in-out;
-      &:hover {
-        transform: translateX(-8px);
-      }
-      }
-    }
-  }
-
-  .atf-scroll {
-    @include absolute-position(694px, 1034px);
-    height: 330px;
-    .atf-span {
-      color: $color;
-      font-weight: 500;
-      font-size: 23px;
-      line-height: 27.6px;
-      margin-left: -39px;
-    }
-    .atf-line {
-      height: 1px;
-      width: 180px;
-      background-color: $color;
-      transform: rotate(90deg);
-      transform-origin: left center;
-    }
-  }
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between;
+  align-items: center;
 }
 
 
+.prof-img {
+  margin-left: 90px;
+  width: clamp(450px, 20vw, 450px);
+  height: clamp(400px, 70vh, 700px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: auto;
+  z-index: 1001;
+
+  img {
+    height: 113%;
+    width: 120%;
+    object-fit: cover;
+  }
+}
+
+  .social-links {
+      width: 40px;
+      height: 170px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 25px;
+      margin-top: auto;
+      margin-right: 5vw;
+      margin-bottom: 5vh;
+    }
+    a {
+      width: 40px;
+      height: 40px;
+
+      img {
+        transition: transform 120ms ease-in-out;
+        &:hover {
+          transform: translateX(-8px);
+        }
+      }
+    }
+
+
+    .atf-scroll {
+      height: 330px;
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      position: relative;
+      
+      
+      .atf-span {
+        color: $color;
+        font-weight: 500;
+        font-size: 23px;
+        line-height: 27.6px;
+        margin-bottom: 10px;
+      }
+    
+      &::after {
+        content: "";
+        position: absolute;
+        top: 53%;
+        left: 50%;
+        transform: translateX(-50%) rotate(90deg);
+        width: 308px;
+        height: 2px;
+        background-color: $color;
+      }
+    }
+      
 .atf-headline {
-  max-width: 760px;
-  @include absolute-position(305px, 731px, 10);
+  max-width: 748px;
+  @include absolute-position(230px, 696px, 10);
 
   h1 {
     @include margin-font;

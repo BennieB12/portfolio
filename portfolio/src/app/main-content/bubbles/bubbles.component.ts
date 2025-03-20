@@ -7,7 +7,7 @@ import { Component, HostListener, OnInit, AfterViewInit, ElementRef, Renderer2 }
   styleUrls: ['./bubbles.component.scss']
 })
 export class BubbleEffectComponent implements OnInit, AfterViewInit {
-  bubbliness = 3; // Menge an Bubbles: 1 - 10
+  bubbliness = 1; // Menge an Bubbles: 1 - 10
   motionResistance = 3; // Bewegungsträgheit: 1 - 10
 
   private layer!: HTMLElement;

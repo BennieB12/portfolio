@@ -4,7 +4,7 @@
     <span>{{ 'comments.subHeadline' | translate }}</span>
   </div>
 
-  <div class="commentarys" [class.visible]="isVisible">
+  <div class="commentarys" [class.visible]="isVisible" [@staggeredComments]>
     <div class="commentarys-content">
       <h5>{{ 'comments.feedback.0.name' | translate }}</h5>
       <span>{{ 'comments.feedback.0.project' | translate }}</span>

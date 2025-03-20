@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { slideInFromBottom, fadeIn } from '../../animations/animations'; 
+import { slideInFromBottom, fadeIn} from '../../animations/animations'; 
 import { ScrollVisibilityDirective } from '../directives/scroll-visibility.directive';
 import { TranslateModule } from '@ngx-translate/core';
 

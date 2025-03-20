@@ -1,20 +1,25 @@
+
 <section id="section-atf">
-
-  <img class="prof-img"
-  src="../../../assets/img/prof.png"
-  alt="profile-image"
-  [@fadeIn]="profImgState">
-
   <div class="atf-headline">
-    <h1 class="mar-uni"
-    appScrollAnimate
-    [@fadeIn]="sectionState">{{ 'atf.greeting' | translate }}</h1>
-    <h2 [@fadeIn]="profImgState">{{ 'atf.role' | translate }}</h2>
+    <h1 class="mar-uni" appScrollAnimate [@fadeIn]="sectionState">
+      {{ "atf.greeting" | translate }}
+    </h1>
+    <h2 [@fadeIn]="profImgState">{{ "atf.role" | translate }}</h2>
   </div>
 
-  <div class="social-links"
-  appScrollAnimate
-  [@fadeIn]="sectionState">
+  <div class="prof-img">
+    <img
+      src="../../../assets/img/prof.png"
+      alt="profile-image"
+      [@fadeIn]="profImgState"
+    />
+  </div>
+
+  <div class="atf-scroll" appScrollAnimate [@fadeIn]="sectionState">
+    <span class="atf-span">{{ "atf.scroll" | translate }}</span>
+  </div>
+
+  <div class="social-links" appScrollAnimate [@fadeIn]="sectionState">
     <a href="https://www.linkedin.com/in/ben-kloss" target="_blank">
       <img src="../../assets/img/Linkedin button s2.png" />
     </a>
@@ -24,12 +29,5 @@
     <a href="https://github.com/BennieB12" target="_blank">
       <img src="../../assets/img/Github button s2.png" />
     </a>
-  </div>
-
-  <div class="atf-scroll"
-  appScrollAnimate
-  [@fadeIn]="sectionState">
-    <span class="atf-span">{{ 'atf.scroll' | translate }}</span>
-    <div class="atf-line"></div>
   </div>
 </section>
