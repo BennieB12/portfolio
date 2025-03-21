@@ -28,6 +28,7 @@
     [@fadeIn]="isVisible ? 'visible' : 'hidden'"
     (ngSubmit)="onSubmit()"
   >
+  <div class="input-group">
     <input
       type="text"
       formControlName="name"
@@ -39,15 +40,14 @@
       [class.valid]="contactForm.controls['name'].valid"
     />
     <p
-      *ngIf="
-        contactForm.controls['name'].invalid &&
-        contactForm.controls['name'].touched
-      "
+      *ngIf="contactForm.controls['name'].invalid && contactForm.controls['name'].touched"
       class="error-message"
     >
       {{ "contact.nameError" | translate }}
     </p>
-
+  </div>
+  
+  <div class="input-group">
     <input
       type="email"
       formControlName="mail"
@@ -59,15 +59,14 @@
       [class.valid]="contactForm.controls['mail'].valid"
     />
     <p
-      *ngIf="
-        contactForm.controls['mail'].invalid &&
-        contactForm.controls['mail'].touched
-      "
+      *ngIf="contactForm.controls['mail'].invalid && contactForm.controls['mail'].touched"
       class="error-message"
     >
       {{ "contact.emailError" | translate }}
     </p>
-
+  </div>
+  
+  <div class="input-group">
     <textarea
       formControlName="message"
       placeholder="{{ 'contact.message' | translate }}"
@@ -79,14 +78,13 @@
       [class.valid]="contactForm.get('message')?.valid"
     ></textarea>
     <p
-      *ngIf="
-        contactForm.controls['message'].invalid &&
-        contactForm.controls['message'].touched
-      "
+      *ngIf="contactForm.controls['message'].invalid && contactForm.controls['message'].touched"
       class="error-message"
     >
       {{ "contact.messageError" | translate }}
     </p>
+  </div>
+  
     <div class="privacy-policy">
       <input type="checkbox" formControlName="privacy" id="privacy-checkbox" />
       <label for="privacy-checkbox" [innerHTML]="'contact.privacy' | translate">

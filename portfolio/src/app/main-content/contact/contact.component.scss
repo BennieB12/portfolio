@@ -11,9 +11,6 @@
   padding-bottom: 60px;
 }
 
-
-
-
 .headl-contact {
   margin-top: 40px;
   text-align: left;
@@ -57,6 +54,28 @@ h5 {
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #contact-right {
   width: 50%;
   gap: 32px;
@@ -80,6 +99,17 @@ h5 {
     &::placeholder{
       font-family: Montserrat !important;
     }
+    &.valid {
+      border: 2px solid green !important;
+      background: url('/assets/icons/check.svg') no-repeat right 10px center;
+      background-size: 20px;
+    }
+  
+    &.invalid {
+      border: 2px solid red !important;
+      background: url('/assets/icons/error.svg') no-repeat right 10px center;
+      background-size: 20px;
+    }
   }
 
 
@@ -95,25 +125,40 @@ h5 {
     }
   }
 
-  input, textarea {
-    &.valid {
-      border: 2px solid green !important;
-      background: url('/assets/icons/check.svg') no-repeat right 10px center;
-      background-size: 20px;
-    }
   
-    &.invalid {
-      border: 2px solid red !important;
-      background: url('/assets/icons/error.svg') no-repeat right 10px center;
-      background-size: 20px;
-    }
+  .input-group {
+    position: relative;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
   }
   
   .error-message {
-    color: red;
+    position: absolute;
+    top: 101%;
+    left: 0;
+    background-color: rgba(255, 0, 0, 0.9);
+    color: white;
     font-size: 12px;
-    margin-top: 5px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    // white-space: nowrap;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
   }
+  
+  input.invalid + .error-message,
+  textarea.invalid + .error-message {
+    opacity: 1;
+  }
+  
+  // textarea + .error-message {
+  //   top: auto;
+  //   bottom: -30px;
+  // }
+  
   
 
   #contact-text {
@@ -183,5 +228,21 @@ h5 {
     background-color: #cccccc;
     cursor: not-allowed;
   }
+}
+
+.success-message {
+  background-color: rgba(0, 200, 0, 0.9);
+  color: white;
+  font-size: 14px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#privacy-checkbox.highlight-error {
+  box-shadow: 0 0 10px red;
+  border: 2px solid red;
 }
 
