@@ -78,6 +78,9 @@
     "message": "Your message",
     "privacy": "I have read the <a href='/privacy-policy' target='_blank'>Privacy Policy</a> and agree to the processing of my data as outlined.",
     "submit": "Say hello ;)",
-    "successMessage": "Thank you for your message! I will get back to you soon."
+    "successMessage": "Thank you for your message! I will get back to you soon.",
+    "nameError": "Please enter a valid name (letters only).",
+    "emailError": "Please enter a valid email address (must contain a '@', for example: example@aol.com",
+    "messageError": "The message field cannot be empty and must contain at least 3 letters."
   }
 }

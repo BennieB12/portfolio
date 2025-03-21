@@ -1,36 +1,106 @@
-
-<div class="headl-contact"><h5>{{ 'contact.headline' | translate }}</h5></div>
-<section id="contact" appScrollVisibility (isVisibleChange)="onVisibilityChange($event)">
-  <div id="contact-left" class="contact-left" [@slideInLeft]="isVisible ? 'visible' : 'hidden'" [@fadeIn]="isVisible ? 'visible' : 'hidden'">
-    <h6>{{ 'contact.gotProblem' | translate }}</h6>
-    <span>{{ 'contact.description' | translate }}</span>
-    <p>{{ 'contact.callToAction' | translate }} <b>{{'contact.contact' | translate}}</b> </p>
+<div class="headl-contact">
+  <h5>{{ "contact.headline" | translate }}</h5>
+</div>
+<section
+  id="contact"
+  appScrollVisibility
+  (isVisibleChange)="onVisibilityChange($event)"
+>
+  <div
+    id="contact-left"
+    class="contact-left"
+    [@slideInLeft]="isVisible ? 'visible' : 'hidden'"
+    [@fadeIn]="isVisible ? 'visible' : 'hidden'"
+  >
+    <h6>{{ "contact.gotProblem" | translate }}</h6>
+    <span>{{ "contact.description" | translate }}</span>
+    <p>
+      {{ "contact.callToAction" | translate }}
+      <b>{{ "contact.contact" | translate }}</b>
+    </p>
   </div>
 
-  <form [formGroup]="contactForm" id="contact-right" class="contact-right"
-  [@slideInLeft]="isVisible ? 'visible' : 'hidden'" [@fadeIn]="isVisible ? 'visible' : 'hidden'" (ngSubmit)="onSubmit()">
-  
-  <input type="text" formControlName="name" placeholder="{{ 'contact.name' | translate }}"
-    [class.invalid]="contactForm.controls['name'].invalid && contactForm.controls['name'].touched"
-    [class.valid]="contactForm.controls['name'].valid">
+  <form
+    [formGroup]="contactForm"
+    id="contact-right"
+    class="contact-right"
+    [@slideInLeft]="isVisible ? 'visible' : 'hidden'"
+    [@fadeIn]="isVisible ? 'visible' : 'hidden'"
+    (ngSubmit)="onSubmit()"
+  >
+    <input
+      type="text"
+      formControlName="name"
+      placeholder="{{ 'contact.name' | translate }}"
+      [class.invalid]="
+        contactForm.controls['name'].invalid &&
+        contactForm.controls['name'].touched
+      "
+      [class.valid]="contactForm.controls['name'].valid"
+    />
+    <p
+      *ngIf="
+        contactForm.controls['name'].invalid &&
+        contactForm.controls['name'].touched
+      "
+      class="error-message"
+    >
+      {{ "contact.nameError" | translate }}
+    </p>
 
-  <input type="email" formControlName="mail" placeholder="{{ 'contact.email' | translate }}"
-    [class.invalid]="contactForm.controls['mail'].invalid && contactForm.controls['mail'].touched"
-    [class.valid]="contactForm.controls['mail'].valid">
-    
-  <textarea formControlName="message" placeholder="{{ 'contact.message' | translate }}" id="contact-text"
-    [class.invalid]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched"
-    [class.valid]="contactForm.get('message')?.valid">
-  </textarea>
+    <input
+      type="email"
+      formControlName="mail"
+      placeholder="{{ 'contact.email' | translate }}"
+      [class.invalid]="
+        contactForm.controls['mail'].invalid &&
+        contactForm.controls['mail'].touched
+      "
+      [class.valid]="contactForm.controls['mail'].valid"
+    />
+    <p
+      *ngIf="
+        contactForm.controls['mail'].invalid &&
+        contactForm.controls['mail'].touched
+      "
+      class="error-message"
+    >
+      {{ "contact.emailError" | translate }}
+    </p>
 
-  <div class="privacy-policy">
-    <input type="checkbox" formControlName="privacy" id="privacy-checkbox">
-    <label for="privacy-checkbox" [innerHTML]="'contact.privacy' | translate">
-    </label>
-  </div>
+    <textarea
+      formControlName="message"
+      placeholder="{{ 'contact.message' | translate }}"
+      id="contact-text"
+      [class.invalid]="
+        contactForm.get('message')?.invalid &&
+        contactForm.get('message')?.touched
+      "
+      [class.valid]="contactForm.get('message')?.valid"
+    ></textarea>
+    <p
+      *ngIf="
+        contactForm.controls['message'].invalid &&
+        contactForm.controls['message'].touched
+      "
+      class="error-message"
+    >
+      {{ "contact.messageError" | translate }}
+    </p>
+    <div class="privacy-policy">
+      <input type="checkbox" formControlName="privacy" id="privacy-checkbox" />
+      <label for="privacy-checkbox" [innerHTML]="'contact.privacy' | translate">
+      </label>
+    </div>
 
-  <input type="submit" value="{{ 'contact.submit' | translate }}" id="contact-submit" 
-  [disabled]="!contactForm.valid || messageSent">
-</form>
-<p *ngIf="messageSent" class="success-message">{{ 'contact.successMessage' | translate }}</p>
+    <input
+      type="submit"
+      value="{{ 'contact.submit' | translate }}"
+      id="contact-submit"
+      [disabled]="!contactForm.valid || messageSent"
+    />
+  </form>
+  <p *ngIf="messageSent" class="success-message">
+    {{ "contact.successMessage" | translate }}
+  </p>
 </section>

@@ -12,6 +12,8 @@
 }
 
 
+
+
 .headl-contact {
   margin-top: 40px;
   text-align: left;
@@ -80,9 +82,6 @@ h5 {
     }
   }
 
-  input.invalid{
-    border-color: red;
-  }
 
   textarea {
     &::placeholder{
@@ -95,11 +94,27 @@ h5 {
       border: 2px solid red !important;
     }
   }
+
+  input, textarea {
+    &.valid {
+      border: 2px solid green !important;
+      background: url('/assets/icons/check.svg') no-repeat right 10px center;
+      background-size: 20px;
+    }
   
-  
-  input.valid {
-    border-color: green;
+    &.invalid {
+      border: 2px solid red !important;
+      background: url('/assets/icons/error.svg') no-repeat right 10px center;
+      background-size: 20px;
+    }
   }
+  
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
 
   #contact-text {
     min-height: 202px;
