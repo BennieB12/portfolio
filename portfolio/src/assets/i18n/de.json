@@ -13,11 +13,11 @@
     "scroll": "SCROLLEN"
   },
   "intro": {
-    "headline": "Lass uns zusammenarbeiten",
-    "subHeadline": "Ich bin",
-    "location": "ansässig in Düsseldorf",
-    "remote": "bereit für Remote-Arbeit",
-    "relocate": "bereit für einen Umzug",
+    "headline": "Lets Work together",
+    "subHeadline": "Ich",
+    "location": "wohne in Düsseldorf",
+    "remote": "bin bereit für Remote-Arbeit",
+    "relocate": "bin bereit für einen Umzug",
     "description": "Ich bin ein Frontend-Entwickler mit Sitz in Düsseldorf, Deutschland. Ich helfe gerne Designern und Unternehmen, ihre Ideen in die Realität umzusetzen. Ich freue mich darauf, meine Entwicklerkarriere mit einer Junior-Webentwickler-Position fortzusetzen. Meine Fähigkeit, komplexe Probleme zu lösen, und meine Leidenschaft für Programmierung machen mich zu einem wertvollen Mitglied für Ihr Team.",
     "contactText": "Wenn Sie denken, dass ich gut zu Ihren Projekten passe, kontaktieren Sie mich.",
     "button": "Nachricht senden"
@@ -70,14 +70,14 @@
   },
   "contact": {
     "headline": "Kontakt",
-    "gotProblem": "Hast du ein Problem zu lösen?",
-    "description": "Ermutige die Leute, dich zu kontaktieren und beschreibe, welche Rolle du interessierst. Zeige, dass du durch deine Arbeit einen Mehrwert für ihre Projekte schaffen wirst.",
+    "gotProblem": "Haben Sie ein Problem zu lösen?",
+    "description": "Nutzen Sie gerne das Kontaktformular, um mich zu erreichen. Ich freue mich auf Ihre Nachrichten und bin mir sicher, dass wir Ihre Ideen zusammen verwirklichen können :)",
     "callToAction": "Brauchen Sie einen Frontend-Entwickler?",
-    "contact": "kontaktiere mich",
+    "contact": "kontaktieren Sie mich",
     "name": "Ihre Name",
     "email": "Ihre E-Mail",
-    "message": "Ihre Nachricht",
-    "privacy": "Ich habe die <a href='/privacy-policy' target='_blank'>Datenschutzrichtlinie</a> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+    "message": "Ihre Nachricht an mich",
+    "privacy": "Ich habe die <a href='/privacy-policy' target='_blank'>Datenschutzrichtlinien</a> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
     "submit": "Sag Hallo ;)",
     "successMessage": "Danke für Ihre Nachricht! Ich melde mich bald."
   }

@@ -9,4 +9,11 @@ import { CommonModule } from '@angular/common';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
+
+  scrollToSection(id: string) {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 }

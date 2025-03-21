@@ -1,3 +1,4 @@
+
 <section id="projects">
   <div class="headl-projects">
     <h5>{{ 'projects.headline' | translate }}</h5>
@@ -27,7 +28,7 @@
 
     <div 
   class="project-info" 
-  [@slideInRight]="visibleProjects[i] ? 'visible' : 'hidden'"
+  [@slideInLeft]="visibleProjects[i] ? 'visible' : 'hidden'"
   [@fadeIn]="visibleProjects[i] ? 'visible' : 'hidden'"
 >
   <h5>{{ 'projects.projects.' + i + '.title' | translate }}</h5>

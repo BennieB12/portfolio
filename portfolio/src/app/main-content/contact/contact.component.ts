@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NgIf } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { ScrollVisibilityDirective } from '.././directives/scroll-visibility.directive';
-import { slideInLeft, slideInRight, fadeIn } from '../../animations/animations';
+import { slideInLeft, fadeIn } from '../../animations/animations';
 import { EmailService } from '../../../app/services/mail-service';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -12,7 +12,7 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
   imports: [ScrollVisibilityDirective, ReactiveFormsModule, NgIf, TranslateModule],
-  animations: [slideInLeft, slideInRight, fadeIn]
+  animations: [slideInLeft, fadeIn]
 })
 export class ContactComponent {
   isVisible = false;

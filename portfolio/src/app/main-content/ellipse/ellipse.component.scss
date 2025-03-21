@@ -2,33 +2,25 @@
   position: absolute;
   width: 100px;
   height: 100px;
-  border-radius: 50%; 
+  border-radius: 50%;
   background: radial-gradient(
     74.22% 74.22% at 19.79% 22.42%,
-    #5988ff 6.25%, 
-    #5988ff 51.56%, 
+    #5988ff 6.25%,
+    #5988ff 51.56%,
     #0043f0 100%
-  ); 
-  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4), 
-              -4px -4px 15px rgba(255, 255, 255, 0.6);
+  );
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4),
+    -4px -4px 15px rgba(255, 255, 255, 0.6);
 
-  transform-style: preserve-3d;
-  animation: rotate 10s linear infinite;
-  perspective: 1000px;
-  display: block;
-  margin: 0 auto;
-  top: 50%;
-  left: 50%;
-  transform-origin: 50% 50%;
+  pointer-events: none; // Keine Interaktion mit Ellipsen möglich
+
+  @media (max-width: 768px) {
+    width: 70%; // Skalierung für Tablets und kleine Screens
+    height: 70%;
+  }
+
+  @media (max-width: 480px) {
+    width: 50%;
+    height: 50%;
+  }
 }
-
-// @keyframes rotate {
-//   0% {
-//     transform: rotate3d(1, 1, 1, 0deg);
-//   }
-//   100% {
-//     transform: rotate3d(1, 1, 1, 360deg);
-//   }
-// }
-
-

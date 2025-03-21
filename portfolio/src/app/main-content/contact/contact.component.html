@@ -8,7 +8,7 @@
   </div>
 
   <form [formGroup]="contactForm" id="contact-right" class="contact-right"
-  [@slideInRight]="isVisible ? 'visible' : 'hidden'" [@fadeIn]="isVisible ? 'visible' : 'hidden'" (ngSubmit)="onSubmit()">
+  [@slideInLeft]="isVisible ? 'visible' : 'hidden'" [@fadeIn]="isVisible ? 'visible' : 'hidden'" (ngSubmit)="onSubmit()">
   
   <input type="text" formControlName="name" placeholder="{{ 'contact.name' | translate }}"
     [class.invalid]="contactForm.controls['name'].invalid && contactForm.controls['name'].touched"

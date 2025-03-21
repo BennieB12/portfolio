@@ -9,6 +9,9 @@ footer {
   align-items: center;
   justify-content: space-around;
   @include background;
+  #footer-img {
+    cursor: pointer;
+  }
 
   .legal-notice {
     display: flex;
@@ -35,6 +38,12 @@ footer {
   #social-links {
     display: flex;
     gap: 42px;
-    align-items: center;
+    align-items: center;    
+      img {
+        transition: transform 120ms ease-in-out;
+        &:hover {
+          transform: translateY(-8px);
+        }
+      }
+    }
   }
-}

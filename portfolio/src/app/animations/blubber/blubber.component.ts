@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 export class BlubberComponent implements AfterViewInit {
   private blubberContainer!: HTMLElement;
   private currentBlubberIndex = 0;
-  private maxBubbles = 12;
+  private maxBubbles = 6;
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
@@ -34,7 +34,7 @@ export class BlubberComponent implements AfterViewInit {
     const containerHeight = this.blubberContainer.offsetHeight;
 
     const x = Math.random() * (containerWidth - 220);
-    const y = Math.random() * (containerHeight - 120);
+    const y = Math.random() * (containerHeight + 4000);
     this.renderer.setStyle(blubber, 'left', `${x}px`);
     this.renderer.setStyle(blubber, 'top', `${y}px`);
   }

@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { NgIf, NgClass, CommonModule } from '@angular/common';
 import { ScrollVisibilityDirective } from '.././directives/scroll-visibility.directive';
-import { slideInLeft, slideInRight, fadeIn, hoverAnimation} from '../../animations/animations';
+import { slideInLeft, fadeIn, hoverAnimation} from '../../animations/animations';
 import { TranslateModule } from '@ngx-translate/core';
 
 interface Project {
@@ -22,7 +22,7 @@ interface Project {
   imports: [CommonModule, ScrollVisibilityDirective, NgIf, NgClass, TranslateModule],
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
-  animations: [slideInLeft, slideInRight, fadeIn, hoverAnimation],
+  animations: [slideInLeft, fadeIn, hoverAnimation],
 })
 export class ProjectsComponent {
   visibleProjects: { [key: number]: boolean } = {};

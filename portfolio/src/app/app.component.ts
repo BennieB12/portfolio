@@ -5,7 +5,8 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslationService } from './shared/translation.service';
-import { TranslateModule } from '@ngx-translate/core'; 
+import { TranslateModule } from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,7 @@ import { TranslateModule } from '@ngx-translate/core';
     HeaderComponent,
     FooterComponent,
     HttpClientModule,
-    TranslateModule
+    TranslateModule,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],

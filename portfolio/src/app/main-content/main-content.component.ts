@@ -7,8 +7,9 @@ import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { CommentsComponent } from './comments/comments.component';
 import { ContactComponent } from './contact/contact.component';
-import { BubbleEffectComponent } from '../main-content/bubbles/bubbles.component';
 import { BlubberComponent } from '../animations/blubber/blubber.component';
+
+
 @Component({
   selector: 'app-main-content',
   standalone: true,
@@ -21,7 +22,6 @@ import { BlubberComponent } from '../animations/blubber/blubber.component';
     ProjectsComponent,
     CommentsComponent,
     ContactComponent,
-    BubbleEffectComponent,
     BlubberComponent
   ],
   templateUrl: './main-content.component.html',
@@ -32,41 +32,15 @@ export class MainContentComponent {
 
   ellipse = [
     {
-      width: '793px',
-      height: '793px',
-      top: '-79px',
-      left: '-199px',
+      width: '45vw',
+      height: '45vw',
+      top: '-10vh',
+      left: '-15vw',
       zIndex: 3,
     },
-    // { width: '206px', height: '206px', top: '90%', left: '700px', zIndex: -1 },
-    // { width: '82px', height: '82px', top: '936px', left: '1034px', zIndex: -1 },
-    // {
-    //   width: '108.75001525878906px',
-    //   height: '108.75001525878906px',
-    //   top: '2290px',
-    //   left: '540px',
-    //   zIndex: -1,
-    // },
-    // {
-    //   width: '183px',
-    //   height: '183px',
-    //   top: '2515px',
-    //   left: '1134px',
-    //   zIndex: -1,
-    // },
-    // {
-    //   width: '393.32px',
-    //   height: '393.32px',
-    //   top: '3000px',
-    //   left: '1124px',
-    //   zIndex: -1,
-    // },
-    // {
-    //   width: '393.3196119958484px',
-    //   height: '393.3196119958484px',
-    //   top: '2700px',
-    //   left: '-194px',
-    //   zIndex: -1,
-    // }
+    { width: '15vw', height: '15vw', top: '85vh', left: '40vw', zIndex: -1 },
+    { width: '5vw', height: '5vw', top: '60vh', left: '75vw', zIndex: -1 },
+    { width: '10vw', height: '10vw', top: '120vh', left: '30vw', zIndex: -1 },
+    { width: '25vw', height: '25vw', top: '200vh', left: '-10vw', zIndex: -1 },
   ];
 }
