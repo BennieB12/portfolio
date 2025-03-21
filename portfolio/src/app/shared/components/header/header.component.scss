@@ -12,6 +12,12 @@ header {
 .img-logo {
   z-index: 1001;
   cursor: pointer;
+  margin-left: 64px;
+  img {
+    height: 8vh;
+    width: 8vw;
+    object-fit:contain;
+  }
 }
 
 nav {

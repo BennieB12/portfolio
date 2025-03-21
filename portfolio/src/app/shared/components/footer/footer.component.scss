@@ -11,7 +11,13 @@ footer {
   @include background;
   #footer-img {
     cursor: pointer;
-  }
+      img {
+        height: 8vh;
+        width: 8vw;
+        object-fit:contain;
+      }
+    }
+  
 
   .legal-notice {
     display: flex;
