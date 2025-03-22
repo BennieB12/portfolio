@@ -92,13 +92,13 @@
     </div>
 
     <input
-      type="submit"
-      value="{{ 'contact.submit' | translate }}"
-      id="contact-submit"
-      [disabled]="!contactForm.valid || messageSent"
-    />
-  </form>
-  <p *ngIf="messageSent" class="success-message">
+    type="submit"
+    value="{{ 'contact.submit' | translate }}"
+    id="contact-submit"
+    [disabled]="!contactForm.valid || messageSent"
+  />
+  <p *ngIf="messageSent" class="success-message" [ngClass]="{ 'show': messageSent, 'hide': !messageSent }">
     {{ "contact.successMessage" | translate }}
   </p>
+  </form>
 </section>
