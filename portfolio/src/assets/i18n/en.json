@@ -79,8 +79,29 @@
     "privacy": "I have read the <a href='/privacy-policy' target='_blank'>Privacy Policy</a> and agree to the processing of my data as outlined.",
     "submit": "Say hello ;)",
     "successMessage": "Thank you for your message! I will get back to you soon.",
-    "nameError": "Please enter a valid name (letters only).",
-    "emailError": "Please enter a valid email address (must contain a '@', for example: example@aol.com",
+    "nameError": "Enter a valid name (letters only).",
+    "emailError": "Enter a valid email address (must contain a '@', for example: example@aol.com",
     "messageError": "The message field cannot be empty and must contain at least 3 letters."
+  },
+    "legal": {
+      "heading": "Legal Notice",
+      "contact": "Contact",
+      "phone": "Phone",
+      "email": "E-Mail",
+      "responsibility": "Responsible for the content according to § 55 Abs. 2 RStV",
+      
+      "liability_content": "Liability for Content",
+      "liability_content_text": "As a service provider, I am responsible for my own content on these pages according to § 7 Abs.1 TMG and the general laws. However, according to §§ 8 to 10 TMG, I am not obliged to monitor transmitted or stored foreign information or to investigate circumstances that indicate illegal activities. Obligations to remove or block the use of information according to general laws remain unaffected. However, liability in this regard is only possible from the point in time at which I become aware of a concrete legal violation. If I become aware of corresponding legal violations, I will immediately remove this content.",
+      
+      "liability_links": "Liability for Links",
+      "liability_links_text": "My offer contains links to external websites of third parties, over whose content I have no influence. Therefore, I cannot assume any liability for these foreign contents. The respective provider or operator of the linked pages is always responsible for the content of the linked pages. The linked pages were checked for possible legal violations at the time of the link. Illegal content was not detectable at the time the link was created. However, permanent monitoring of the linked pages without concrete evidence of a legal violation is unreasonable. If I become aware of legal violations, I will immediately remove such links.",
+      
+      "copyright": "Copyright",
+      "copyright_text": "The content and works created by the site operators on these pages are subject to German copyright law. The duplication, editing, distribution, and any kind of use beyond the limits of copyright require the written consent of the respective author or creator. Downloads and copies of this page are only permitted for private, non-commercial use. As far as the content on this site was not created by the operator, the copyrights of third parties are respected. In particular, third-party content is identified as such. If you become aware of a copyright violation, we ask you to inform us. If legal violations become known, I will immediately remove such content.",
+      
+      "dispute": "Dispute Resolution",
+      "dispute_text": "The European Commission provides a platform for online dispute resolution (OS):",
+      "dispute_info": "I am neither willing nor obliged to participate in dispute resolution procedures before a consumer dispute resolution body."
+    }
   }
-}
+  

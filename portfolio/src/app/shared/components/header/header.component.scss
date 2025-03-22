@@ -12,8 +12,12 @@ header {
 .img-logo {
   z-index: 1001;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-left: 64px;
   img {
+    filter: invert(1);
     height: 8vh;
     width: 8vw;
     object-fit:contain;

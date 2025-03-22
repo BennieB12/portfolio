@@ -1,0 +1,37 @@
+.legal-notice {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.legal-notice h2 {
+    color: #222;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.legal-notice h3 {
+    color: #444;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.legal-notice p {
+    margin-bottom: 15px;
+}
+
+.legal-notice a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.legal-notice a:hover {
+    text-decoration: underline;
+}
