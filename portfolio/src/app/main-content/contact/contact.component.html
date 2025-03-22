@@ -85,17 +85,25 @@
     </p>
   </div>
   
-    <div class="privacy-policy">
-      <input type="checkbox" formControlName="privacy" id="privacy-checkbox" />
-      <label for="privacy-checkbox" [innerHTML]="'contact.privacy' | translate">
-      </label>
-    </div>
+  <div class="privacy-policy">
+    <input
+      type="checkbox"
+      formControlName="privacy"
+      id="privacy-checkbox"
+      [class.highlight-error]="privacyError"
+    />
+    <label for="privacy-checkbox" [innerHTML]="'contact.privacy' | translate">
+    </label>
+  </div>
+
 
     <input
     type="submit"
     value="{{ 'contact.submit' | translate }}"
     id="contact-submit"
     [disabled]="!contactForm.valid || messageSent"
+    (mouseenter)="highlightInvalidFields()"
+    (mouseleave)="removeHighlights()"
   />
   <p *ngIf="messageSent" class="success-message" [ngClass]="{ 'show': messageSent, 'hide': !messageSent }">
     {{ "contact.successMessage" | translate }}
