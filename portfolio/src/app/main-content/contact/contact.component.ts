@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NgIf, NgClass } from '@angular/common';
+import { RouterModule, RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import {
   FormBuilder,
   FormGroup,
@@ -17,6 +19,9 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
   imports: [
+    CommonModule,
+    RouterLink,
+    RouterModule,
     ScrollVisibilityDirective,
     ReactiveFormsModule,
     NgIf,

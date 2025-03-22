@@ -1,0 +1,72 @@
+<section class="privacy-policy">
+    <h2>{{ 'privacy-policy.title' | translate }}</h2>
+
+    <h3>{{ 'privacy-policy.responsible.title' | translate }}</h3>
+    <p>
+        <strong>{{ 'privacy-policy.responsible.name' | translate }}</strong><br>
+        {{ 'privacy-policy.responsible.address' | translate }}<br>
+        <a href="mailto:kontakt&#64;peterpfautsch.de">kontakt&#64;benjamin-kloss.de</a>
+    </p>
+
+    <h3>{{ 'privacy-policy.general-info.title' | translate }}</h3>
+    <p>{{ 'privacy-policy.general-info.text' | translate }}</p>
+
+    <h3>{{ 'privacy-policy.data-collection.title' | translate }}</h3>
+    
+    <h4>{{ 'privacy-policy.data-collection.visit.title' | translate }}</h4>
+    <p>{{ 'privacy-policy.data-collection.visit.text' | translate }}</p>
+    <ul>
+        <li *ngFor="let item of ['privacy-policy.data-collection.visit.data.0', 'privacy-policy.data-collection.visit.data.1', 'privacy-policy.data-collection.visit.data.2', 'privacy-policy.data-collection.visit.data.3', 'privacy-policy.data-collection.visit.data.4']">
+            {{ item | translate }}
+        </li>
+    </ul>
+    <p>{{ 'privacy-policy.data-collection.visit.purposes' | translate }}</p>
+    <ul>
+        <li *ngFor="let purpose of ['privacy-policy.data-collection.visit.purposes.0', 'privacy-policy.data-collection.visit.purposes.1', 'privacy-policy.data-collection.visit.purposes.2']">
+            {{ purpose | translate }}
+        </li>
+    </ul>
+
+    <h4>{{ 'privacy-policy.data-collection.contact-form.title' | translate }}</h4>
+    <p>{{ 'privacy-policy.data-collection.contact-form.text' | translate }}</p>
+
+    <h3>{{ 'privacy-policy.website-hosting.title' | translate }}</h3>
+    <p>
+        {{ 'privacy-policy.website-hosting.text' | translate }}
+        <a href="https://www.strato.de/datenschutz" target="_blank">
+            {{ 'privacy-policy.website-hosting.link' | translate }}
+        </a>
+    </p>
+
+    <h3>{{ 'privacy-policy.social-media.title' | translate }}</h3>
+    <p>{{ 'privacy-policy.social-media.text' | translate }}</p>
+
+    <h4>{{ 'privacy-policy.social-media.linkedin.title' | translate }}</h4>
+    <p>
+        {{ 'privacy-policy.social-media.linkedin.text' | translate }}
+        <a href="https://www.linkedin.com/legal/privacy-policy" target="_blank">
+            {{ 'privacy-policy.social-media.linkedin.link' | translate }}
+        </a>
+    </p>
+
+    <h4>{{ 'privacy-policy.social-media.github.title' | translate }}</h4>
+    <p>
+        {{ 'privacy-policy.social-media.github.text' | translate }}
+        <a href="https://docs.github.com/de/site-policy/privacy-policies/github-privacy-statement" target="_blank">
+            {{ 'privacy-policy.social-media.github.link' | translate }}
+        </a>
+    </p>
+
+    <h3>{{ 'privacy-policy.your-rights.title' | translate }}</h3>
+    <ul>
+        <li *ngFor="let right of ['privacy-policy.your-rights.rights.0', 'privacy-policy.your-rights.rights.1', 'privacy-policy.your-rights.rights.2', 'privacy-policy.your-rights.rights.3', 'privacy-policy.your-rights.rights.4', 'privacy-policy.your-rights.rights.5', 'privacy-policy.your-rights.rights.6']">
+            {{ right | translate }}
+        </li>
+    </ul>
+
+    <h4>{{ 'privacy-policy.your-rights.right-to-object.title' | translate }}</h4>
+    <p>{{ 'privacy-policy.your-rights.right-to-object.text' | translate }}</p>
+
+    <h3>{{ 'privacy-policy.updates.title' | translate }}</h3>
+    <p>{{ 'privacy-policy.updates.text' | translate }}</p>
+</section>
