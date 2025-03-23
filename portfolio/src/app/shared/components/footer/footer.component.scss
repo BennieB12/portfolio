@@ -9,15 +9,15 @@ footer {
   align-items: center;
   justify-content: space-around;
   @include background;
-  
+
   #footer-img {
-    cursor: pointer;
-      img {
-        height: 8vh;
-        width: 8vw;
-        object-fit:contain;
-      }
+    img {
+      cursor: pointer;
+      height: 8vh;
+      width: 8vw;
+      object-fit: contain;
     }
+  }
 
   .legal-notice {
     display: flex;
@@ -40,9 +40,9 @@ footer {
       bottom: -40px;
       padding-bottom: 5px;
     }
-    
+
     a::after {
-      content: '';
+      content: "";
       display: block;
       width: 0;
       height: 3px;
@@ -53,22 +53,21 @@ footer {
       transform: translateX(-50%);
       bottom: -5px;
     }
-    
+
     a:hover::after {
       width: 80%;
     }
-    
   }
 
   #social-links {
     display: flex;
     gap: 42px;
-    align-items: center;    
-      img {
-        transition: transform 120ms ease-in-out;
-        &:hover {
-          transform: translateY(-8px);
-        }
+    align-items: center;
+    img {
+      transition: transform 120ms ease-in-out;
+      &:hover {
+        transform: translateY(-8px);
       }
     }
   }
+}

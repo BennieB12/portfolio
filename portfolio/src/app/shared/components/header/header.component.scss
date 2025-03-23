@@ -32,10 +32,9 @@ nav {
   cursor: pointer;
   .header-lang {
     margin: 0;
-
   }
 
-  a,button {
+  a {
     width: 120px;
     text-decoration: none;
     color: rgba(89, 136, 255, 1);
@@ -43,14 +42,6 @@ nav {
     font-size: 21px;
     line-height: 27.6px;
     font-weight: 400;
-    animation: fontsizing-reverse 70ms ease-in-out forwards;
-    button {
-      background: none;
-      border: none;
-      padding: 0;
-      outline: none;
-    }
-
     &:hover {
       cursor: pointer;
     }
