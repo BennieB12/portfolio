@@ -4,29 +4,32 @@
     <h3>{{ 'intro.subHeadline' | translate }}</h3>
 
     <div class="intro-icon">
-      <div class="intro-icons"
-           (mouseenter)="hoverImage('location', true)"
-           (mouseleave)="hoverImage('location', false)">
-        <img id="location" [src]="currentImages['location']" />
+      <div class="intro-icons">
+        <div class="image-wrapper">
+          <img src="assets/img/location.png" class="default" />
+          <img src="assets/img/location-hover.png" class="hover" />
+        </div>
         <p>{{ 'intro.location' | translate }}</p>
       </div>
 
-      <div class="intro-icons"
-           (mouseenter)="hoverImage('remote', true)"
-           (mouseleave)="hoverImage('remote', false)">
-        <img id="remote" [src]="currentImages['remote']" />
+      <div class="intro-icons">
+        <div class="image-wrapper2">
+          <img src="assets/img/remote.png" class="default" />
+          <img src="assets/img/remote-hover.png" class="hover" />
+        </div>
         <p>{{ 'intro.remote' | translate }}</p>
       </div>
-      
-      <div class="intro-icons"
-           (mouseenter)="hoverImage('move', true)"
-           (mouseleave)="hoverImage('move', false)">
-        <img id="move" [src]="currentImages['move']" />
+
+      <div class="intro-icons">
+        <div class="image-wrapper">
+          <img src="assets/img/move.png" class="default" />
+          <img src="assets/img/move-hover.png" class="hover" />
+        </div>
         <p>{{ 'intro.relocate' | translate }}</p>
       </div>
     </div>
   </div>
-  
+
   <div class="intro-right" [@slideInLeft]="isVisible ? 'visible' : 'hidden'" [@fadeIn]="isVisible ? 'visible' : 'hidden'">
     <p>
       {{ 'intro.description' | translate }}

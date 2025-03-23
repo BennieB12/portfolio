@@ -1,6 +1,16 @@
 import { trigger, state, style, transition, animate, keyframes} from '@angular/animations';
 
 
+export const fontWeightAnimation = trigger('fontWeightAnimation', [
+  state('normal', style({
+    fontWeight: 400
+  })),
+  state('bold', style({
+    fontWeight: 800
+  })),
+  transition('normal <=> bold', animate('70ms ease-in-out'))
+]);
+
 export const shrinkAndCircle = trigger('shrinkAndCircle', [
   transition('start => end', animate('1000ms ease-out', keyframes([
     style({ width: '100vw', height: '100vh', borderRadius: '0', top: '0', left: '0', zIndex: '10000', offset: 0 }),
@@ -18,16 +28,16 @@ export const shrinkAndCircle = trigger('shrinkAndCircle', [
   ])))
 ]);
 
-
-
 export const hoverAnimation = trigger('hoverAnimation', [
   state('normal', style({
     transform: 'scale(1)',
+    transformOrigin: 'bottom'
   })),
   state('hover', style({
-    transform: 'scale(1.2)',
+    transform: 'scale(1.1)',
+    transformOrigin: 'bottom'
   })),
-  transition('normal <=> hover', animate('300ms ease-in-out')),
+  transition('normal <=> hover', animate('300ms ease-in-out'))
 ]);
 
 export const slideInFromBottom = trigger('slideInFromBottom', [

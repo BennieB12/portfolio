@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslationService } from '../../translation.service';
 import { TranslateModule } from '@ngx-translate/core';
+import { fontWeightAnimation} from '../../../animations/animations';
 
 @Component({
   selector: 'app-header',
@@ -8,8 +9,14 @@ import { TranslateModule } from '@ngx-translate/core';
   imports: [TranslateModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
+  animations: [ fontWeightAnimation]
 })
 export class HeaderComponent {
+
+  hoverState: string = 'normal';
+  fontWeightState: string = 'normal';
+  hoveredIndex: number | null = null; 
+
   constructor(private translationService: TranslationService) {}
 
   scrollToSection(id: string) {
@@ -25,5 +32,11 @@ export class HeaderComponent {
 
   get currentLanguage(): string {
     return this.translationService.getCurrentLanguage();
+  }
+
+  toggleHover(state: boolean, index?: number) {
+    this.hoverState = state ? 'hover' : 'normal';
+    this.fontWeightState = state ? 'bold' : 'normal';
+    this.hoveredIndex = state ? index ?? null : null; 
   }
 }

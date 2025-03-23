@@ -17,10 +17,9 @@ header {
   justify-content: center;
   margin-left: 64px;
   img {
-    filter: invert(1);
     height: 8vh;
     width: 8vw;
-    object-fit:contain;
+    object-fit: contain;
   }
 }
 
@@ -35,8 +34,8 @@ nav {
     margin: 0;
 
   }
-  a,
-  button {
+
+  a,button {
     width: 120px;
     text-decoration: none;
     color: rgba(89, 136, 255, 1);
@@ -54,29 +53,9 @@ nav {
 
     &:hover {
       cursor: pointer;
-      animation: fontsizing 70ms ease-in-out forwards;
-    }
-  }
-
-  @keyframes fontsizing {
-    from {
-      font-weight: 400;
-    }
-    to {
-      font-weight: 800;
-    }
-  }
-
-  @keyframes fontsizing-reverse {
-    from {
-      font-weight: 800;
-    }
-    to {
-      font-weight: 400;
     }
   }
 }
-
 
 nav div.active svg {
   border: 1px solid $color;

@@ -34,7 +34,7 @@ export class BlubberComponent implements AfterViewInit {
     const containerHeight = this.blubberContainer.offsetHeight;
 
     const x = Math.random() * (containerWidth - 220);
-    const y = Math.random() * (containerHeight + 4000);
+    const y = Math.random() * (containerHeight + 4500);
     this.renderer.setStyle(blubber, 'left', `${x}px`);
     this.renderer.setStyle(blubber, 'top', `${y}px`);
   }

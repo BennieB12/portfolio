@@ -5,14 +5,27 @@
     </a>
   </div>
   <nav>
-    <a (click)="scrollToSection('intro')">{{ "header.aboutMe" | translate }}</a>
-    <a (click)="scrollToSection('skillset')">{{
-      "header.skillSet" | translate
-    }}</a>
-    <a (click)="scrollToSection('projects')">{{
-      "header.myWork" | translate
-    }}</a>
-
+    <a 
+  (mouseenter)="toggleHover(true, 0)" 
+  (mouseleave)="toggleHover(false, 0)"
+  [@fontWeightAnimation]="hoveredIndex === 0 ? 'bold' : 'normal'"
+  (click)="scrollToSection('intro')">
+  {{ "header.aboutMe" | translate }}
+</a>
+<a 
+  (mouseenter)="toggleHover(true, 1)" 
+  (mouseleave)="toggleHover(false, 1)"
+  [@fontWeightAnimation]="hoveredIndex === 1 ? 'bold' : 'normal'"
+  (click)="scrollToSection('skillset')">
+  {{ "header.skillSet" | translate }}
+</a>
+<a 
+  (mouseenter)="toggleHover(true,2)" 
+  (mouseleave)="toggleHover(false,2)"
+  [@fontWeightAnimation]="hoveredIndex === 2 ? 'bold' : 'normal'"
+  (click)="scrollToSection('projects')">
+  {{ "header.myWork" | translate }}
+</a>
     <div class="header-langu">
       <div
         (click)="switchLanguage('en')"
