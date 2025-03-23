@@ -14,11 +14,11 @@
   "intro": {
     "headline": "Let's work together",
     "subHeadline": "I am",
-    "location": "located in Duesseldorf",
-    "remote": "open to work remote",
-    "relocate": "open to relocate",
-    "description": "I am a Front-end developer based in Duesseldorf, Germany. I enjoy helping designers and companies bring their ideas into real life. I am looking forward to continuing my developer career with a job in a junior web developer position. My ability to solve complex problems and my passion for programming make me a valuable member for your team.",
-    "contactText": "If you think I´d be a good match for your projects, contact me.",
+    "location": "based in Duesseldorf, Germany",
+    "remote": "open to remote work",
+    "relocate": "open to relocating",
+    "description": "I’m a Front-end developer based in Duesseldorf, Germany, passionate about solving problems and embracing challenges. I’m committed to continuous growth and love learning new skills to create meaningful solutions. I’m excited to collaborate with teams to bring innovative ideas to life.\n\nI’m seeking a junior developer position where I can grow and contribute to impactful projects. My problem-solving mindset and passion for programming would make me a valuable asset to your team.\n\n",
+    "contactText": "If you think I’d be a good match for your projects, get in touch.",
     "button": "Send a message"
   },
   "skills": {
@@ -44,28 +44,28 @@
     "headline": "My Work",
     "subHeadline": "Explore a selection of my work here - Interact with projects to see my skills in action.",
     "projects": [
-  {
-    "title": "JOIN",
-    "subtitle": "JavaScript | HTML | CSS | Firebase",
-    "description": "Task manager, inspired by the Kanban system. Create and organize tasks using drag and drop functions, assign users and categories.",
-    "btngit": "Github",
-    "btntest": "View project"
-  },
-  {
-    "title": "El Pollo Loco",
-    "subtitle": "JavaScript | HTML | CSS",
-    "description": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
-    "btngit": "Github",
-    "btntest": "View project"
-  },
-  {
-    "title": "Pokédex",
-    "subtitle": "JavaScript | HTML | CSS | API",
-    "description": "Based on the PokéAPI, a simple library that provides and catalogues Pokémon information.",
-    "btngit": "Github",
-    "btntest": "View project"
-  }
-]
+      {
+        "title": "JOIN",
+        "subtitle": "JavaScript | HTML | CSS | Firebase",
+        "description": "Task manager, inspired by the Kanban system. Create and organize tasks using drag and drop functions, assign users and categories.",
+        "btngit": "Github",
+        "btntest": "View project"
+      },
+      {
+        "title": "El Pollo Loco",
+        "subtitle": "JavaScript | HTML | CSS",
+        "description": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+        "btngit": "Github",
+        "btntest": "View project"
+      },
+      {
+        "title": "Pokédex",
+        "subtitle": "JavaScript | HTML | CSS | API",
+        "description": "Based on the PokéAPI, a simple library that provides and catalogues Pokémon information.",
+        "btngit": "Github",
+        "btntest": "View project"
+      }
+    ]
   },
   "contact": {
     "headline": "Contact",
@@ -76,32 +76,109 @@
     "name": "Your name",
     "email": "Your email",
     "message": "Your message",
-    "privacy": "I have read the <a href='/privacy-policy' target='_blank'>Privacy Policy</a> and agree to the processing of my data as outlined.",
+    "privacy": "I have read the <a href='/privacy-policy'>Privacy Policy</a> and agree to the processing of my data as outlined.",
     "submit": "Say hello ;)",
     "successMessage": "Thank you for your message! I will get back to you soon.",
     "nameError": "Enter a valid name (letters only).",
     "emailError": "Enter a valid email address (must contain a '@', for example: example@aol.com",
     "messageError": "The message field cannot be empty and must contain at least 3 letters."
   },
-    "legal": {
-      "heading": "Legal Notice",
-      "contact": "Contact",
-      "phone": "Phone",
-      "email": "E-Mail",
-      "responsibility": "Responsible for the content according to § 55 Abs. 2 RStV",
-      
-      "liability_content": "Liability for Content",
-      "liability_content_text": "As a service provider, I am responsible for my own content on these pages according to § 7 Abs.1 TMG and the general laws. However, according to §§ 8 to 10 TMG, I am not obliged to monitor transmitted or stored foreign information or to investigate circumstances that indicate illegal activities. Obligations to remove or block the use of information according to general laws remain unaffected. However, liability in this regard is only possible from the point in time at which I become aware of a concrete legal violation. If I become aware of corresponding legal violations, I will immediately remove this content.",
-      
-      "liability_links": "Liability for Links",
-      "liability_links_text": "My offer contains links to external websites of third parties, over whose content I have no influence. Therefore, I cannot assume any liability for these foreign contents. The respective provider or operator of the linked pages is always responsible for the content of the linked pages. The linked pages were checked for possible legal violations at the time of the link. Illegal content was not detectable at the time the link was created. However, permanent monitoring of the linked pages without concrete evidence of a legal violation is unreasonable. If I become aware of legal violations, I will immediately remove such links.",
-      
-      "copyright": "Copyright",
-      "copyright_text": "The content and works created by the site operators on these pages are subject to German copyright law. The duplication, editing, distribution, and any kind of use beyond the limits of copyright require the written consent of the respective author or creator. Downloads and copies of this page are only permitted for private, non-commercial use. As far as the content on this site was not created by the operator, the copyrights of third parties are respected. In particular, third-party content is identified as such. If you become aware of a copyright violation, we ask you to inform us. If legal violations become known, I will immediately remove such content.",
-      
-      "dispute": "Dispute Resolution",
-      "dispute_text": "The European Commission provides a platform for online dispute resolution (OS):",
-      "dispute_info": "I am neither willing nor obliged to participate in dispute resolution procedures before a consumer dispute resolution body."
+  "legal": {
+    "heading": "Legal Notice",
+    "contact": "Contact",
+    "phone": "Phone",
+    "email": "E-Mail",
+    "responsibility": "Responsible for the content according to § 55 Abs. 2 RStV",
+
+    "liability_content": "Liability for Content",
+    "liability_content_text": "As a service provider, I am responsible for my own content on these pages according to § 7 Abs.1 TMG and the general laws. However, according to §§ 8 to 10 TMG, I am not obliged to monitor transmitted or stored foreign information or to investigate circumstances that indicate illegal activities. Obligations to remove or block the use of information according to general laws remain unaffected. However, liability in this regard is only possible from the point in time at which I become aware of a concrete legal violation. If I become aware of corresponding legal violations, I will immediately remove this content.",
+
+    "liability_links": "Liability for Links",
+    "liability_links_text": "My offer contains links to external websites of third parties, over whose content I have no influence. Therefore, I cannot assume any liability for these foreign contents. The respective provider or operator of the linked pages is always responsible for the content of the linked pages. The linked pages were checked for possible legal violations at the time of the link. Illegal content was not detectable at the time the link was created. However, permanent monitoring of the linked pages without concrete evidence of a legal violation is unreasonable. If I become aware of legal violations, I will immediately remove such links.",
+
+    "copyright": "Copyright",
+    "copyright_text": "The content and works created by the site operators on these pages are subject to German copyright law. The duplication, editing, distribution, and any kind of use beyond the limits of copyright require the written consent of the respective author or creator. Downloads and copies of this page are only permitted for private, non-commercial use. As far as the content on this site was not created by the operator, the copyrights of third parties are respected. In particular, third-party content is identified as such. If you become aware of a copyright violation, we ask you to inform us. If legal violations become known, I will immediately remove such content.",
+
+    "dispute": "Dispute Resolution",
+    "dispute_text": "The European Commission provides a platform for online dispute resolution (OS):",
+    "dispute_info": "I am neither willing nor obliged to participate in dispute resolution procedures before a consumer dispute resolution body."
+  },
+  "privacy-policy": {
+    "title": "Privacy Policy",
+    "responsible": {
+      "title": "Responsible",
+      "name": "Benjamin Kloss",
+      "address": "Sebastianusstraße 9, 41460 Neuss",
+      "email": "kontakt@benjamin-kloss.de"
+    },
+    "general-info": {
+      "title": "General Information",
+      "text": "The protection of your personal data is very important to me. I treat your personal data confidentially and in accordance with the legal data protection regulations and this privacy policy."
+    },
+    "data-collection": {
+      "title": "Collection and Storage of Personal Data",
+      "visit": {
+        "title": "When visiting the website",
+        "text": "When you visit my website, your browser automatically sends information to the server of my website. This information is temporarily stored in a log file.",
+        "data": [
+          "IP address of the requesting computer",
+          "Date and time of access",
+          "Name and URL of the retrieved file",
+          "Website from which access occurs (Referrer URL)",
+          "Browser used and possibly the operating system of your computer and your access provider's name"
+        ],
+        "purposes": [
+          "Ensuring a smooth connection setup to the website",
+          "Ensuring comfortable use of my website",
+          "Analyzing system security and stability, as well as for administrative purposes"
+        ]
+      },
+      "contact-form": {
+        "title": "Contact Form",
+        "text": "When you contact me via the contact form, your provided data will be stored for processing your request."
+      }
+    },
+    "website-hosting": {
+      "title": "Website Hosting",
+      "text": "This website is hosted by ALL-INKL.COM - Neue Medien Münnich, Inhaber: René Münnich, Hauptstraße 68, 02742 Friedersdorf",
+      "link": "https://all-inkl.com/datenschutzinformationen"
+    },
+    "social-media": {
+      "title": "Social Media Plugins",
+      "text": "My website uses social media plugins from LinkedIn and GitHub.",
+      "linkedin": {
+        "title": "LinkedIn",
+        "text": "A plugin from LinkedIn is used on my website. The operator is LinkedIn Corporation, 1000 W Maude, Sunnyvale, CA 94085, USA.",
+        "link": "https://www.linkedin.com/legal/privacy-policy"
+      },
+      "github": {
+        "title": "GitHub",
+        "text": "This website links to GitHub. The operator is GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA.",
+        "link": "https://docs.github.com/de/site-policy/privacy-policies/github-privacy-statement"
+      }
+    },
+    "your-rights": {
+      "title": "Your Rights",
+      "rights": [
+        "Request information about your personal data processed by me.",
+        "Request immediate correction of inaccurate or incomplete personal data stored by me.",
+        "Request the deletion of your personal data stored by me.",
+        "Request the restriction of the processing of your personal data.",
+        "Receive your personal data in a structured, commonly used, and machine-readable format, or request its transmission to another controller.",
+        "Withdraw your consent at any time.",
+        "File a complaint with a supervisory authority."
+      ],
+      "right-to-object": {
+        "title": "Right to Object",
+        "text": "If your personal data is processed based on legitimate interests, you have the right to object to the processing of your personal data."
+      }
+    },
+    "updates": {
+      "title": "Updates and Changes to This Privacy Policy",
+      "text": "This privacy policy is currently valid and has the status of December 2024."
     }
+  },
+  "legal-footer": {
+    "legalNotice": "Legal notice"
   }
-  
+}
