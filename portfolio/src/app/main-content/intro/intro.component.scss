@@ -1,53 +1,41 @@
 @import "../../../mixins.scss";
+
 #intro {
-  height: 600px;
+  padding: 100px 70px 40px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   gap: 100px;
 }
 
 .intro-left {
-  max-width: 600px;
-  gap: 16px;
   display: flex;
-  align-items: center;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  min-width: 607px;
+  text-align: center;
+  gap: 16px;
 
   h2 {
+    @include margin-font;
     font-family: "Baloo 2";
-    color: rgba(89, 136, 255, 1);
+    color: $color;
     font-size: 135px;
     font-weight: 800;
     line-height: 107.6px;
     letter-spacing: -0.025em;
     display: block;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-    unicode-bidi: isolate;
-    text-align: left;
   }
 
   h3 {
+    @include margin-font;
     font-family: "Baloo 2";
     color: rgba(89, 136, 255, 1);
     font-size: 45px;
     line-height: 33px;
     letter-spacing: 0.01em;
     text-align: center;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
     display: block;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-    unicode-bidi: isolate;
   }
 }
 
@@ -65,27 +53,17 @@
   gap: 16px;
 
   p {
-    color: rgba(89, 136, 255, 1);
+    @include margin-font;
+    color: $color;
     font-size: 16px;
     font-weight: 400;
     line-height: 17.2px;
-    text-align: left;
-    align-self: self-end;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    display: block;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    unicode-bidi: isolate;
-    margin: 0;
   }
 }
 .image-wrapper2 {
   position: relative;
-  width: 100px;
-  height: 60px;
+  width: 80px;
+  height: 45px;
   display: flex;
   justify-content: center;
   align-items: baseline;
@@ -114,7 +92,7 @@
 .image-wrapper {
   position: relative;
   width: 60px;
-  height: 60px;
+  height: 45px;
   display: flex;
   justify-content: center;
   align-items: baseline;
@@ -141,30 +119,29 @@
 }
 
 .intro-right {
-  width: 571px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  min-width: 500px;
   gap: 40px;
 
   p {
-    font-family: Montserrat;
-    font-size: 23px;
+    @include margin-font;
+    font-size: 22px;
     font-weight: 400;
     line-height: 23.6px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
     display: block;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    unicode-bidi: isolate;
   }
 }
 
 #intro-btn {
   @include button;
 }
+
+@media (max-width: 768px) {
+    #intro {
+      display: none;
+    }}
+  // #intro {
+  //   flex-direction: column;
+  // }
+  

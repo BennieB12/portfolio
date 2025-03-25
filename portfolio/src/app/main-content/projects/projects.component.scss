@@ -89,3 +89,8 @@
 .project-info button {
   @include button;
 }
+
+@media (max-width: 768px) {
+  .headl-projects, .projects-container {
+    display: none;
+  }}

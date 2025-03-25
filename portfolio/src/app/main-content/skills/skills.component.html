@@ -1,4 +1,7 @@
-<section id="skillset" appScrollVisibility (isVisibleChange)="isVisible = $event" [@slideInFromBottom]="isVisible ? 'visible' : 'hidden'">
+<section id="skillset" appScrollVisibility (isVisibleChange)="isVisible = $event"
+[@slideInFromBottom]="isVisible ? 'visible' : 'hidden'"
+[@fadeIn]="isVisible ? 'visible' : 'hidden'"
+>
   <h4>{{ 'skills.headline' | translate }}</h4>
     <div class="skillset-content">
       <div class="content-item" *ngFor="let skill of skills">

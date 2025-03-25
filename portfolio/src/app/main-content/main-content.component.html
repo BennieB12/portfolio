@@ -1,4 +1,15 @@
-<app-ellipse [ellipse]="ellipse"></app-ellipse>
+<div *ngFor="let e of ellipse; let i = index"
+     class="ellipse"
+     [ngStyle]="{
+       'width': e.width,
+       'height': e.height,
+       'top': e.top,
+       'left': e.left || 'auto',
+       'z-index': e.zIndex
+     }"
+     [@shrinkAndCircle]="i === 0 ? animationState : ''">
+</div>
+
 <app-blubber></app-blubber>
 <app-atf></app-atf>
 <app-intro></app-intro>

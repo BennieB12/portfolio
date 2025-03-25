@@ -3,6 +3,7 @@
     "aboutMe": "Über mich",
     "skillSet": "Fähigkeiten",
     "myWork": "Projekte",
+    "contact": "Kontakt",
     "english": "Englisch",
     "deutsch": "Deutsch"
   },
@@ -14,12 +15,11 @@
   },
   "intro": {
     "headline": "Lets Work together",
-    "subHeadline": "Ich",
-    "location": "wohne in Düsseldorf",
-    "remote": "bin bereit für Remote-Arbeit",
-    "relocate": "bin bereit für einen Umzug",
+    "subHeadline": "Ich bin",
+    "location": "in Düsseldorf, Deutschland",
+    "remote": "bereit für Remote-Arbeit",
+    "relocate": "bereit für einen Umzug",
     "description": "Ich bin ein Front-End-Entwickler aus Düsseldorf, Deutschland, leidenschaftlich darin, Probleme zu lösen und Herausforderungen anzunehmen. Ich engagiere mich für kontinuierliches Wachstum und lerne gerne neue Fähigkeiten, um sinnvolle Lösungen zu schaffen. Ich freue mich darauf, mit Teams zusammenzuarbeiten, um innovative Ideen zum Leben zu erwecken. Ich suche eine Junior-Entwicklerposition, in der ich mich weiterentwickeln und zu wirkungsvollen Projekten beitragen kann. Meine lösungsorientierte Denkweise und Leidenschaft für Programmierung würden mich zu einer wertvollen Bereicherung für Ihr Team machen.",
-    "contactText": "Wenn Sie denken, dass ich gut zu Ihren Projekten passe, kontaktieren Sie mich.",
     "button": "Nachricht senden"
   },
   "skills": {

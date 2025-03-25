@@ -1,1 +1,35 @@
+.ellipse {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(
+      74.22% 74.22% at 19.79% 22.42%,
+      #5988ff 6.25%,
+      #5988ff 51.56%,
+      #0043f0 100%
+    );
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4),
+                -4px -4px 15px rgba(255, 255, 255, 0.6);
+    pointer-events: none;
+  }
 
+
+  
+
+
+@media (max-width: 1280px) {
+  .ellipse {
+    width: 693px;
+    height: 693px;
+  }
+  .atf-top{
+      max-width: 600px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .ellipse {
+      width: 400px;
+      height: 400px;
+  }
+}

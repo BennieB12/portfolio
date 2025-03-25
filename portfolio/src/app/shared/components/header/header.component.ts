@@ -15,6 +15,7 @@ export class HeaderComponent {
   hoverState: string = 'normal';
   fontWeightState: string = 'normal';
   hoveredIndex: number | null = null;
+  menuOpen = false;
 
   constructor(private translationService: TranslationService) {}
 
@@ -65,4 +66,31 @@ export class HeaderComponent {
     this.fontWeightState = state ? 'bold' : 'normal';
     this.hoveredIndex = state ? index ?? null : null;
   }
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  
+    if (this.menuOpen) {
+      document.body.classList.add('menu-open');
+      this.invertLogo();
+    } else {
+      document.body.classList.remove('menu-open');
+      this.resetLogo();
+    }
+  }
+  
+  invertLogo() {
+    const logoImage = document.getElementById('logo');
+    if (logoImage) {
+      logoImage.style.filter = 'invert(1)';
+    }
+  }
+  
+  resetLogo() {
+    const logoImage = document.getElementById('logo');
+    if (logoImage) {
+      logoImage.style.filter = '';
+    }
+  }  
+  
 }

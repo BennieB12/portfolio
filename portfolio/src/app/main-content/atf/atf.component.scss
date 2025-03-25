@@ -3,8 +3,8 @@
 #section-atf {
   height: 90vh;
   width: 100%;
-  max-width: $max-width;
-  background: linear-gradient(179.99deg, #ffffff 12.89%, #eaf0ff 91.39%);
+  // max-width: $max-width;
+  background: $background;
   z-index: 1000;
   display: flex;
   flex-direction: column;
@@ -12,10 +12,11 @@
 }
 .atf-top {
   max-height: 20vh;
-  max-width: 880px;
+  max-width: 800px;
   padding-left: 80px;
   padding-top: 108px;
 }
+
 .atf-btm {
   display: flex;
   max-height: 70vh;
@@ -30,6 +31,7 @@
 
   h1 {
     @include margin-font;
+    color: $color;
     font-family: "Montserrat";
     font-size: clamp(36px, 4vw, 64px);
     font-weight: 400;
@@ -37,6 +39,7 @@
   }
   h2 {
     @include margin-font;
+    color: $color;
     font-family: "Baloo 2";
     font-size: clamp(48px, 8vw, 128px);
     font-weight: 600;
@@ -55,7 +58,7 @@
   img {
     height: 100%;
     width: 100%;
-    object-fit: contain;
+    // object-fit: contain;
   }
 }
 
@@ -110,5 +113,46 @@
     width: 35vh;
     height: 2px;
     background-color: $color;
+  }
+}
+
+@media (max-width: 768px) {
+  .ellipse {
+    width: 600px;
+    height: 600px;
+  }
+  .prof-img{
+    display: none;
+  }
+  #section-atf {
+    align-items: normal;
+  }
+  .atf-top {
+    display: none;
+    max-height: 10vh;
+    max-width: 600px;
+    padding: 0;
+    z-index: 100;
+  }
+  .atf-headline {
+
+    h1 {
+      color: white;
+      font-weight: 400;
+      line-height: 64px;
+    }
+    h2 {
+      color: white;
+      font-weight: 800;
+      font-size: 73px;
+      line-height: 120%;
+      letter-spacing: -2.5%;
+      vertical-align: middle;
+      
+    }
+  }
+
+  .social-links {
+    display: none;
   }
 }

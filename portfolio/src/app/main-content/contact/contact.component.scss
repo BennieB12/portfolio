@@ -15,16 +15,17 @@
   margin-top: 40px;
   text-align: left;
 
-h5 {
-  font-family: "Baloo 2";
-  color: $color;
-  font-weight: 800;
-  font-size: 90px;
-  line-height: 120%;
-  letter-spacing: 0%;
-  margin-left: 77px;
-  margin-block-end: 0;
-}}
+  h5 {
+    font-family: "Baloo 2";
+    color: $color;
+    font-weight: 800;
+    font-size: 90px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    margin-left: 77px;
+    margin-block-end: 0;
+  }
+}
 
 #contact-left {
   width: 473px;
@@ -54,28 +55,6 @@ h5 {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #contact-right {
   width: 50%;
   gap: 32px;
@@ -96,25 +75,24 @@ h5 {
     &:focus {
       outline: $color;
     }
-    &::placeholder{
+    &::placeholder {
       font-family: Montserrat !important;
     }
     &.valid {
       border: 2px solid green !important;
-      background: url('/assets/icons/check.svg') no-repeat right 10px center;
+      background: url("/assets/icons/check.svg") no-repeat right 10px center;
       background-size: 20px;
     }
-  
+
     &.invalid {
       border: 2px solid red !important;
-      background: url('/assets/icons/error.svg') no-repeat right 10px center;
+      background: url("/assets/icons/error.svg") no-repeat right 10px center;
       background-size: 20px;
     }
   }
-
 
   textarea {
-    &::placeholder{
+    &::placeholder {
       font-family: Montserrat !important;
     }
     &.valid {
@@ -125,14 +103,21 @@ h5 {
     }
   }
 
-  
+  input[type="text"],
+  input[type="email"],
+  #contact-text{
+    &:hover{
+    border-width: 3px;
+    border-color: darken($color, 10%);
+  }}
+
   .input-group {
     position: relative;
     width: fit-content;
     display: flex;
     flex-direction: column;
   }
-  
+
   .error-message {
     position: absolute;
     top: 101%;
@@ -146,14 +131,13 @@ h5 {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-
   }
-  
+
   input.invalid + .error-message,
   textarea.invalid + .error-message {
     opacity: 1;
   }
-  
+
   #contact-text {
     min-height: 202px;
     max-height: 202px;
@@ -184,10 +168,19 @@ h5 {
   label {
     font-size: 14px;
   }
+}
 
-  a {
-    color: $color;
-    text-decoration: none;
+.highlight-blue {
+  box-shadow: 0 0 8px rgba(89, 136, 255, 1);
+  border: 2px solid rgba(89, 136, 255, 1);
+}
+
+.privacy-policy-link {
+  color: $color;
+  text-decoration: none;
+  &:hover {
+    font-size: bold;
+    text-decoration: underline;
   }
 }
 
@@ -276,3 +269,7 @@ h5 {
   box-shadow: 0 0 10px red;
 }
 
+@media (max-width: 768px) {
+  #contact, .headl-contact {
+    display: none;
+  }}

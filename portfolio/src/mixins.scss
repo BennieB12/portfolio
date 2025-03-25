@@ -1,5 +1,6 @@
 $color: rgba(89, 136, 255, 1);
 $max-width: 1440px;
+$background: linear-gradient(179.99deg, #ffffff 12.89%, #eaf0ff 91.39%);
 
 @mixin margin-font {
   margin-block-start: 0;
@@ -7,7 +8,6 @@ $max-width: 1440px;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   unicode-bidi: isolate;
-  color: $color;
   text-align: left;
 }
 

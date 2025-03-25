@@ -103,4 +103,19 @@ export class ContactComponent {
       element.classList.remove("highlight-error");
     });
   }
+
+  highlightPrivacyCheckbox() {
+    const privacyCheckbox = document.getElementById('privacy-checkbox');
+    if (privacyCheckbox) {
+      privacyCheckbox.classList.add('highlight-blue');
+    }
+  }
+  
+  removePrivacyHighlight() {
+    const privacyCheckbox = document.getElementById('privacy-checkbox');
+    if (privacyCheckbox) {
+      privacyCheckbox.classList.remove('highlight-blue');
+    }
+  }
+
 }
