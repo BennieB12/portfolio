@@ -67,7 +67,14 @@ export class HeaderComponent {
     this.hoveredIndex = state ? index ?? null : null;
   }
 
-  toggleMenu() {
+  /**
+   * Toggles the state of the menu (open or closed).
+   * When the menu opens, it adds a class to the body and inverts the logo color.
+   * When the menu closes, it removes the class and resets the logo color.
+   *
+   * @returns {void} - No return value.
+   */
+  toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
   
     if (this.menuOpen) {
@@ -78,19 +85,31 @@ export class HeaderComponent {
       this.resetLogo();
     }
   }
-  
-  invertLogo() {
+
+  /**
+   * Inverts the color of the logo image by applying a CSS filter.
+   * This is typically used when the menu is opened to maintain contrast.
+   *
+   * @returns {void} - No return value.
+   */
+  invertLogo(): void {
     const logoImage = document.getElementById('logo');
     if (logoImage) {
       logoImage.style.filter = 'invert(1)';
     }
   }
-  
-  resetLogo() {
+
+  /**
+   * Resets the logo image to its original color by removing the applied CSS filter.
+   * This is typically used when the menu is closed.
+   *
+   * @returns {void} - No return value.
+   */
+  resetLogo(): void {
     const logoImage = document.getElementById('logo');
     if (logoImage) {
       logoImage.style.filter = '';
     }
-  }  
+  }
   
 }

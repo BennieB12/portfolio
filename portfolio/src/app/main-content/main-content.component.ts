@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AtfComponent } from './atf/atf.component';
 import { IntroComponent } from './intro/intro.component';
@@ -38,10 +38,36 @@ export class MainContentComponent {
     { width: '25vw', height: '25vw', top: '200vh', left: '-10vw', zIndex: -1 },
   ];
 
+  constructor() {
+    this.updateEllipseSize();
+  }
+
   ngOnInit() {
     setTimeout(() => {
       this.animationState = 'end';
     }, 100);
   }
-  
+
+  @HostListener('window:resize', [])
+  onResize() {
+    this.updateEllipseSize();
+  }
+
+  updateEllipseSize() {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth <= 480) {
+      this.ellipse[0].width = '300px';
+      this.ellipse[0].height = '300px';
+    } else if (screenWidth <= 768) {
+      this.ellipse[0].width = '493px';
+      this.ellipse[0].height = '493px';
+    } else if (screenWidth <= 1280) {
+      this.ellipse[0].width = '693px';
+      this.ellipse[0].height = '693px';
+    } else {
+      this.ellipse[0].width = '793px';
+      this.ellipse[0].height = '793px';
+    }
+  }
 }

@@ -10,6 +10,11 @@ html, body {
   box-sizing: border-box;
 }
 
+body.menu-open,
+html.menu-open {
+  overflow: hidden;
+}
+
 * {
   margin: 0;
   padding: 0;

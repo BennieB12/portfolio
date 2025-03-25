@@ -27,6 +27,17 @@
 
 }
 
+@media (max-width: 768px) {
+  .ellipse {
+    width: 493px;
+    height: 493px;
+  }
+  .atf-top{
+      max-width: 100%;
+  }
+
+}
+
 @media (max-width: 480px) {
   .ellipse {
       width: 400px;

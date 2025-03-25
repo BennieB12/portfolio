@@ -13,8 +13,8 @@ footer {
   #footer-img {
     img {
       cursor: pointer;
-      height: 8vh;
-      width: 8vw;
+      height: 69px;
+      width: 64px;
       object-fit: contain;
     }
   }
@@ -70,4 +70,14 @@ footer {
       }
     }
   }
+}
+
+@media (max-width: 768px) {
+
+  footer {
+    flex-direction: column;
+  .legal-notice {
+    margin-top: -50px;
+  }
+}
 }
