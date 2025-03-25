@@ -1,23 +1,22 @@
-
 <section id="projects">
   <div class="headl-projects">
-    <h5>{{ 'projects.headline' | translate }}</h5>
-    <span>{{ 'projects.subHeadline' | translate }}</span>
+    <h5>{{ "projects.headline" | translate }}</h5>
+    <span>{{ "projects.subHeadline" | translate }}</span>
   </div>
 </section>
 
 <div class="projects-container">
-  <div 
-    class="project" 
+  <div
+    class="project"
     *ngFor="let project of projects; let i = index"
-    [ngClass]="{'reverse-layout': isMiddleProject(i)}"
+    [ngClass]="{ 'reverse-layout': isMiddleProject(i) }"
     appScrollVisibility
     (isVisibleChange)="onVisibilityChange(i, $event)"
   >
-    <img 
-      [src]="project.imageSrc" 
-      [alt]="project.imageAlt" 
-      class="project-image" 
+    <img
+      [src]="project.imageSrc"
+      [alt]="project.imageAlt"
+      class="project-image"
       loading="lazy"
       [@slideInLeft]="visibleProjects[i] ? 'visible' : 'hidden'"
       [@fadeIn]="visibleProjects[i] ? 'visible' : 'hidden'"
@@ -26,21 +25,27 @@
       (mouseleave)="onMouseLeave(i)"
     />
 
-    <div 
-  class="project-info" 
-  [@slideInLeft]="visibleProjects[i] ? 'visible' : 'hidden'"
-  [@fadeIn]="visibleProjects[i] ? 'visible' : 'hidden'"
->
-  <h5>{{ 'projects.projects.' + i + '.title' | translate }}</h5>
-  <h6>{{ 'projects.projects.' + i + '.subtitle' | translate }}</h6>
-  <span>{{ 'projects.projects.' + i + '.description' | translate }}</span>
+    <div
+      class="project-info"
+      [@slideInLeft]="visibleProjects[i] ? 'visible' : 'hidden'"
+      [@fadeIn]="visibleProjects[i] ? 'visible' : 'hidden'"
+    >
+      <h5>{{ "projects.projects." + i + ".title" | translate }}</h5>
+      <h6>{{ "projects.projects." + i + ".subtitle" | translate }}</h6>
+      <span>{{ "projects.projects." + i + ".description" | translate }}</span>
 
-  <a *ngIf="project.gitLink" [href]="project.gitLink" target="_blank">
-    <button>{{ 'projects.projects.' + i + '.btngit' | translate }}</button>
-  </a>
-  <a *ngIf="project.testLink" [href]="project.testLink" target="_blank">
-    <button>{{ 'projects.projects.' + i + '.btntest' | translate }}</button>
-  </a>
-</div>
+      <div class="btn-box">
+        <a *ngIf="project.gitLink" [href]="project.gitLink" target="_blank">
+          <button>
+            {{ "projects.projects." + i + ".btngit" | translate }}
+          </button>
+        </a>
+        <a *ngIf="project.testLink" [href]="project.testLink" target="_blank">
+          <button>
+            {{ "projects.projects." + i + ".btntest" | translate }}
+          </button>
+        </a>
+      </div>
+    </div>
   </div>
 </div>

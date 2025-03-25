@@ -270,6 +270,26 @@
 }
 
 @media (max-width: 768px) {
-  #contact, .headl-contact {
+ .headl-contact {
     display: none;
-  }}
+  }
+  #contact {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+  }
+  #contact-left {
+    margin-left: 0;
+  }
+
+  #contact-right {
+    width: auto;
+    gap: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   padding-top: 32px;
+  }
+}

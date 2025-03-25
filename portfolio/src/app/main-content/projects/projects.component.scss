@@ -54,8 +54,14 @@
 .project-info {
   display: flex;
   flex-direction: column;
-  width: 536px;
+  width: 586px;
   gap: 15px;
+}
+.btn-box {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+
 }
 
 .project-info h5 {
@@ -91,6 +97,26 @@
 }
 
 @media (max-width: 768px) {
-  .headl-projects, .projects-container {
+  .headl-projects {
     display: none;
-  }}
+  }
+  .project, .project.reverse-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+  .project-image {
+    max-height: 60%;
+    max-width: 80%;
+  }
+  .project-info {
+    align-items: center;
+    text-align: center;
+    width: 80%;
+  }
+  .btn-box {
+    flex-direction: row;
+    align-items: center;
+    gap: 70px;
+  }
+}

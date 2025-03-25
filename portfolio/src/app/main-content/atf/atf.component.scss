@@ -117,15 +117,15 @@
 }
 
 @media (max-width: 768px) {
-  .ellipse {
-    width: 600px;
-    height: 600px;
+  #section-atf {
+    height: 100%;
+    align-items: normal;
+  }
+  .atf-btm {
+    align-items: flex-end;
   }
   .prof-img{
     display: none;
-  }
-  #section-atf {
-    align-items: normal;
   }
   .atf-top {
     display: none;

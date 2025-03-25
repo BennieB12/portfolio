@@ -60,8 +60,9 @@ export class MainContentComponent {
       this.ellipse[0].width = '300px';
       this.ellipse[0].height = '300px';
     } else if (screenWidth <= 768) {
-      this.ellipse[0].width = '493px';
-      this.ellipse[0].height = '493px';
+      this.ellipse[0].width = '693px';
+      this.ellipse[0].height = '693px';
+      this.ellipse[0].left = '-193px';
     } else if (screenWidth <= 1280) {
       this.ellipse[0].width = '693px';
       this.ellipse[0].height = '693px';
