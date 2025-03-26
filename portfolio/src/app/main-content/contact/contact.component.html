@@ -32,6 +32,7 @@
     <input
       type="text"
       formControlName="name"
+      id="contact-name"
       placeholder="{{ 'contact.name' | translate }}"
       [class.invalid]="
         contactForm.controls['name'].invalid &&
@@ -51,6 +52,7 @@
     <input
       type="email"
       formControlName="mail"
+      id="contact-mail"
       placeholder="{{ 'contact.email' | translate }}"
       [class.invalid]="
         contactForm.controls['mail'].invalid &&

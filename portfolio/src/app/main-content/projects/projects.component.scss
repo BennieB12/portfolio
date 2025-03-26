@@ -1,11 +1,11 @@
-@import '../../../mixins.scss';
+@import "../../../mixins.scss";
 
 .headl-projects {
   display: flex;
   flex-direction: column;
   margin-left: 77px;
+  margin-top: 40px;
   h5 {
-    margin-top: 40px;
     color: rgba(89, 136, 255, 1);
     font-family: "Baloo 2";
     font-weight: 800;
@@ -43,7 +43,6 @@
   }
 }
 
-
 .project-image {
   width: 640px;
   height: 480px;
@@ -61,7 +60,6 @@
   display: flex;
   gap: 16px;
   flex-direction: column;
-
 }
 
 .project-info h5 {
@@ -82,7 +80,6 @@
   font-size: 23px;
   line-height: 120%;
   letter-spacing: 0%;
-  
 }
 
 .project-info span {
@@ -98,12 +95,24 @@
 
 @media (max-width: 768px) {
   .headl-projects {
-    display: none;
+    margin-left: 75px;
+    h5 {
+      font-size: 64px;
+    }
+    span {
+      width: 340px;
+      height: 59px;
+
+      font-size: 16px;
+      line-height: 120%;
+      letter-spacing: 0%;
+    }
   }
-  .project, .project.reverse-layout {
+  .project,
+  .project.reverse-layout {
     flex-direction: column;
     align-items: center;
-    gap: 60px;
+    gap: 32px;
   }
   .project-image {
     max-height: 60%;
@@ -117,6 +126,58 @@
   .btn-box {
     flex-direction: row;
     align-items: center;
-    gap: 70px;
+    gap: 150px;
+    padding-top: 24px;
+    button {
+      width: 125px;
+      height: 54px;
+    }
+  }
+  #btn-git {
+    font-family: "Poppins";
+    background: radial-gradient(
+      74.22% 74.22% at 19.79% 22.42%,
+      #5988ff 6.25%,
+      #5988ff 51.56%,
+      #0043f0 100%
+    );
+    border-radius: 10px;
+    border: 2px solid white;
+    color: white;
+    transition: transform 120ms ease-out;
+  
+    &:hover {
+      cursor: pointer;
+      border: 2px solid rgba(89, 136, 255, 1);
+      animation: gradientToWhite 120ms forwards, growButton 120ms ease-in forwards;
+    }
+  
+    &:not(:hover) {
+      animation: shrinkButton 120ms ease-out forwards;
+    }
+  }
+  
+  @keyframes gradientToWhite {
+    0% {
+      background: radial-gradient(
+        74.22% 74.22% at 19.79% 22.42%,
+        #5988ff 6.25%,
+        #5988ff 51.56%,
+        #0043f0 100%
+      );
+      color: white;
+    }
+    100% {
+      background: linear-gradient(
+        104.85deg,
+        #5988ff -90.22%,
+        #5988ff -49.45%,
+        #0043f0 27.88%,
+        #ffffff 33.64%,
+        #ffffff 39.44%,
+        #ffffff 90.08%
+      );
+      color: rgba(89, 136, 255, 1);
+    }
   }
 }

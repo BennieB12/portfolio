@@ -31,12 +31,12 @@
       {
         "name": "Peter Pfautsch",
         "project": "Project Join",
-        "text": "Benjamin, your structured approach and quick problem-solving were key to the project's success. Thank you for your reliable and precise work!"
+        "text": "'Benjamin, your structured approach and quick problem-solving were key to the project's success. Thank you for your reliable and precise work!'"
       },
       {
         "name": "Dennis Freyer",
         "project": "Project Join",
-        "text": "He is very helpful and always has a solution ready when problems arise."
+        "text": "'He is very helpful and always has a solution ready when problems arise.'"
       }
     ]
   },
@@ -49,21 +49,21 @@
         "subtitle": "JavaScript | HTML | CSS | Firebase",
         "description": "Task manager, inspired by the Kanban system. Create and organize tasks using drag and drop functions, assign users and categories.",
         "btngit": "Github",
-        "btntest": "View project"
+        "btntest": "Live test"
       },
       {
         "title": "El Pollo Loco",
         "subtitle": "JavaScript | HTML | CSS",
         "description": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
         "btngit": "Github",
-        "btntest": "View project"
+        "btntest": "Live test"
       },
       {
         "title": "Pokédex",
         "subtitle": "JavaScript | HTML | CSS | API",
         "description": "Based on the PokéAPI, a simple library that provides and catalogues Pokémon information.",
         "btngit": "Github",
-        "btntest": "View project"
+        "btntest": "Live test"
       }
     ]
   },

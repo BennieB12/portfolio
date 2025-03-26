@@ -57,14 +57,14 @@
         "subtitle": "JavaScript | HTML | CSS",
         "description": "Jump-, Run- und Throw-Spiel auf Basis eines objektorientierten Ansatzes. Helfen Sie Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.",
         "btngit": "Github",
-        "btntest": "Projekt anzeigen"
+        "btntest": "Testen"
       },
       {
         "title": "Pokédex",
         "subtitle": "JavaScript | HTML | CSS | API",
         "description": "Basierend auf der PokéAPI eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.",
         "btngit": "Github",
-        "btntest": "Projekt anzeigen"
+        "btntest": "Testen"
       }
     ]
   },

@@ -3,7 +3,6 @@
 #intro {
   padding: 100px 70px 40px;
   display: flex;
-  align-items: flex-end;
   justify-content: center;
   gap: 100px;
 }
@@ -138,8 +137,35 @@
 }
 
 @media (max-width: 768px) {
-    #intro {
-      flex-direction: column;
-      align-items: center;
-    }}
-  
+  #intro {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+  .intro-left {
+    min-width: auto;
+    max-width: 600px;
+    gap: 32px;
+    h2 {
+      text-align: center;
+      font-size: 64px;
+      line-height: 120%;
+      letter-spacing: 0%;
+    }
+    h3 {
+      font-size: 32px;
+      line-height: 100%;
+      letter-spacing: 1%;
+      text-align: center;
+    }
+  }
+  .intro-right {
+    min-width: auto;
+    max-width: 600px;
+  }
+
+  #intro-btn {
+    align-self: center;
+  }
+}

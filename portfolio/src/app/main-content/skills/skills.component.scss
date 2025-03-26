@@ -75,8 +75,11 @@ h4 {
 @media (max-width: 768px) {
   #skillset{
     height: auto;
+    padding-bottom: 20px;
   }
   .skillset-content {
     gap: 80px;
+    padding-left: 10px;
+    padding-right: 10px;
     }
 }

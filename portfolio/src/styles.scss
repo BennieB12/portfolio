@@ -29,23 +29,25 @@ html.menu-open {
     margin: 0 auto;
   }}
 
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-button:single-button {
-  background-color: #f6f6f7;
-  display: block;
-  background-size: 8px;
-  background-repeat: no-repeat;
-}
-
+  
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-button:single-button {
+    background-color: #f6f6f7;
+    display: block;
+    background-size: 8px;
+    background-repeat: no-repeat;
+  }
+  
 ::-webkit-scrollbar-button:single-button:vertical:decrement {
   height: 10px;
   width: 8px;
@@ -81,4 +83,15 @@ html.menu-open {
 button {
   cursor: pointer;
   border: none;
+}
+
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    display: none;
+  }
+  html {
+    scrollbar-width: none;
+  }
 }
