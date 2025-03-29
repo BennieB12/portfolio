@@ -77,7 +77,21 @@ nav div.active svg {
     width: 30px;
     height: 4px;
     background-color: $color;
-    transition: 0.3s;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+
+  &.open {
+    div:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+
+    div:nth-child(2) {
+      opacity: 0;
+    }
+
+    div:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
   }
 }
 

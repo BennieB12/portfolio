@@ -67,23 +67,39 @@ export class HeaderComponent {
     this.hoveredIndex = state ? index ?? null : null;
   }
 
-  /**
-   * Toggles the state of the menu (open or closed).
-   * When the menu opens, it adds a class to the body and inverts the logo color.
-   * When the menu closes, it removes the class and resets the logo color.
-   *
-   * @returns {void} - No return value.
-   */
+/**
+ * Toggles the menu open or closed and updates related UI elements.
+ *    * @returns {void} - No return value.
+ */
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
+    this.toggleBurgerMenu();
+    this.toggleBodyClass();
+    this.toggleLogo();
+  }
   
-    if (this.menuOpen) {
-      document.body.classList.add('menu-open');
-      this.invertLogo();
-    } else {
-      document.body.classList.remove('menu-open');
-      this.resetLogo();
+  /**
+ * Toggles the burger menu's "open" class based on the menu state.
+ */
+  private toggleBurgerMenu(): void {
+    const burgerMenu = document.querySelector('.burger-menu');
+    if (burgerMenu) {
+      burgerMenu.classList.toggle('open', this.menuOpen);
     }
+  }
+  
+  /**
+ * Adds or removes the "menu-open" class on the body based on the menu state.
+ */
+  private toggleBodyClass(): void {
+    document.body.classList.toggle('menu-open', this.menuOpen);
+  }
+  
+  /**
+ * Inverts or resets the logo depending on the menu state.
+ */
+  private toggleLogo(): void {
+    this.menuOpen ? this.invertLogo() : this.resetLogo();
   }
 
   /**
