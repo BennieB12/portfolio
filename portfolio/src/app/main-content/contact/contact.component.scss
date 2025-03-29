@@ -256,6 +256,8 @@ textarea.invalid + .error-message {
 
 .contact-arrow {
   position: absolute;
+  height: 24px;
+  width: 24px;
   bottom: 8%;
   left: 8%;
   border-radius: 50%;
@@ -265,6 +267,7 @@ textarea.invalid + .error-message {
   &:hover {
     cursor: pointer;
     border: unset;
+    scale: 1.2;
 }}
 
 @media (max-width: 768px) {
