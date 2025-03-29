@@ -9,6 +9,7 @@
   align-items: flex-start;
   padding-top: 60px;
   padding-bottom: 60px;
+  position: relative;
 }
 
 .headl-contact {
@@ -245,13 +246,26 @@ textarea.invalid + .error-message {
 
 #privacy-checkbox.highlight-error {
   box-shadow: 0 0 10px red;
-  // border: 2px solid red;
 }
 
 .highlight-error {
   border: 2px solid red !important;
   box-shadow: 0 0 10px red;
 }
+
+
+.contact-arrow {
+  position: absolute;
+  bottom: 8%;
+  left: 8%;
+  border-radius: 50%;
+  background-color: $color;
+  color: rgba(89, 136, 255, 1);
+  transition: transform 120ms ease-out;
+  &:hover {
+    cursor: pointer;
+    border: unset;
+}}
 
 @media (max-width: 768px) {
   .headl-contact {

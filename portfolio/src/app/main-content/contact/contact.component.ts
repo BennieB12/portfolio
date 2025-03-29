@@ -118,4 +118,19 @@ export class ContactComponent {
     }
   }
 
+
+   /**
+   * Scrolls to a specific section on the page identified by the provided ID.
+   * This method performs a smooth scroll to the target element.
+   *
+   * @param {string} id - The ID of the target element to scroll to.
+   * @returns {void} - No return value.
+   */
+   scrollToSection(id: string) {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
 }
