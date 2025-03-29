@@ -11,7 +11,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-width: 607px;
+  max-width: 607px;
+  width: 100%;
   text-align: center;
   gap: 16px;
 
@@ -48,7 +49,7 @@
   display: flex;
   align-items: end;
   min-height: 75px;
-  max-height: 75px;
+  // max-height: 75px;
   gap: 16px;
 
   p {
@@ -62,21 +63,57 @@
 .image-wrapper2 {
   position: relative;
   width: 80px;
-  height: 45px;
+  height: 60px;
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
 
   img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: contain;
-    position: absolute;
+    position: relative;
     transition: opacity 20ms ease-in-out;
   }
 
   .hover {
     opacity: 0;
+    position: absolute;
+    top: 15%;
+    left: 0;
+  }
+
+  &:hover .default {
+    opacity: 0;
+  }
+
+  &:hover .hover {
+    opacity: 1;
+    object-fit: cover;
+  }
+}
+
+.image-wrapper {
+  position: relative;
+  width: 55px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    position: relative;
+    transition: opacity 20ms ease-in-out;
+  }
+
+  .hover {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   &:hover .default {
@@ -88,24 +125,27 @@
   }
 }
 
-.image-wrapper {
+.image-wrapper3 {
   position: relative;
-  width: 60px;
-  height: 45px;
+  width: 55px;
+  height: 60px;
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
 
   img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: contain;
-    position: absolute;
+    position: relative;
     transition: opacity 20ms ease-in-out;
   }
 
   .hover {
     opacity: 0;
+    position: absolute;
+    top: 10%;
+    left: 25%;
   }
 
   &:hover .default {
@@ -120,7 +160,8 @@
 .intro-right {
   display: flex;
   flex-direction: column;
-  min-width: 500px;
+  max-width: 500px;
+  width: 100%;
   gap: 40px;
 
   p {
@@ -144,6 +185,7 @@
     padding-bottom: 60px;
   }
   .intro-left {
+    width: auto;
     min-width: auto;
     max-width: 600px;
     gap: 32px;
@@ -167,5 +209,33 @@
 
   #intro-btn {
     align-self: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .intro-icon {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .intro-icons {
+    align-items: center;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 36px;
+  }
+  .image-wrapper,.image-wrapper3 {
+    width: 40px;
+    height: 40px;
+  }
+  .image-wrapper2{
+    width: 40px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 440px) {
+  #intro-btn {
+    width: auto;
   }
 }

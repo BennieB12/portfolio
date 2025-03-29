@@ -31,48 +31,16 @@ export class MainContentComponent {
   animationState = 'start';
 
   ellipse = [
-    { width: '793px', height: '793px', top: '-10vh', left: '-15vw', zIndex: 103 },
-    { width: '15vw', height: '15vw', top: '85vh', left: '40vw', zIndex: -1 },
-    { width: '5vw', height: '5vw', top: '60vh', left: '75vw', zIndex: -1 },
-    { width: '10vw', height: '10vw', top: '120vh', left: '30vw', zIndex: -1 },
-    { width: '25vw', height: '25vw', top: '200vh', left: '-10vw', zIndex: -1 },
+    { id: 0, top: '-93px', left: '-193px', zIndex: 103 },
+    // { id: 1, top: '85vh', left: '40vw', zIndex: -1 },
+    // { id: 2, top: '60vh', left: '75vw', zIndex: -1 },
+    // { id: 3, top: '120vh', left: '30vw', zIndex: -1 },
+    // { id: 4, top: '200vh', left: '-10vw', zIndex: -1 },
   ];
-
-  constructor() {
-    this.updateEllipseSize();
-  }
 
   ngOnInit() {
     setTimeout(() => {
       this.animationState = 'end';
     }, 100);
-  }
-
-  @HostListener('window:resize', [])
-  onResize() {
-    this.updateEllipseSize();
-  }
-
-  updateEllipseSize() {
-    const screenWidth = window.innerWidth;
-  
-    if (screenWidth <= 480) {
-      this.ellipse[0].width = '300px';
-      this.ellipse[0].height = '300px';
-      this.ellipse[0].zIndex = 99;  // Niedriger als .prof-img
-    } else if (screenWidth <= 768) {
-      this.ellipse[0].width = '693px';
-      this.ellipse[0].height = '693px';
-      this.ellipse[0].left = '-193px';
-      this.ellipse[0].zIndex = 99; // Auch hier niedriger als .prof-img
-    } else if (screenWidth <= 1280) {
-      this.ellipse[0].width = '693px';
-      this.ellipse[0].height = '693px';
-      this.ellipse[0].zIndex = 99;
-    } else {
-      this.ellipse[0].width = '793px';
-      this.ellipse[0].height = '793px';
-      this.ellipse[0].zIndex = 99;
-    }
   }
 }

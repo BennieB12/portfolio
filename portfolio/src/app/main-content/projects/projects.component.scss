@@ -126,7 +126,7 @@
   .btn-box {
     flex-direction: row;
     align-items: center;
-    gap: 150px;
+    gap: 120px;
     padding-top: 24px;
     button {
       width: 125px;
@@ -145,18 +145,19 @@
     border: 2px solid white;
     color: white;
     transition: transform 120ms ease-out;
-  
+
     &:hover {
       cursor: pointer;
       border: 2px solid rgba(89, 136, 255, 1);
-      animation: gradientToWhite 120ms forwards, growButton 120ms ease-in forwards;
+      animation: gradientToWhite 120ms forwards,
+        growButton 120ms ease-in forwards;
     }
-  
+
     &:not(:hover) {
       animation: shrinkButton 120ms ease-out forwards;
     }
   }
-  
+
   @keyframes gradientToWhite {
     0% {
       background: radial-gradient(
@@ -178,6 +179,38 @@
         #ffffff 90.08%
       );
       color: rgba(89, 136, 255, 1);
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .btn-box {
+    gap: 60px;
+  }
+  .headl-projects {
+    align-items: center;
+    margin: 0;
+
+  }
+  .project,
+  .project.reverse-layout {
+    gap: 16px;
+  }
+  .project-image {
+    width: 390px;
+    height: 275px;
+  }
+}
+
+@media (max-width: 420px) {
+  .btn-box {
+    padding: 0;
+    flex-direction: column;
+    gap: 36px;
+  }
+  .headl-projects {
+    span {
+      width: 252px;
     }
   }
 }

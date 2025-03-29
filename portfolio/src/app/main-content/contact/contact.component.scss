@@ -103,13 +103,13 @@
   }
   &.valid {
     border: 2px solid green !important;
-    background: url("/assets/icons/check.svg") no-repeat right 10px center;
+    background: url("../../../assets/img/check.png") no-repeat right 10px center;
     background-size: 20px;
   }
 
   &.invalid {
     border: 2px solid red !important;
-    background: url("/assets/icons/error.svg") no-repeat right 10px center;
+    background: url("../../../assets/img/error.png") no-repeat right 10px center;
     background-size: 20px;
   }
   &:hover {
@@ -269,26 +269,26 @@ textarea.invalid + .error-message {
   #contact-left {
     width: auto;
     min-width: auto;
-    max-width: 600px;
+    max-width: 500px;
     margin-left: 75px;
   }
 
   #contact-right {
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
     margin-left: 75px;
   }
 
   #contact-name,
   #contact-mail {
-    min-width: 600px;
-    max-width: 600px;
+    min-width: 500px;
+    max-width: 500px;
     padding: 15px 20px;
   }
 
   #contact-text {
-    min-width: 600px;;
-    max-width: 600px;
+    min-width: 500px;
+    max-width: 500px;
     min-height: 160px;
     max-height: 160px;
     border-radius: 10px;
@@ -301,5 +301,85 @@ textarea.invalid + .error-message {
     padding: 15px 30px;
     font-size: 16px;
     align-self: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .headl-contact {
+    margin-left: 0px;
+    h5 {
+      text-align: center;
+      font-size: 45px;
+      line-height: 120%;
+    }
+  }
+  #contact {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+  }
+  #contact-left {
+    width: auto;
+    min-width: auto;
+    max-width: 400px;
+    margin-left: 0px;
+  }
+
+  #contact-right {
+    width: 100%;
+    max-width: 400px;
+    margin-left: 0px;
+  }
+
+  #contact-name,
+  #contact-mail {
+    min-width: 400px;
+    max-width: 400px;
+    padding: 15px 20px;
+  }
+
+  #contact-text {
+    min-width: 400px;
+    max-width: 400px;
+    min-height: 160px;
+    max-height: 160px;
+    border-radius: 10px;
+    padding: 15px 25px;
+  }
+
+  #contact-submit {
+    width: 100%;
+    max-width: 200px;
+    padding: 15px 30px;
+    font-size: 16px;
+    align-self: center;
+  }
+}
+@media (max-width: 480px) {
+
+  #contact-left {
+    max-width: 300px;
+  }
+
+  #contact-right {
+    max-width: 300px;
+  }
+
+  #contact-name,
+  #contact-mail {
+    min-width: 300px;
+    max-width: 300px;
+    padding: 10px 15px;
+  }
+
+  #contact-text {
+    min-width: 300px;
+    max-width: 300px;
+    padding: 10px 15px;
+  }
+
+  #contact-submit {
+    max-width: 150px;
   }
 }

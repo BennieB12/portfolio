@@ -1,23 +1,26 @@
 <section id="section-atf">
   <div class="atf-top">
-    <div class="atf-headline">
-      <h1 class="mar-uni" appScrollAnimate [@fadeIn]="sectionState">
-        {{ "atf.greeting" | translate }}
-      </h1>
-      <h2 [@fadeIn]="profImgState">{{ "atf.role" | translate }}</h2>
-    </div>
+    <h1 class="mar-uni" appScrollAnimate [@fadeIn]="sectionState">
+      {{ "atf.greeting" | translate }}
+    </h1>
+    <h2 [@fadeIn]="profImgState">{{ "atf.role" | translate }}</h2>
   </div>
+
   <div class="atf-btm">
-    <div class="prof-img">
-      <img
-        src="../../../assets/img/prof.png"
-        alt="profile-image"
-        [@fadeIn]="profImgState"
-      />
-    </div>
+    <img
+      id="prof-img"
+      src="../../../assets/img/prof.png"
+      alt="profile-image"
+      [@fadeIn]="profImgState"
+    />
 
     <div class="atf-scroll" appScrollAnimate [@fadeIn]="sectionState">
+      <div class="horizontal-line"></div>
       <span class="atf-span">{{ "atf.scroll" | translate }}</span>
+    </div>
+
+    <div class="atf-scroll-res" appScrollAnimate [@fadeIn]="sectionState">
+      <span class="atf-span-res">{{ "atf.scroll-res" | translate }}</span>
     </div>
 
     <div class="social-links" appScrollAnimate [@fadeIn]="sectionState">

@@ -83,3 +83,12 @@ h4 {
     padding-right: 10px;
     }
 }
+@media (max-width: 440px) {
+  .skillset-content {
+    padding-top: 10px;
+    gap: 60px;
+  }
+  h4 {
+    font-size: 64px;
+  }
+}
