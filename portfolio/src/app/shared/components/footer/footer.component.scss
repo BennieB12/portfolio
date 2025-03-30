@@ -72,12 +72,15 @@ footer {
   }
 }
 
-@media (max-width: 768px) {
-
+@media (max-width: 1040px) {
   footer {
     flex-direction: column;
-  .legal-notice {
-    margin-top: -50px;
   }
 }
+@media (max-width: 768px) {
+  footer {
+    .legal-notice {
+      margin-top: -50px;
+    }
+  }
 }

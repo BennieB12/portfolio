@@ -93,26 +93,46 @@
   @include button;
 }
 
-@media (max-width: 768px) {
-  .headl-projects {
-    margin-left: 75px;
-    h5 {
-      font-size: 64px;
+@media (max-width: 1280px) {
+  .project {
+    gap: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+    .headl-projects{
+      margin-left: 10px;
+      margin-top: 40px;
     }
-    span {
-      width: 340px;
-      height: 59px;
+  }
 
-      font-size: 16px;
-      line-height: 120%;
-      letter-spacing: 0%;
-    }
+
+@media (max-width:1040px) {
+  .headl-projects {
+    align-items: center;
   }
   .project,
   .project.reverse-layout {
     flex-direction: column;
     align-items: center;
     gap: 32px;
+  }
+  .project-info{
+    width: 640px;
+  }
+  .btn-box{
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .headl-projects {
+    span {
+      width: 340px;
+      height: 59px;
+      font-size: 16px;
+      line-height: 120%;
+      letter-spacing: 0%;
+    }
   }
   .project-image {
     max-height: 60%;
@@ -125,7 +145,6 @@
   }
   .btn-box {
     flex-direction: row;
-    align-items: center;
     gap: 120px;
     padding-top: 24px;
     button {
@@ -188,10 +207,11 @@
     gap: 60px;
   }
   .headl-projects {
-    align-items: center;
-    margin: 0;
-
+    h5 {
+      font-size: 64px;
+    }
   }
+
   .project,
   .project.reverse-layout {
     gap: 16px;

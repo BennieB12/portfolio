@@ -13,8 +13,9 @@
 .atf-top {
   display: flex;
   flex-direction: column;
-  width: min(50%, 700px);
+  width: min(50%, 720px);
   margin-right: 5vh;
+  padding-left: 5vh;
   padding-top: clamp(40px, 6vh, 108px);
 
   h1 {
@@ -42,21 +43,22 @@
   flex: 1;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   width: 100%;
   position: relative;
   height: auto;
 }
 
 #prof-img {
-  width: clamp(200px, 35vw, 600px);
-  height: auto;
-  margin-left: clamp(20px, 10vw, 100px);
-  object-fit: contain;
-  z-index: 105;
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 20%;
+  transform: translateX(-50%);
+  width: 40%;
+  max-height: 110%;
+  object-fit: contain;
+  z-index: 105;
+  margin-left: 24px;
 }
 
 .social-links {
@@ -121,23 +123,27 @@
   }
 }
 
-// @media (max-width: 1140px) {
-//   #section-atf {
-//     height: 90vh;
-//     display: flex;
-//     flex-direction: column;
-//   }
+@media (max-width: 1280px) {
+  #prof-img {
+    left: 25%;
+    transform: translateX(-50%);
+    width: 40%;
+    max-height: 110%;
+  }
 
-//   .atf-top {
-//     display: flex;
-//     flex: 1;
-//     width: 630px;
-//     justify-content: flex-end;
-//     padding-top: 80px;
-//     margin-right: 20px;
-//     z-index: 1005;
-//   }
-// }
+  .atf-scroll {
+    left: 70%;
+  }
+}
+
+@media (max-width: 1040px) {
+
+  #prof-img {
+
+    transform: translateX(-50%);
+    width: 50%;
+    max-height: 130%;
+   }}
 
 @media (max-width: 768px) {
   #section-atf {
@@ -184,9 +190,12 @@
   }
 
   #prof-img {
-    margin: 0;
-    width: clamp(310px, 30vw, 560px);
-    left: 20px;
+    width: 80%;
+    height: auto;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0;
   }
 
   .atf-scroll {
@@ -229,6 +238,10 @@
     margin: 0;
     padding-left: 10px;
   }
+
+  #prof-img {
+    width: 90%;
+  }
 }
 
 @media (max-width: 410px) {
@@ -239,16 +252,21 @@
       font-size: 28px;
     }
     h2 {
-      font-size:56px;
+      font-size: 56px;
       line-height: 100%;
     }
   }
 }
 
-
 @media (max-width: 410px) {
-#prof-img {
-  margin: 0;
-  width: clamp(290px, 30vw, 560px);
-  left: 10px;
-}}
+  #prof-img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  #prof-img {
+    height: auto;
+    max-height: 90%;
+  }
+}
