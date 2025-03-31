@@ -11,10 +11,11 @@
   "atf": {
     "greeting": "Hallo! Ich bin Benjamin",
     "role": "FRONTEND ENTWICKLER",
-    "scroll": "SCROLLEN"
+    "scroll": "SCROLLEN",
+    "scroll-res": "Runter Scrollen → "
   },
   "intro": {
-    "headline": "Lets Work together",
+    "headline": "Lass uns zusammenarbeiten",
     "subHeadline": "Ich bin",
     "location": "in Düsseldorf, Deutschland",
     "remote": "bereit für Remote-Arbeit",
@@ -50,7 +51,7 @@
         "subtitle": "JavaScript | HTML | CSS | Firebase",
         "description": "Task-Manager, inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzern und Kategorien zu.",
         "btngit": "Github",
-        "btntest": "Projekt anzeigen"
+        "btntest": "Testen"
       },
       {
         "title": "El Pollo Loco",

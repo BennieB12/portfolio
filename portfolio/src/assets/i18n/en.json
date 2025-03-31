@@ -10,7 +10,8 @@
   "atf": {
     "greeting": "Hello! I am Benjamin",
     "role": "FRONTEND DEVELOPER",
-    "scroll": "SCROLL"
+    "scroll": "SCROLL",
+    "scroll-res": "SCROLL DOWN → "
   },
   "intro": {
     "headline": "Let's work together",

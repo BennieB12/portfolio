@@ -65,6 +65,7 @@
   justify-content: center;
   flex-direction: column;
   margin-top: 0;
+  margin-right: 10px;
 }
 
 .input-group {
@@ -120,6 +121,7 @@
 }
 
 .error-message {
+  justify-self: anchor-center;
   position: absolute;
   top: 101%;
   left: 0;
@@ -253,36 +255,35 @@ textarea.invalid + .error-message {
   box-shadow: 0 0 10px red;
 }
 
-
 .contact-arrow {
+  @include background;
   position: absolute;
   height: 24px;
   width: 24px;
   bottom: 8%;
   left: 8%;
   border-radius: 50%;
-  background-color: $color;
   color: rgba(89, 136, 255, 1);
   transition: transform 120ms ease-out;
   &:hover {
     cursor: pointer;
     border: unset;
     scale: 1.2;
-}}
+  }
+}
 
 @media (max-width: 1280px) {
-
-#contact {
-  gap: 60px;
-
-}
+  #contact {
+    gap: 60px;
+  }
 }
 
-@media (max-width:1040px) {
+@media (max-width: 1040px) {
   #contact {
     flex-direction: column;
-    align-items: center   ;
+    align-items: center;
     justify-content: center;
+    padding-top: 20px;
   }
   .headl-contact {
     margin-left: 0;
@@ -292,11 +293,20 @@ textarea.invalid + .error-message {
   }
   #contact-left {
     margin-left: 0;
+    text-align: center;
   }
 
   .contact-arrow {
     left: 4%;
     bottom: 4%;
+  }
+
+  #contact-submit {
+    width: 100%;
+    max-width: 360px;
+    padding: 15px 30px;
+    font-size: 16px;
+    align-self: center;
   }
 }
 
@@ -322,7 +332,7 @@ textarea.invalid + .error-message {
   }
 
   .contact-arrow {
-    bottom: 1%;
+    bottom: 7%;
   }
 
   #contact-name,
@@ -342,11 +352,13 @@ textarea.invalid + .error-message {
   }
 
   #contact-submit {
-    width: 100%;
     max-width: 300px;
-    padding: 15px 30px;
-    font-size: 16px;
-    align-self: center;
+  }
+
+  .error-message {
+    padding: 0;
+    white-space: wrap;
+    text-align: center;
   }
 }
 
@@ -355,8 +367,7 @@ textarea.invalid + .error-message {
     margin-left: 0px;
     h5 {
       text-align: center;
-      font-size: 45px;
-      line-height: 120%;
+      font-size: 48px;
     }
   }
   #contact {
@@ -392,20 +403,22 @@ textarea.invalid + .error-message {
     padding: 15px 25px;
   }
 
-
-
   #contact-submit {
-    width: 100%;
     max-width: 200px;
-    padding: 15px 30px;
-    font-size: 16px;
-    align-self: center;
   }
 }
-@media (max-width: 480px) {
 
+@media (max-width: 480px) {
+  .headl-contact {
+    h5 {
+      font-size: 36px;
+    }
+  }
   #contact-left {
     max-width: 300px;
+    h6 {
+      font-size: 28px;
+    }
   }
 
   #contact-right {
@@ -427,5 +440,9 @@ textarea.invalid + .error-message {
 
   #contact-submit {
     max-width: 150px;
+  }
+  
+  .contact-arrow {
+    bottom: 1%;
   }
 }

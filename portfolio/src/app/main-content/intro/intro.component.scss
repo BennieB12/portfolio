@@ -25,6 +25,9 @@
     line-height: 107.6px;
     letter-spacing: -0.025em;
     display: block;
+
+    word-wrap: break-word;
+    hyphens: auto;
   }
 
   h3 {
@@ -47,9 +50,8 @@
 
 .intro-icons {
   display: flex;
-  align-items: end;
+  align-items: center;
   min-height: 75px;
-  // max-height: 75px;
   gap: 16px;
 
   p {
@@ -160,6 +162,7 @@
 .intro-right {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   max-width: 500px;
   width: 100%;
   gap: 40px;
@@ -178,12 +181,84 @@
 }
 
 @media (max-width: 1040px) {
-
   #intro {
     flex-direction: column;
     align-items: center;
     padding-top: 50px;
     padding-bottom: 60px;
+    gap: 60px;
+  }
+  .intro-left {
+    h2 {
+      text-align: center;
+      font-size: 64px;
+      word-wrap:unset;
+      hyphens:none;
+    }
+    h3 {
+      font-size: 42px;
+    }
+  }
+
+  .intro-left {
+    max-width: none;
+    width: auto;
+  }
+
+  .intro-icons {
+    min-height: auto;
+  }
+
+  .intro-right {
+    max-width: none;
+    width: auto;
+    gap: 40px;
+    p {
+      text-align: center;
+    }
+  }
+
+  .image-wrapper3 {
+    width: 50px;
+    height: 50px;
+
+    img {
+      width: auto;
+      height: auto;
+    }
+
+    .hover {
+      opacity: 0;
+      position: absolute;
+      top: auto;
+      left: auto;
+    }
+  }
+
+  .image-wrapper {
+    width: 50px;
+    height: 50px;
+    align-items: flex-end;
+    img {
+      width: auto;
+      height: auto;
+    }
+    .hover {
+      top: auto;
+      left: auto;
+    }
+  }
+  .image-wrapper2 {
+    width: 50px;
+    height: 50px;
+    img {
+      width: auto;
+      height: auto;
+    }
+    .hover {
+      top: auto;
+      left: auto;
+    }
   }
 
   #intro-btn {
@@ -217,6 +292,15 @@
 }
 
 @media (max-width: 640px) {
+  .intro-left {
+    h2 {
+      font-size: 48px;
+    }
+    h3 {
+      font-size: 28px;
+    }
+  }
+
   .intro-icon {
     align-items: flex-start;
     flex-direction: column;
@@ -228,11 +312,12 @@
     justify-content: flex-start;
     gap: 36px;
   }
-  .image-wrapper,.image-wrapper3 {
+  .image-wrapper,
+  .image-wrapper3 {
     width: 40px;
     height: 40px;
   }
-  .image-wrapper2{
+  .image-wrapper2 {
     width: 40px;
     height: 50px;
   }
@@ -241,5 +326,22 @@
 @media (max-width: 440px) {
   #intro-btn {
     width: auto;
+  }
+  .intro-left {
+    h2 {
+      font-size: 36px;
+    }
+    h3 {
+      font-size: 28px;
+    }
+  }
+  .intro-right {
+    width: 300px;
+    p {
+      font-size: 16px;
+    }
+  }
+  #intro-btn {
+    font-size: 16px;
   }
 }

@@ -13,7 +13,7 @@
 .atf-top {
   display: flex;
   flex-direction: column;
-  width: min(50%, 720px);
+  width: min(55%, 720px);
   margin-right: 5vh;
   padding-left: 5vh;
   padding-top: clamp(40px, 6vh, 108px);
@@ -55,7 +55,7 @@
   left: 20%;
   transform: translateX(-50%);
   width: 40%;
-  max-height: 110%;
+  max-height: 130%;
   object-fit: contain;
   z-index: 105;
   margin-left: 24px;
@@ -124,11 +124,14 @@
 }
 
 @media (max-width: 1280px) {
+  .atf-top {
+    margin-right: 0;
+  }
   #prof-img {
     left: 25%;
     transform: translateX(-50%);
     width: 40%;
-    max-height: 110%;
+    max-height: 130%;
   }
 
   .atf-scroll {
@@ -137,13 +140,18 @@
 }
 
 @media (max-width: 1040px) {
-
+  .atf-top {
+    margin-right: 5vh;
+  }
+  .social-links {
+    margin-right: 10px;
+  }
   #prof-img {
-
     transform: translateX(-50%);
     width: 50%;
     max-height: 130%;
-   }}
+  }
+}
 
 @media (max-width: 768px) {
   #section-atf {
@@ -157,13 +165,12 @@
     height: auto;
     align-items: flex-start;
     justify-content: center;
-    width: min(60%, 720px);
+    width: min(65%, 720px);
     padding: 0;
     z-index: 106;
-    height: 208px;
     margin-left: 0;
     margin-top: 0;
-    margin-right: 40%;
+    margin-right: 15%;
     padding-left: 20px;
 
     h1 {
@@ -225,29 +232,21 @@
   }
 }
 
-@media (max-width: 660px) {
+@media (max-width: 640px) {
   .atf-top {
+    margin-right: 0;
     width: 100%;
-    margin: 0;
+    align-items: center;
+    h1,
+    h2 {
+      text-align: center;
+    }
   }
 }
 
 @media (max-width: 480px) {
   .atf-top {
-    width: 100%;
-    margin: 0;
-    padding-left: 10px;
-  }
-
-  #prof-img {
-    width: 90%;
-  }
-}
-
-@media (max-width: 410px) {
-  .atf-top {
-    width: 100%;
-    padding: 0;
+    padding-left: 0;
     h1 {
       font-size: 28px;
     }
@@ -256,17 +255,15 @@
       line-height: 100%;
     }
   }
-}
 
-@media (max-width: 410px) {
   #prof-img {
-    width: 100%;
+    width: 90%;
   }
 }
 
 @media (max-width: 360px) {
   #prof-img {
     height: auto;
-    max-height: 90%;
+    max-height: 110%;
   }
 }

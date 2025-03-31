@@ -45,8 +45,8 @@
   @media (max-width: 768px){
     .ellipse{
       &.ellipse-0 {
-        width: clamp(740px, 100vw, 900px);
-        height: clamp(740px, 100vw, 900px);
+        width: clamp(800px, 100vw, 900px);
+        height: clamp(800px, 100vw, 900px);
       }
     }
   }
@@ -54,8 +54,8 @@
   @media (max-width: 640px){
     .ellipse{
       &.ellipse-0 {
-        width: clamp(720px, 100vw, 800px);
-        height: clamp(720px, 100vw, 800px);
+        width: clamp(760px, 100vw, 800px);
+        height: clamp(760px, 100vw, 800px);
       }
     }
   }
@@ -63,16 +63,16 @@
   @media (max-width: 570px){
     .ellipse{
       &.ellipse-0 {
-        width: clamp(680px, 100vw, 800px);
-        height: clamp(680px, 100vw, 800px);
+        width: clamp(720px, 100vw, 800px);
+        height: clamp(720px, 100vw, 800px);
       }
     }
   }
-  @media (max-width: 510px){
+  @media (max-width: 540px){
     .ellipse{
       &.ellipse-0 {
-        width: clamp(640px, 100vw, 800px);
-        height: clamp(640px, 100vw, 800px);
+        width: clamp(670px, 100vw, 800px);
+        height: clamp(670px, 100vw, 800px);
       }
     }
   }
@@ -80,8 +80,8 @@
   @media (max-width: 480px){
     .ellipse{
       &.ellipse-0 {
-        width: clamp(620px, 100vw, 650px);
-        height: clamp(620px, 100vw, 650px);
+        width: clamp(630px, 100vw, 650px);
+        height: clamp(630px, 100vw, 650px);
       }
     }
   }
@@ -98,21 +98,21 @@
   @media (max-width: 410px){
     .ellipse{
       &.ellipse-0 {
-        width: clamp(580px, 100vw, 560px);
-        height: clamp(580px, 100vw, 656px);
+        width: clamp(560px, 100vw, 560px);
+        height: clamp(560px, 100vw, 656px);
       }
     }
   }
-  @media (max-width: 410px){
-    .ellipse{
-      &.ellipse-0 {
-        width: clamp(550px, 100vw, 560px);
-        height: clamp(550px, 100vw, 656px);
-  }}}
 
-  @media (max-width: 360px){
+  @media (max-width: 370px){
     .ellipse{
       &.ellipse-0 {
-        width: clamp(510px, 100vw, 560px);
-        height: clamp(510px, 100vw, 656px);
+        width: clamp(530px, 100vw, 560px);
+        height: clamp(530px, 100vw, 656px);
+  }}}
+  @media (max-width: 340px){
+    .ellipse{
+      &.ellipse-0 {
+        width: clamp(500px, 100vw, 560px);
+        height: clamp(500px, 100vw, 656px);
   }}}
