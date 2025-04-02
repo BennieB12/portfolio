@@ -43,20 +43,20 @@ export class ProjectsComponent {
     {
       imageSrc: 'assets/img/project_1.png',
       imageAlt: 'Project 1',
-      gitLink: 'https://github.com/BennieB12',
-      testLink: 'https://Benjamin-Kloss.de',
+      gitLink: 'https://github.com/BennieB12/Join/',
+      testLink: 'https://Benjamin-Kloss.de/join/public/',
     },
     {
       imageSrc: 'assets/img/project_2.png',
       imageAlt: 'Project 2',
-      gitLink: 'https://github.com/BennieB12',
-      testLink: 'https://Benjamin-Kloss.de',
+      gitLink: 'https://github.com/BennieB12/polloloco/',
+      testLink: 'https://Benjamin-Kloss.de/pollo-loco/',
     },
     {
       imageSrc: 'assets/img/project_3.png',
       imageAlt: 'Project 3',
       gitLink: 'https://github.com/BennieB12',
-      testLink: 'https://Benjamin-Kloss.de',
+      testLink: 'https://Benjamin-Kloss.de/pokedex/',
     },
   ];
 

@@ -34,6 +34,15 @@ export class IntroComponent {
     }
   }
 
+  scrollToSection(id: string) {
+    setTimeout(() => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+   } , 50);
+  }
+  
   onVisibilityChange(isVisible: boolean) {
     this.isVisible = isVisible;
   }

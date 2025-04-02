@@ -1,4 +1,6 @@
 <section id="intro" appScrollVisibility (isVisibleChange)="onVisibilityChange($event)">
+  <div class="ellipse"></div>
+  <div class="ellipse2"></div>
   <div class="intro-left" [@slideInLeft]="isVisible ? 'visible' : 'hidden'" [@fadeIn]="isVisible ? 'visible' : 'hidden'">
     <h2>{{ 'intro.headline' | translate }}</h2>
     <h3>{{ 'intro.subHeadline' | translate }}</h3>
@@ -34,6 +36,6 @@
     <p>
       {{ 'intro.description' | translate }}
     </p>
-    <button id="intro-btn">{{ 'intro.button' | translate }}</button>
+    <button id="intro-btn" (click)="scrollToSection('headl-contact')">{{ 'intro.button' | translate }}</button>
   </div>
 </section>

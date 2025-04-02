@@ -58,24 +58,23 @@ export class ContactComponent {
   onSubmit() {
     if (this.contactForm.valid && !this.messageSent) {
       this.messageSent = true;
-
+  
       this.emailService.sendEmail(this.contactForm.value).subscribe({
         next: (response) => {
-          console.log('E-Mail erfolgreich gesendet:', response);
           this.messageSent = true;
           this.contactForm.reset();
-
+  
           setTimeout(() => {
             this.messageSent = false;
           }, 3000);
         },
         error: (error) => {
-          console.log('Fehler beim Senden der E-Mail:', error);
           this.messageSent = false;
         },
       });
     }
   }
+  
 
   highlightInvalidFields() {
     Object.keys(this.contactForm.controls).forEach((field) => {

@@ -10,6 +10,25 @@
   align-items: flex-end;
 }
 
+.ellipse {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(
+    74.22% 74.22% at 19.79% 22.42%,
+    #5988ff 6.25%,
+    #5988ff 51.56%,
+    #0043f0 100%
+  );
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4),
+    -4px -4px 15px rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+    top: -93px;
+    left: -193px;
+    z-index: 103;
+    width: clamp(400px, 62vw, 793px);
+    height: clamp(400px, 62vw, 793px);
+}
+
 .atf-top {
   display: flex;
   flex-direction: column;
@@ -26,6 +45,7 @@
     line-height: clamp(28px, 5vw, 64px);
     font-weight: 400;
     line-height: 64px;
+    white-space: nowrap;
   }
   h2 {
     @include margin-font;

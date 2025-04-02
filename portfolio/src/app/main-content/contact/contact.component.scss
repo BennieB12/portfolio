@@ -12,7 +12,7 @@
   position: relative;
 }
 
-.headl-contact {
+#headl-contact {
   margin-top: 40px;
   margin-left: 77px;
 
@@ -285,7 +285,7 @@ textarea.invalid + .error-message {
     justify-content: center;
     padding-top: 20px;
   }
-  .headl-contact {
+  #headl-contact {
     margin-left: 0;
     h5 {
       text-align: center;
@@ -311,7 +311,7 @@ textarea.invalid + .error-message {
 }
 
 @media (max-width: 768px) {
-  .headl-contact {
+  #headl-contact {
     margin-left: 0px;
     h5 {
       text-align: center;
@@ -363,7 +363,7 @@ textarea.invalid + .error-message {
 }
 
 @media (max-width: 640px) {
-  .headl-contact {
+  #headl-contact {
     margin-left: 0px;
     h5 {
       text-align: center;
@@ -409,7 +409,7 @@ textarea.invalid + .error-message {
 }
 
 @media (max-width: 480px) {
-  .headl-contact {
+  #headl-contact {
     h5 {
       font-size: 36px;
     }

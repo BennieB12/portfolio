@@ -21,7 +21,7 @@
     <a href="#" (click)="toggleMenu(); scrollToSection('projects')">{{
       "header.myWork" | translate
     }}</a>
-    <a href="#" (click)="toggleMenu()">{{ "header.contact" | translate }}</a>
+    <a href="#" (click)="toggleMenu(); scrollToSection('headl-contact')">{{ "header.contact" | translate }}</a>
     <div class="header-langu">
       <div
         (click)="switchLanguage('en')"

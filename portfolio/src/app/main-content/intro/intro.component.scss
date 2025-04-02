@@ -5,6 +5,45 @@
   display: flex;
   justify-content: center;
   gap: 100px;
+  position: relative;
+}
+.ellipse {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(
+    74.22% 74.22% at 19.79% 22.42%,
+    #5988ff 6.25%,
+    #5988ff 51.56%,
+    #0043f0 100%
+  );
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4),
+    -4px -4px 15px rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+  top: -14%;
+  left: 50%;
+  z-index: -1;
+  width: clamp(100px, 15vw, 200px);
+  height: clamp(100px, 15vw, 200px);
+  transform: translate(-50%, -14%);
+}
+
+.ellipse2 {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(
+    74.22% 74.22% at 19.79% 22.42%,
+    #5988ff 6.25%,
+    #5988ff 51.56%,
+    #0043f0 100%
+  );
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4),
+    -4px -4px 15px rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+  top: 1%;
+  left: 80%;
+  width: clamp(50px, 5vw, 100px);
+  height: clamp(50px, 5vw, 100px);
+  transform: translateX(-80%);
 }
 
 .intro-left {
@@ -180,6 +219,13 @@
   @include button;
 }
 
+@media (max-width: 1280px) {
+.ellipse {
+  top: -12%;
+  left: 50%;
+  transform: translate(-50%, -12%);
+}}
+
 @media (max-width: 1040px) {
   #intro {
     flex-direction: column;
@@ -187,6 +233,15 @@
     padding-top: 50px;
     padding-bottom: 60px;
     gap: 60px;
+  }
+  .ellipse {
+    top: -10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+  }
+  .ellipse2{
+  top: 20%;
+  left: 85%;
   }
   .intro-left {
     h2 {
@@ -285,6 +340,10 @@
       text-align: center;
     }
   }
+  .ellipse {
+    top: -8%;
+    transform: translate(-50%, 8%);
+  }
   .intro-right {
     min-width: auto;
     max-width: 600px;
@@ -299,6 +358,10 @@
     h3 {
       font-size: 28px;
     }
+  }
+
+  .ellipse {
+    top: -6%;
   }
 
   .intro-icon {
@@ -327,6 +390,10 @@
   #intro-btn {
     width: auto;
   }
+  .ellipse2{
+    top: 15%;
+    left: 80%;
+    }
   .intro-left {
     h2 {
       font-size: 36px;

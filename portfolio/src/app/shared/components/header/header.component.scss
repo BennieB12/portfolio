@@ -59,7 +59,7 @@ nav {
   }
 }
 
-nav div.active svg {
+nav div.active object {
   border: 1px solid $color;
   border-radius: 100%;
   box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
@@ -153,6 +153,12 @@ nav {
       object-fit: contain;
       transition: filter 0.3s ease-in-out;
     }
+  }
+
+  .header-langu div.active object {
+    border: 2px solid #007bff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
   }
 
   .header-langu {

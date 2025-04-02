@@ -27,11 +27,14 @@ export class HeaderComponent {
    * @returns {void} - No return value.
    */
   scrollToSection(id: string) {
+    setTimeout(() => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+   } , 50);
   }
+
 
   /**
    * Switches the application's language by invoking the `changeLanguage` method from the TranslationService.
@@ -41,6 +44,9 @@ export class HeaderComponent {
    */
   switchLanguage(language: string): void {
     this.translationService.changeLanguage(language);
+    if (window.innerWidth < 768) {
+      this.toggleMenu();
+    }
   }
 
   /**
