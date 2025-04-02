@@ -12,9 +12,65 @@
   position: relative;
 }
 
+.ellipse {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(
+    74.22% 74.22% at 19.79% 22.42%,
+    #5988ff 6.25%,
+    #5988ff 51.56%,
+    #0043f0 100%
+  );
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4),
+    -4px -4px 15px rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+  z-index: -1;
+  top: 15%;
+  left: 75%;
+  width: 98px;
+  height: 98px;
+}
+
+.ellipse2 {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(
+    74.22% 74.22% at 19.79% 22.42%,
+    #5988ff 6.25%,
+    #5988ff 51.56%,
+    #0043f0 100%
+  );
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4),
+    -4px -4px 15px rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+  top: 80%;
+  left: 85%;
+  width: 72px;
+  height: 72px;
+}
+
+.ellipse3 {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(
+    74.22% 74.22% at 19.79% 22.42%,
+    #5988ff 6.25%,
+    #5988ff 51.56%,
+    #0043f0 100%
+  );
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4),
+    -4px -4px 15px rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+  top: 55%;
+  left: 15%;
+  width: 204px;
+  height: 204px;
+}
+
 #headl-contact {
-  margin-top: 40px;
+  padding-top: 80px;
   margin-left: 77px;
+  position: relative;
 
   h5 {
     font-family: "Baloo 2";
@@ -296,6 +352,17 @@ textarea.invalid + .error-message {
     text-align: center;
   }
 
+  .ellipse2 {
+    top: 88%;
+    left: 85%;
+    width: 72px;
+    height: 72px;
+  }
+
+  .ellipse3 { 
+    display: none;
+  }
+
   .contact-arrow {
     left: 4%;
     bottom: 4%;
@@ -369,9 +436,22 @@ textarea.invalid + .error-message {
       text-align: center;
       font-size: 48px;
     }
+    .ellipse {
+      top: 28%;
+      left: 80%;
+      width: 48px;
+      height: 48px;
+    }
   }
   #contact {
     gap: 60px;
+  }
+
+  .ellipse2 {
+    top: 90%;
+    left: 85%;
+    width: 32px;
+    height: 32px;
   }
 
   #contact-left {
@@ -441,7 +521,7 @@ textarea.invalid + .error-message {
   #contact-submit {
     max-width: 150px;
   }
-  
+
   .contact-arrow {
     bottom: 1%;
   }
