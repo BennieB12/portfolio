@@ -12,18 +12,28 @@ import { fadeIn} from '../../animations/animations';
   styleUrl: './atf.component.scss',
   animations: [fadeIn]
 })
+/**
+ * Represents the ATF (Above the Fold) component.
+ * This component manages animations for profile image and section visibility.
+ */
 export class AtfComponent {
-
+  /** State of the profile image animation ('hidden' or 'visible'). */
   profImgState = 'hidden';
+
+  /** State of the section animation ('hidden' or 'visible'). */
   sectionState = 'hidden';
 
-  ngOnInit() {
+  /**
+   * Lifecycle hook that is called after Angular initializes the component.
+   * Delays the visibility of the profile image and section to create an animation effect.
+   */
+  ngOnInit(): void {
     setTimeout(() => {
       this.profImgState = 'visible';
     }, 2000);
+
     setTimeout(() => {
       this.sectionState = 'visible';
     }, 1200);
   }
 }
-

@@ -13,38 +13,35 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './intro.component.scss',
   animations: [slideInLeft, fadeIn]
 })
+/**
+ * Represents the introduction section of the application.
+ * Handles smooth scrolling and visibility changes.
+ */
 export class IntroComponent {
+  /** Tracks the visibility state of the component. */
   isVisible = false;
 
-  imageMap: Record<string, { default: string; hover: string }> = {
-    location: { default: 'assets/img/location.png', hover: 'assets/img/location-hover.png' },
-    remote: { default: 'assets/img/remote.png', hover: 'assets/img/remote-hover.png' },
-    move: { default: 'assets/img/move.png', hover: 'assets/img/move-hover.png' }
-  };
-
-  currentImages: Record<string, string> = {
-    location: this.imageMap['location'].default,
-    remote: this.imageMap['remote'].default,
-    move: this.imageMap['move'].default
-  };
-
-  hoverImage(icon: string, hover: boolean) {
-    if (this.imageMap[icon]) {
-      this.currentImages[icon] = hover ? this.imageMap[icon].hover : this.imageMap[icon].default;
-    }
-  }
-
-  scrollToSection(id: string) {
+  /**
+   * Smoothly scrolls the page to a specified section by its ID.
+   * 
+   * @param {string} id - The ID of the target section.
+   */
+  scrollToSection(id: string): void {
     setTimeout(() => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-   } , 50);
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 50);
   }
-  
-  onVisibilityChange(isVisible: boolean) {
+
+  /**
+   * Updates the visibility state of the component.
+   * 
+   * @param {boolean} isVisible - Whether the component is currently visible.
+   */
+  onVisibilityChange(isVisible: boolean): void {
     this.isVisible = isVisible;
   }
-  
 }
+

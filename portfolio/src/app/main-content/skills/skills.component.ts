@@ -3,6 +3,9 @@ import { CommonModule, NgFor  } from '@angular/common';
 import { slideInFromBottom, fadeIn } from '../../animations/animations'; 
 import { ScrollVisibilityDirective } from '../directives/scroll-visibility.directive';
 import { TranslateModule } from '@ngx-translate/core';
+/**
+ * Component that displays a list of technical skills with animations.
+ */
 @Component({
   selector: 'app-skills',
   standalone: true,
@@ -12,8 +15,12 @@ import { TranslateModule } from '@ngx-translate/core';
   animations: [slideInFromBottom, fadeIn]
 })
 export class SkillsComponent {
+  /** Controls the visibility state of the entire skills section. */
   isVisible = false;
 
+  /**
+   * List of skills, each containing a name, image source, and visibility status.
+   */
   skills = [
     { name: 'Angular', image: '../../assets/img/Property 1=Angular.png', isVisible: false },
     { name: 'TypeScript', image: '../../assets/img/Property 1=Typescript.png', isVisible: false },
@@ -27,14 +34,31 @@ export class SkillsComponent {
     { name: 'Rest API', image: '../../assets/img/Property 1=Api.png', isVisible: false },
   ];
 
-  onVisibilityChange(isVisible: boolean) {
+  /**
+   * Updates the visibility state of the entire skills section when it enters the viewport.
+   *
+   * @param {boolean} isVisible - Whether the section is visible.
+   */
+  onVisibilityChange(isVisible: boolean): void {
     this.isVisible = isVisible;
   }
 
-  onSkillVisibilityChange(index: number, isVisible: boolean) {
+  /**
+   * Updates the visibility state of a specific skill.
+   *
+   * @param {number} index - The index of the skill in the list.
+   * @param {boolean} isVisible - Whether the skill is visible.
+   */
+  onSkillVisibilityChange(index: number, isVisible: boolean): void {
     this.skills[index].isVisible = isVisible;
   }
 
+  /**
+   * Custom track function for *ngFor to improve rendering performance.
+   *
+   * @param {number} index - The index of the skill in the list.
+   * @returns {number} - The index, used as a unique identifier.
+   */
   trackByIndex(index: number): number {
     return index;
   }

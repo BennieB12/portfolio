@@ -15,6 +15,10 @@ import { TranslateModule } from '@ngx-translate/core';
 export class CommentsComponent {
   isVisible = false;
 
+    /**
+   * Updates the visibility state of the component.
+   * @param {boolean} isVisible - Whether the component should be visible.
+   */
   onVisibilityChange(isVisible: boolean) {
     this.isVisible = isVisible;
   }

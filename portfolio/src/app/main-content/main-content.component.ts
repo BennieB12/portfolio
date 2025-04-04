@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AtfComponent } from './atf/atf.component';
 import { IntroComponent } from './intro/intro.component';
@@ -7,7 +7,6 @@ import { ProjectsComponent } from './projects/projects.component';
 import { CommentsComponent } from './comments/comments.component';
 import { ContactComponent } from './contact/contact.component';
 import { BlubberComponent } from '../animations/blubber/blubber.component';
-import { shrinkAndCircle } from './../animations/animations';
 
 @Component({
   selector: 'app-main-content',
@@ -24,15 +23,6 @@ import { shrinkAndCircle } from './../animations/animations';
   ],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss',
-  animations: [shrinkAndCircle],
 })
 export class MainContentComponent {
-  // animationState = 'start';
-
-
-  // ngOnInit() {
-  //   setTimeout(() => {
-  //     this.animationState = 'end';
-  //   }, 100);
-  // }
 }
