@@ -107,12 +107,14 @@
         [class.highlight-error]="privacyError"
       />
       <label
-        routerLink="/privacy-policy"
-        for="privacy-checkbox"
-        [innerHTML]="'contact.privacy' | translate"
-        (mouseenter)="highlightPrivacyCheckbox()"
-        (mouseleave)="removePrivacyHighlight()"
-      >
+      (mouseleave)="removePrivacyHighlight()"
+      (mouseenter)="highlightPrivacyCheckbox()"
+        for="privacy-checkbox">
+        {{ "contact.policy-1" | translate }}
+        <a routerLink="/privacy-policy">
+          {{ "contact.policy-link" | translate }}
+        </a>
+        {{ "contact.policy-2" | translate }}
       </label>
     </div>
 

@@ -217,20 +217,19 @@ textarea.invalid + .error-message {
   label {
     font-size: 14px;
   }
+  a {
+    color: $color;
+    text-decoration: none;
+    &:hover {
+      font-size: bold;
+      text-decoration: underline;
+    }
+  }
 }
 
 .highlight-blue {
   box-shadow: 0 0 8px rgba(89, 136, 255, 1);
-  border: 2px solid rgba(89, 136, 255, 1);
-}
-
-.privacy-policy-link {
-  color: $color;
-  text-decoration: none;
-  &:hover {
-    font-size: bold;
-    text-decoration: underline;
-  }
+  border: 5px solid rgba(89, 136, 255, 1);
 }
 
 #contact-submit {

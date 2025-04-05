@@ -24,7 +24,6 @@ $background: linear-gradient(179.99deg, #ffffff 12.89%, #eaf0ff 91.39%);
     align-self: self-start;
     width: 254px;
     height: 58px;
-    // padding: 15px 30px;
     border-radius: 10px;
     border: 2px solid rgba(89, 136, 255, 1);
     color: rgba(89, 136, 255, 1);
@@ -135,14 +134,3 @@ $background: linear-gradient(179.99deg, #ffffff 12.89%, #eaf0ff 91.39%);
   align-items: center;
 }
 
-@mixin responsive($breakpoint) {
-  @if $breakpoint == mobile {
-    @media (max-width: 600px) {
-      @content;
-    }
-  } @else if $breakpoint == tablet {
-    @media (max-width: 1024px) {
-      @content;
-    }
-  }
-}

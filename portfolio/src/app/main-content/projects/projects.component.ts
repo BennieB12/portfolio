@@ -1,7 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { NgIf, NgClass, CommonModule } from '@angular/common';
 import { ScrollVisibilityDirective } from '.././directives/scroll-visibility.directive';
-import { slideInLeft, fadeIn, hoverAnimation} from '../../animations/animations';
+import {
+  slideInLeft,
+  fadeIn,
+  hoverAnimation,
+} from '../../animations/animations';
 import { TranslateModule } from '@ngx-translate/core';
 
 /**
@@ -20,7 +24,13 @@ interface Project {
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, ScrollVisibilityDirective, NgIf, NgClass, TranslateModule],
+  imports: [
+    CommonModule,
+    ScrollVisibilityDirective,
+    NgIf,
+    NgClass,
+    TranslateModule,
+  ],
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
   animations: [slideInLeft, fadeIn, hoverAnimation],
@@ -31,6 +41,10 @@ export class ProjectsComponent {
 
   /** Object storing hover states for projects. */
   hoverStates: { [key: number]: 'normal' | 'hover' } = {};
+
+    /** Object storing button states for projects. */
+    buttonStates: { [key: number]: 'normal' | 'pressed' } = {};
+
 
   /** Image source URL for a project. */
   @Input() imageSrc: string = '';
@@ -105,5 +119,12 @@ export class ProjectsComponent {
    */
   onMouseLeave(index: number): void {
     this.hoverStates[index] = 'normal';
+  }
+
+  setupTouchHandlers(index: number): void {
+    this.hoverStates[index] = 'hover';
+    setTimeout(() => {
+      this.hoverStates[index] = 'normal';
+    }, 500);
   }
 }

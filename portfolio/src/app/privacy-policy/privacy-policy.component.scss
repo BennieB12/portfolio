@@ -1,3 +1,5 @@
+@import "../../mixins.scss";
+
 .privacy-policy {
     max-width: 700px;
     margin: 40px auto;
@@ -10,6 +12,27 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.privacy-arrow {
+    @include background;
+    position: fixed;
+    top: 11%;
+    left:10%;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    color: rgba(89, 136, 255, 1);
+    transition: transform 120ms ease-out;
+    &:hover {
+        cursor: pointer;
+        border: unset;
+        scale: 1.2;
+    }
+    img {
+        transform: rotate(-90deg);
+
+    }
+  }
 
 .privacy-policy h2 {
     color: #222;
@@ -49,3 +72,9 @@
 .privacy-policy ul li {
     margin-bottom: 8px;
 }
+
+@media ( max-width: 768px){
+    .privacy-arrow {
+        left: auto;
+        right: 6%;
+    }}

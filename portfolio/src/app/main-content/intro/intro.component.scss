@@ -134,6 +134,18 @@
   }
 }
 
+.image-wrapper:hover .default,
+.image-wrapper2:hover .default,
+.image-wrapper3:hover .default {
+  opacity: 0;
+}
+
+.image-wrapper:hover .hover,
+.image-wrapper2:hover .hover,
+.image-wrapper3:hover .hover {
+  opacity: 1;
+}
+
 .image-wrapper {
   position: relative;
   width: 55px;
@@ -217,6 +229,7 @@
 
 #intro-btn {
   @include button;
+  padding: 15px 30px;
 }
 
 @media (max-width: 1280px) {

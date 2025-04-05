@@ -6,8 +6,25 @@ import { trigger, state, style, transition, animate, keyframes} from '@angular/a
 export const fontWeightAnimation = trigger('fontWeightAnimation', [
   state('normal', style({ fontWeight: 400 })),
   state('bold', style({ fontWeight: 800 })),
-  transition('normal <=> bold', animate('70ms ease-in-out'))
+  state('medium', style({ fontWeight: 600 })), 
+  transition('normal <=> bold', animate('70ms ease-in-out')),
+  transition('normal <=> medium', animate('70ms ease-in-out')),  
+  transition('medium <=> bold', animate('70ms ease-in-out'))
 ]);
+
+
+export const hoverTimeoutAnimation = trigger('hoverTimeoutAnimation', [
+  state('normal', style({
+    transform: 'translateY(0)',
+    fontWeight: 400
+  })),
+  state('hover', style({
+    transform: 'translateY(-20px)',
+    fontWeight: 600
+  })),
+  transition('normal <=> hover', animate('300ms ease-in-out'))
+])
+
 
 /**
  * Animation for scaling an element when hovered.

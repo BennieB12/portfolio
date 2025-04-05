@@ -56,16 +56,8 @@ h4 {
   img {
     transition: transform 120ms ease-in-out;
   }
-
-  &:hover {
-    span {
-      font-weight: 600;
-    }
-    img {
-      transform: translateY(-20px);
-    }
-  }
 }
+
 @media (max-width: 1040px) {
   #skillset {
     height: auto;

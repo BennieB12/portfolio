@@ -1,3 +1,5 @@
+@import "../../mixins.scss";
+
 .legal-notice {
     max-width: 700px;
     margin: 40px auto;
@@ -9,6 +11,27 @@
     background: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.legal-arrow {
+    @include background;
+    position: fixed;
+    top: 11%;
+    left:10%;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    color: rgba(89, 136, 255, 1);
+    transition: transform 120ms ease-out;
+    &:hover {
+        cursor: pointer;
+        border: unset;
+        scale: 1.2;
+    }
+    img {
+        transform: rotate(-90deg);
+
+    }
 }
 
 .legal-notice h2 {
@@ -35,3 +58,9 @@
 .legal-notice a:hover {
     text-decoration: underline;
 }
+
+@media ( max-width: 768px){
+.legal-arrow {
+    left: auto;
+    right: 6%;
+}}

@@ -29,6 +29,7 @@
       [@hoverAnimation]="hoverStates[i] || 'normal'"
       (mouseenter)="onMouseEnter(i)"
       (mouseleave)="onMouseLeave(i)"
+      (touchstart)="setupTouchHandlers(i)"
     />
 
     <div
@@ -48,7 +49,7 @@
         </a>
         <a *ngIf="project.testLink" [attr.href]="project.testLink" target="_blank">
 
-          <button>
+          <button id="btn-test">
             {{ "projects.projects." + i + ".btntest" | translate }}
           </button>
         </a>

@@ -130,6 +130,11 @@ nav {
   margin-right: 10px;
 }}
 
+@media (max-width: 840px) {
+  nav {
+    gap: 20px;
+  }}
+
 @media (max-width: 768px) {
   header {
     position: fixed;
