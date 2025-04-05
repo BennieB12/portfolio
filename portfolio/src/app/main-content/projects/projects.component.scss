@@ -2,9 +2,9 @@
 
 .headl-projects {
   @include column;
-  margin-left: 77px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  padding-left: 77px;
+  padding-top: 100px;
+  padding-bottom: 40px;
   h5 {
     color: rgba(89, 136, 255, 1);
     font-family: "Baloo 2";
@@ -36,7 +36,7 @@
 .ellipse {
   @include ellipse;
   z-index: -1;
-  @include absolute-position(-10%,50%);
+  @include absolute-position(5%,60%);
   width: 108px;
   height: 108px;
   transform: translateX(-80%);
@@ -44,7 +44,7 @@
 
 .ellipse2 {
   @include ellipse;
-  @include absolute-position(10%,75%);
+  @include absolute-position(25%,75%);
   z-index: -1;
   width: 186px;
   height: 186px;
@@ -67,7 +67,7 @@
 
 .ellipse5 {
   @include ellipse;
-  @include absolute-position(-65,20%);
+  @include absolute-position(65%,20%);
   z-index: -1;
   width: 98px;
   height: 98px;
@@ -152,11 +152,10 @@
   }
 
   .ellipse {
-    top: -32%;
+    top: 5%;
   }
   .headl-projects {
-    margin-left: 10px;
-    margin-top: 100px;
+    padding-left: 20px;
   }
 }
 
@@ -168,7 +167,7 @@
   .ellipse {
     height: 80px;
     width: 80px;
-    top: -40%;
+    top: 15%;
     left: 85%;
   }
 
@@ -177,12 +176,12 @@
   }
 
   .ellipse4 {
-    top: 15%;
+    top: 10%;
     left: -15%;
   }
 
   .ellipse6 {
-    top: 80%;
+    top: 85%;
     left: 85%;
     width: 60px;
     height: 60px;
@@ -286,8 +285,7 @@
   .ellipse {
     height: 60px;
     width: 60px;
-    top: -40%;
-    left: 85%;
+    top: 25%;
   }
 
   .ellipse4 {
@@ -300,6 +298,10 @@
     left: 50%;
     width: 452px;
     height: 452px;
+  }
+
+  .ellipse6 {
+    top: 82%;
   }
 
   .headl-projects {
@@ -339,5 +341,9 @@
     span {
       width: 252px;
     }
+  }
+
+  .ellipse6 {
+    top: 80%;
   }
 }
