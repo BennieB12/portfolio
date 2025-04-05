@@ -1,24 +1,14 @@
 @import "../../../mixins.scss";
 
 #intro {
-  padding: 100px 70px 40px;
+  padding: 100px 70px 100px;
   display: flex;
   justify-content: center;
   gap: 100px;
   position: relative;
 }
 .ellipse {
-  position: absolute;
-  border-radius: 50%;
-  background: radial-gradient(
-    74.22% 74.22% at 19.79% 22.42%,
-    #5988ff 6.25%,
-    #5988ff 51.56%,
-    #0043f0 100%
-  );
-  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4),
-    -4px -4px 15px rgba(255, 255, 255, 0.6);
-  pointer-events: none;
+  @include ellipse;
   top: -14%;
   left: 50%;
   z-index: -1;
@@ -28,17 +18,7 @@
 }
 
 .ellipse2 {
-  position: absolute;
-  border-radius: 50%;
-  background: radial-gradient(
-    74.22% 74.22% at 19.79% 22.42%,
-    #5988ff 6.25%,
-    #5988ff 51.56%,
-    #0043f0 100%
-  );
-  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4),
-    -4px -4px 15px rgba(255, 255, 255, 0.6);
-  pointer-events: none;
+  @include ellipse;
   top: 1%;
   left: 80%;
   width: clamp(50px, 5vw, 100px);
@@ -47,8 +27,7 @@
 }
 
 .intro-left {
-  display: flex;
-  flex-direction: column;
+  @include column;
   justify-content: space-between;
   max-width: 607px;
   width: 100%;
@@ -64,7 +43,6 @@
     line-height: 107.6px;
     letter-spacing: -0.025em;
     display: block;
-
     word-wrap: break-word;
     hyphens: auto;
   }
@@ -105,9 +83,7 @@
   position: relative;
   width: 80px;
   height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center;
 
   img {
     width: 100%;
@@ -119,9 +95,7 @@
 
   .hover {
     opacity: 0;
-    position: absolute;
-    top: 15%;
-    left: 0;
+    @include absolute-position(15%, 0);
   }
 
   &:hover .default {
@@ -150,9 +124,7 @@
   position: relative;
   width: 55px;
   height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center;
 
   img {
     width: 100%;
@@ -164,9 +136,7 @@
 
   .hover {
     opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
+    @include absolute-position(0, 0);
   }
 
   &:hover .default {
@@ -182,9 +152,7 @@
   position: relative;
   width: 55px;
   height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center;
 
   img {
     width: 100%;
@@ -197,8 +165,7 @@
   .hover {
     opacity: 0;
     position: absolute;
-    top: 10%;
-    left: 25%;
+    @include absolute-position (10%,25%);
   }
 
   &:hover .default {
@@ -233,11 +200,12 @@
 }
 
 @media (max-width: 1280px) {
-.ellipse {
-  top: -12%;
-  left: 50%;
-  transform: translate(-50%, -12%);
-}}
+  .ellipse {
+    top: -12%;
+    left: 50%;
+    transform: translate(-50%, -12%);
+  }
+}
 
 @media (max-width: 1040px) {
   #intro {
@@ -252,16 +220,16 @@
     left: 50%;
     transform: translate(-50%, -10%);
   }
-  .ellipse2{
-  top: 20%;
-  left: 85%;
+  .ellipse2 {
+    top: 20%;
+    left: 85%;
   }
   .intro-left {
     h2 {
       text-align: center;
       font-size: 64px;
-      word-wrap:unset;
-      hyphens:none;
+      word-wrap: unset;
+      hyphens: none;
     }
     h3 {
       font-size: 42px;
@@ -297,7 +265,6 @@
 
     .hover {
       opacity: 0;
-      position: absolute;
       top: auto;
       left: auto;
     }
@@ -403,10 +370,10 @@
   #intro-btn {
     width: auto;
   }
-  .ellipse2{
+  .ellipse2 {
     top: 15%;
     left: 80%;
-    }
+  }
   .intro-left {
     h2 {
       font-size: 36px;

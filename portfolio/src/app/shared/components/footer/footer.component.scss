@@ -34,11 +34,9 @@ footer {
       color: rgb(255, 255, 255);
       cursor: pointer;
       text-decoration: none;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: -40px;
+      @include absolute-position (null, 50%, null, -40px);
       padding-bottom: 5px;
+      transform: translateX(-50%);
     }
 
     a::after {
@@ -48,10 +46,8 @@ footer {
       height: 3px;
       background-color: rgb(255, 255, 255);
       transition: width 0.3s ease;
-      position: absolute;
-      left: 50%;
+      @include absolute-position (null, 50%, null, -5px);
       transform: translateX(-50%);
-      bottom: -5px;
     }
 
     a:hover::after {

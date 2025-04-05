@@ -11,6 +11,20 @@ $background: linear-gradient(179.99deg, #ffffff 12.89%, #eaf0ff 91.39%);
   text-align: left;
 }
 
+@mixin ellipse {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(
+    74.22% 74.22% at 19.79% 22.42%,
+    #5988ff 6.25%,
+    #5988ff 51.56%,
+    #0043f0 100%
+  );
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4),
+    -4px -4px 15px rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+}
+
 @mixin background {
   background: linear-gradient(128.94deg, #5988FF -33.96%, #5988FF 36.71%, #0043F0 112.25%);
 }
@@ -121,11 +135,29 @@ $background: linear-gradient(179.99deg, #ffffff 12.89%, #eaf0ff 91.39%);
   }
 }
 
-@mixin absolute-position($top, $left, $z-index: auto) {
+@mixin absolute-position($top: null, $left: null, $right: null, $bottom: null) {
   position: absolute;
-  top: $top;
-  left: $left;
-  z-index: $z-index;
+  
+  @if $top != null {
+    top: $top;
+  }
+  
+  @if $left != null {
+    left: $left;
+  }
+  
+  @if $right != null {
+    right: $right;
+  }
+  
+  @if $bottom != null {
+    bottom: $bottom;
+  }
+}
+
+@mixin column {
+  display: flex;
+  flex-direction: column;
 }
 
 @mixin flex-center {

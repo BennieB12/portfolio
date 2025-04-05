@@ -13,17 +13,7 @@
 }
 
 .ellipse {
-  position: absolute;
-  border-radius: 50%;
-  background: radial-gradient(
-    74.22% 74.22% at 19.79% 22.42%,
-    #5988ff 6.25%,
-    #5988ff 51.56%,
-    #0043f0 100%
-  );
-  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4),
-    -4px -4px 15px rgba(255, 255, 255, 0.6);
-  pointer-events: none;
+  @include ellipse;
   z-index: -1;
   top: 15%;
   left: 75%;
@@ -32,17 +22,7 @@
 }
 
 .ellipse2 {
-  position: absolute;
-  border-radius: 50%;
-  background: radial-gradient(
-    74.22% 74.22% at 19.79% 22.42%,
-    #5988ff 6.25%,
-    #5988ff 51.56%,
-    #0043f0 100%
-  );
-  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4),
-    -4px -4px 15px rgba(255, 255, 255, 0.6);
-  pointer-events: none;
+  @include ellipse;
   top: 80%;
   left: 85%;
   width: 72px;
@@ -50,17 +30,7 @@
 }
 
 .ellipse3 {
-  position: absolute;
-  border-radius: 50%;
-  background: radial-gradient(
-    74.22% 74.22% at 19.79% 22.42%,
-    #5988ff 6.25%,
-    #5988ff 51.56%,
-    #0043f0 100%
-  );
-  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4),
-    -4px -4px 15px rgba(255, 255, 255, 0.6);
-  pointer-events: none;
+  @include ellipse;
   top: 55%;
   left: 15%;
   width: 204px;
@@ -100,7 +70,6 @@
   }
 
   span {
-    font-family: Montserrat;
     font-weight: 400;
     font-size: 16px;
     line-height: 120%;
@@ -116,10 +85,9 @@
   width: 100%;
   max-width: 617px;
   gap: 32px;
-  display: flex;
+  @include column;
   align-items: flex-start;
   justify-content: center;
-  flex-direction: column;
   margin-top: 0;
   margin-right: 10px;
 }
@@ -176,12 +144,6 @@
   }
 }
 
-
-.privacy-link a {
-  color: blue;
-  text-decoration: none; 
-}
-
 .error-message {
   justify-self: anchor-center;
   position: absolute;
@@ -204,8 +166,7 @@ textarea.invalid + .error-message {
 }
 
 .privacy-policy {
-  display: flex;
-  align-items: center;
+  @include flex-center;
   gap: 8px;
   font-size: 14px;
 
@@ -217,11 +178,11 @@ textarea.invalid + .error-message {
   label {
     font-size: 14px;
   }
+
   a {
     color: $color;
     text-decoration: none;
     &:hover {
-      font-size: bold;
       text-decoration: underline;
     }
   }
@@ -233,7 +194,7 @@ textarea.invalid + .error-message {
 }
 
 #contact-submit {
-  width: 181px !important;
+  width: 181px;
   height: 58px;
   border-radius: 10px;
   border: 2px solid $color;
@@ -264,6 +225,27 @@ textarea.invalid + .error-message {
   }
 }
 
+.success-message {
+  background-color: rgba(0, 200, 0, 0.9);
+  color: white;
+  font-size: 14px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  @include absolute-position(null, 50%, null, -50px);
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+  &.show {
+    animation: fadeInSlide 0.5s ease-out forwards;
+  }
+
+  &.hide {
+    animation: fadeOut 0.5s ease-out forwards;
+  }
+}
+
 @keyframes fadeOut {
   from {
     opacity: 1;
@@ -284,29 +266,6 @@ textarea.invalid + .error-message {
   }
 }
 
-.success-message {
-  background-color: rgba(0, 200, 0, 0.9);
-  color: white;
-  font-size: 14px;
-  padding: 10px 15px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  position: absolute;
-  bottom: -50px;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-
-  &.show {
-    animation: fadeInSlide 0.5s ease-out forwards;
-  }
-
-  &.hide {
-    animation: fadeOut 0.5s ease-out forwards;
-  }
-}
-
 #privacy-checkbox.highlight-error {
   box-shadow: 0 0 10px red;
 }
@@ -318,13 +277,11 @@ textarea.invalid + .error-message {
 
 .contact-arrow {
   @include background;
-  position: absolute;
+  @include absolute-position ( null, 8%, null, 8%);
   height: 24px;
   width: 24px;
-  bottom: 8%;
-  left: 8%;
   border-radius: 50%;
-  color: rgba(89, 136, 255, 1);
+  color: $color;
   transition: transform 120ms ease-out;
   &:hover {
     cursor: pointer;
@@ -341,9 +298,8 @@ textarea.invalid + .error-message {
 
 @media (max-width: 1040px) {
   #contact {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
+    @include column;
     padding-top: 20px;
   }
   #headl-contact {
@@ -364,7 +320,7 @@ textarea.invalid + .error-message {
     height: 72px;
   }
 
-  .ellipse3 { 
+  .ellipse3 {
     display: none;
   }
 

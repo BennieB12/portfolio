@@ -1,8 +1,7 @@
 @import "../../../mixins.scss";
 
 #skillset {
-  display: flex;
-  flex-direction: column;
+  @include column;
   align-items: center;
   justify-content: space-evenly;
   max-width: 100%;
@@ -37,10 +36,8 @@ h4 {
 .content-item {
   width: 120px;
   height: 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  @include flex-center;
+  @include column;
   gap: 10px;
   transform: scale(0.8);
   transition: transform 0.3s ease;

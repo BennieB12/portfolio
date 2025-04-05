@@ -4,36 +4,22 @@
   height: 90vh;
   width: 100%;
   background: $background;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
+  @include column;
   align-items: flex-end;
   position: relative;
 
 }
 
 .ellipse {
-  position: absolute;
-  border-radius: 50%;
-  background: radial-gradient(
-    74.22% 74.22% at 19.79% 22.42%,
-    #5988ff 6.25%,
-    #5988ff 51.56%,
-    #0043f0 100%
-  );
-  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4),
-    -4px -4px 15px rgba(255, 255, 255, 0.6);
-  pointer-events: none;
-  top: -31%;
-  left: -16%;
+ @include ellipse;
+ @include absolute-position(-31%,-16%);
   z-index: 103;
   width: 793px;
   height: 793px;
 }
 
 .atf-top {
-  display: flex;
-  flex-direction: column;
+  @include column;
   width: min(55%, 720px);
   gap: 16px;
   margin-right: 5vh;
@@ -43,7 +29,6 @@
   h1 {
     @include margin-font;
     color: $color;
-    font-family: "Montserrat";
     font-size: clamp(24px, 4vw, 64px);
     line-height: clamp(28px, 5vw, 64px);
     font-weight: 400;
@@ -73,9 +58,7 @@
 }
 
 #prof-img {
-  position: absolute;
-  bottom: 0;
-  left: 20%;
+  @include absolute-position(null,20%,null,0);
   transform: translateX(-50%);
   width: 40%;
   max-height: 130%;
@@ -85,15 +68,11 @@
 }
 
 .social-links {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  @include flex-center;
+  @include column;
+  @include absolute-position(null,null, 0, 0);
   width: 40px;
   height: 170px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   gap: 25px;
   margin-top: auto;
   margin-right: clamp(20px, 10vw, 100px);
@@ -117,11 +96,8 @@
 }
 
 .atf-scroll {
-  position: absolute;
-  bottom: 0;
-  left: 60%;
-  display: flex;
-  flex-direction: column;
+  @include column;
+  @include absolute-position( null, 60%, null, 0);
   align-items: center;
 
   .atf-span {
@@ -139,9 +115,7 @@
     width: 2px;
     height: 35vh;
     background-color: $color;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
+    @include absolute-position(null, 50%, null,0);
     transform: translateX(-50%);
   }
 }

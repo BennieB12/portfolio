@@ -3,16 +3,14 @@
 #comments {
   @include background;
   width: 100%;
-  max-width: 1440px;
+  max-width: $max-width;
   height: 532px;
   margin: 0;
 
   .headline-comments {
     height: 140px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    @include flex-center;
+    @include column;
     h6 {
       font-family: "Baloo 2";
       color: rgb(255, 255, 255);
@@ -48,8 +46,7 @@
     .commentarys-content {
       color: rgb(255, 255, 255);
       font-weight: 400;
-      display: flex;
-      flex-direction: column;
+      @include column;
       width: 301px;
       margin-top: 54px;
       h5 {
@@ -92,7 +89,6 @@
       }
 
       span {
-        font-family: Montserrat;
         font-weight: 400;
         font-size: 16px;
         line-height: 141%;
@@ -113,10 +109,8 @@
       .commentarys-content {
         flex: 0 0 100%;
         scroll-snap-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        @include flex-center;
+        @include column;
         padding: 20px;
 
         span,

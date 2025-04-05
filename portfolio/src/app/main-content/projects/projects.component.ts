@@ -121,6 +121,11 @@ export class ProjectsComponent {
     this.hoverStates[index] = 'normal';
   }
 
+   /**
+   * Handles the touch event to remove the hover state.
+   *
+   * @param {number} index - The index of the unhovered project.
+   */
   setupTouchHandlers(index: number): void {
     this.hoverStates[index] = 'hover';
     setTimeout(() => {

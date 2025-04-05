@@ -1,8 +1,7 @@
 @import "../../../mixins.scss";
 
 .headl-projects {
-  display: flex;
-  flex-direction: column;
+  @include column;
   margin-left: 77px;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -35,122 +34,52 @@
 }
 
 .ellipse {
-  position: absolute;
-  border-radius: 50%;
-  background: radial-gradient(
-    74.22% 74.22% at 19.79% 22.42%,
-    #5988ff 6.25%,
-    #5988ff 51.56%,
-    #0043f0 100%
-  );
-  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4),
-    -4px -4px 15px rgba(255, 255, 255, 0.6);
-  pointer-events: none;
+  @include ellipse;
   z-index: -1;
-  top: -10%;
-  left: 50%;
+  @include absolute-position(-10%,50%);
   width: 108px;
   height: 108px;
   transform: translateX(-80%);
 }
 
 .ellipse2 {
-  position: absolute;
-  border-radius: 50%;
-  background: radial-gradient(
-    74.22% 74.22% at 19.79% 22.42%,
-    #5988ff 6.25%,
-    #5988ff 51.56%,
-    #0043f0 100%
-  );
-  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4),
-    -4px -4px 15px rgba(255, 255, 255, 0.6);
-  pointer-events: none;
+  @include ellipse;
+  @include absolute-position(10%,75%);
   z-index: -1;
-  top: 10%;
-  left: 75%;
   width: 186px;
   height: 186px;
 }
 
-
 .ellipse3 {
-  position: absolute;
-  border-radius: 50%;
-  background: radial-gradient(
-    74.22% 74.22% at 19.79% 22.42%,
-    #5988ff 6.25%,
-    #5988ff 51.56%,
-    #0043f0 100%
-    );
-  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4),
-    -4px -4px 15px rgba(255, 255, 255, 0.6);
-    pointer-events: none;
-    z-index: -1;
-    top: 30%;
-    left: 60%;
-    width: 652px;
-    height: 652px;
-  }
-  
-  .ellipse4 {
-    position: absolute;
-    border-radius: 50%;
-    background: radial-gradient(
-      74.22% 74.22% at 19.79% 22.42%,
-      #5988ff 6.25%,
-      #5988ff 51.56%,
-      #0043f0 100%
-    );
-    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4),
-      -4px -4px 15px rgba(255, 255, 255, 0.6);
-    pointer-events: none;
-    z-index: -1;
-    top: 20%;
-    left: -15%;
-    width: clamp(293px, 20vw, 393px);
-    height: clamp(293px, 20vw, 393px);
-  }
+  @include ellipse;
+  @include absolute-position(30%,60%);
+  width: 652px;
+  height: 652px;
+}
 
-  .ellipse5{
-  position: absolute;
-  border-radius: 50%;
-  background: radial-gradient(
-    74.22% 74.22% at 19.79% 22.42%,
-    #5988ff 6.25%,
-    #5988ff 51.56%,
-    #0043f0 100%
-  );
-  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4),
-    -4px -4px 15px rgba(255, 255, 255, 0.6);
-  pointer-events: none;
+.ellipse4 {
+  @include ellipse;
+  @include absolute-position(20%,-15%);
   z-index: -1;
-  top: 65%;
-  left: 20%;
+  width: clamp(293px, 20vw, 393px);
+  height: clamp(293px, 20vw, 393px);
+}
+
+.ellipse5 {
+  @include ellipse;
+  @include absolute-position(-65,20%);
+  z-index: -1;
   width: 98px;
   height: 98px;
 }
 
-.ellipse6{
-  position: absolute;
-  border-radius: 50%;
-  background: radial-gradient(
-    74.22% 74.22% at 19.79% 22.42%,
-    #5988ff 6.25%,
-    #5988ff 51.56%,
-    #0043f0 100%
-  );
-  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4),
-    -4px -4px 15px rgba(255, 255, 255, 0.6);
-  pointer-events: none;
+.ellipse6 {
+  @include ellipse;
   z-index: -1;
-  top: 85%;
-  left: 30%;
+  @include absolute-position(85%,30%);
   width: 198px;
   height: 198px;
 }
-
-
 
 .project {
   display: flex;
@@ -178,15 +107,13 @@
 }
 
 .project-info {
-  display: flex;
-  flex-direction: column;
+@include column;
   width: 586px;
   gap: 15px;
 }
 .btn-box {
-  display: flex;
   gap: 16px;
-  flex-direction: column;
+  @include column;
 }
 
 .project-info h5 {
@@ -196,7 +123,6 @@
   font-size: 45px;
   line-height: 120%;
   letter-spacing: 0%;
-
   margin: 0;
 }
 
