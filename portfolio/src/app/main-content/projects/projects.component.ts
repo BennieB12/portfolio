@@ -1,10 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { NgIf, NgClass, CommonModule } from '@angular/common';
 import { ScrollVisibilityDirective } from '.././directives/scroll-visibility.directive';
 import {
   slideInLeft,
   fadeIn,
   hoverAnimation,
+  buttonScaleAnimation,
 } from '../../animations/animations';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -33,7 +34,12 @@ interface Project {
   ],
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
-  animations: [slideInLeft, fadeIn, hoverAnimation],
+  animations: [
+    slideInLeft,
+    fadeIn,
+    hoverAnimation,
+    buttonScaleAnimation,
+  ],
 })
 export class ProjectsComponent {
   /** Object tracking which projects are currently visible. */
@@ -42,8 +48,11 @@ export class ProjectsComponent {
   /** Object storing hover states for projects. */
   hoverStates: { [key: number]: 'normal' | 'hover' } = {};
 
-    /** Object storing button states for projects. */
-    buttonStates: { [key: number]: 'normal' | 'pressed' } = {};
+  /** Object storing button states for projects. */
+  buttonTestStates: { [key: number]: 'normal' | 'hover' } = {};
+  buttonGitStates: { [key: number]: 'normal' | 'hover' } = {};
+
+  gradientStates: { [key: number]: 'hover' | 'normal' } = {};
 
 
   /** Image source URL for a project. */
@@ -78,10 +87,11 @@ export class ProjectsComponent {
     {
       imageSrc: 'assets/img/project_3.png',
       imageAlt: 'Project 3',
-      gitLink: 'https://github.com/BennieB12',
+      gitLink: 'https://github.com/BennieB12/pokedex',
       testLink: 'https://Benjamin-Kloss.de/pokedex/',
     },
   ];
+
 
   /**
    * Determines if the project is in a middle position in the grid layout.
@@ -121,7 +131,7 @@ export class ProjectsComponent {
     this.hoverStates[index] = 'normal';
   }
 
-   /**
+  /**
    * Handles the touch event to remove the hover state.
    *
    * @param {number} index - The index of the unhovered project.
@@ -132,4 +142,21 @@ export class ProjectsComponent {
       this.hoverStates[index] = 'normal';
     }, 500);
   }
+
+  /**
+   * General hover and leave handler for Git and Test buttons.
+   * 
+   * @param {string} buttonType - 'git' or 'test', determines which button's state to change.
+   * @param {number} index - The index of the project.
+   * @param {string} action - 'enter' or 'leave', determines if it's a hover or leave event.
+   */
+  onButtonHoverStateChange(buttonType: string, index: number, action: string): void {
+    if (buttonType === 'git') {
+        this.buttonGitStates[index] = action === 'enter' ? 'hover' : 'normal'; 
+      }
+    else if (buttonType === 'test') {
+      this.buttonTestStates[index] = action === 'enter' ? 'hover' : 'normal';
+    }
+  }
 }
+

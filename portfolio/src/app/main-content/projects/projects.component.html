@@ -43,13 +43,22 @@
 
       <div class="btn-box">
         <a *ngIf="project.gitLink" [href]="project.gitLink" target="_blank">
-          <button id="btn-git">
-            {{ "projects.projects." + i + ".btngit" | translate }}
-          </button>
+          <button
+          id="btn-git"
+          [@buttonScaleAnimation]="buttonGitStates[i] || 'normal'"
+          (mouseenter)="onButtonHoverStateChange('git', i, 'enter')"
+          (mouseleave)="onButtonHoverStateChange('git', i, 'leave')">
+          {{ "projects.projects." + i + ".btngit" | translate }}
+        </button>
         </a>
-        <a *ngIf="project.testLink" [attr.href]="project.testLink" target="_blank">
 
-          <button id="btn-test">
+        
+        <a *ngIf="project.testLink" [attr.href]="project.testLink" target="_blank">
+          <button
+            id="btn-test"
+            [@buttonScaleAnimation]="buttonTestStates[i] || 'normal'"
+            (mouseenter)="onButtonHoverStateChange('test', i, 'enter')"
+            (mouseleave)="onButtonHoverStateChange('test', i, 'leave')">
             {{ "projects.projects." + i + ".btntest" | translate }}
           </button>
         </a>

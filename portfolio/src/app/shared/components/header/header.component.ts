@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { TranslationService } from '../../translation.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { fontWeightAnimation } from '../../../animations/animations';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -17,7 +18,8 @@ export class HeaderComponent {
   hoveredIndex: number | null = null;
   menuOpen = false;
 
-  constructor(private translationService: TranslationService) {}
+
+  constructor(private translationService: TranslationService, private router: Router) {}
 
   /**
    * Scrolls to a specific section on the page identified by the provided ID.
@@ -27,13 +29,29 @@ export class HeaderComponent {
    * @returns {void} - No return value.
    */
   scrollToSection(id: string) {
-    setTimeout(() => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (this.router.url !== '/') {
+      this.router.navigateByUrl('/').then(() => {
+        setTimeout(() => {
+          const element = document.getElementById(id);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 100);
+      });
+    } else {
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 50);
     }
-   } , 50);
+  
+    if (window.innerWidth < 768) {
+      this.toggleMenu();
+    }
   }
+  
 
 
   /**

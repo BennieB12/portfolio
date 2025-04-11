@@ -49,11 +49,15 @@
       {{ "intro.description" | translate }}
     </p>
     <button
-      id="intro-btn"
-      (click)="scrollToSection('headl-contact')"
-      (touchstart)="scrollToSection('headl-contact')"
-    >
-      {{ "intro.button" | translate }}
-    </button>
+    id="intro-btn"
+    [@buttonScaleAnimation]="isHovered ? 'hover' : 'normal'"
+    (mouseenter)="onMouseEnter()"
+    (mouseleave)="onMouseLeave()"
+    (touchstart)="onMouseEnter(); scrollToSection('headl-contact')"
+    (touchend)="onMouseLeave()"
+    (click)="scrollToSection('headl-contact')"
+  >
+    {{ "intro.button" | translate }}
+  </button>
   </div>
 </section>

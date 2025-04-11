@@ -36,7 +36,7 @@
 .ellipse {
   @include ellipse;
   z-index: -1;
-  @include absolute-position(5%,60%);
+  @include absolute-position(5%, 60%);
   width: 108px;
   height: 108px;
   transform: translateX(-80%);
@@ -44,7 +44,7 @@
 
 .ellipse2 {
   @include ellipse;
-  @include absolute-position(25%,75%);
+  @include absolute-position(25%, 75%);
   z-index: -1;
   width: 186px;
   height: 186px;
@@ -52,14 +52,14 @@
 
 .ellipse3 {
   @include ellipse;
-  @include absolute-position(30%,60%);
+  @include absolute-position(30%, 60%);
   width: 652px;
   height: 652px;
 }
 
 .ellipse4 {
   @include ellipse;
-  @include absolute-position(20%,-15%);
+  @include absolute-position(20%, -15%);
   z-index: -1;
   width: clamp(293px, 20vw, 393px);
   height: clamp(293px, 20vw, 393px);
@@ -67,7 +67,7 @@
 
 .ellipse5 {
   @include ellipse;
-  @include absolute-position(65%,20%);
+  @include absolute-position(65%, 20%);
   z-index: -1;
   width: 98px;
   height: 98px;
@@ -76,7 +76,7 @@
 .ellipse6 {
   @include ellipse;
   z-index: -1;
-  @include absolute-position(85%,30%);
+  @include absolute-position(85%, 30%);
   width: 198px;
   height: 198px;
 }
@@ -93,21 +93,26 @@
 }
 
 .project.reverse-layout {
+
   flex-direction: row-reverse;
   img {
+    width: 640px;
+    height: 420px;
     box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
+    object-fit: fill;
   }
 }
 
 .project-image {
   width: 640px;
   height: 420px;
+  object-fit: fill;
   transition: transform 0.3s ease-in-out;
   box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
 }
 
 .project-info {
-@include column;
+  @include column;
   width: 586px;
   gap: 15px;
 }
@@ -237,43 +242,19 @@
   }
   #btn-git {
     font-family: "Poppins";
+  }
+
+  .button-bg {
     background: radial-gradient(
       74.22% 74.22% at 19.79% 22.42%,
       #5988ff 6.25%,
       #5988ff 51.56%,
       #0043f0 100%
     );
-    border-radius: 10px;
-    border: 2px solid white;
-    color: white;
-    transition: transform 120ms ease-out;
-
-    &:hover {
-      cursor: pointer;
-      border: 2px solid rgba(89, 136, 255, 1);
-      animation: gradientToWhite 120ms forwards,
-        growButton 120ms ease-in forwards;
-    }
-
-    &:not(:hover) {
-      animation: shrinkButton 120ms ease-out forwards;
-    }
   }
 
-  @keyframes gradientToWhite {
-    0% {
-      background: radial-gradient(
-        74.22% 74.22% at 19.79% 22.42%,
-        #5988ff 6.25%,
-        #5988ff 51.56%,
-        #0043f0 100%
-      );
-      color: white;
-    }
-    100% {
-      background: white;
-      color: rgba(89, 136, 255, 1);
-    }
+  .button-animate {
+    animation: gradientToWhite 0.4s ease forwards;
   }
 }
 
@@ -285,7 +266,7 @@
   .ellipse {
     height: 60px;
     width: 60px;
-    top: 25%;
+    top: 15%;
   }
 
   .ellipse4 {

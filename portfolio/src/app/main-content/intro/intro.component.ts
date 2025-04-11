@@ -2,7 +2,7 @@ import { Component, AfterViewInit} from '@angular/core';
 
 import { CommonModule } from '@angular/common';
 import { ScrollVisibilityDirective } from '.././directives/scroll-visibility.directive';
-import { slideInLeft, fadeIn } from '../../animations/animations';
+import { slideInLeft, fadeIn, buttonScaleAnimation } from '../../animations/animations';
 import { TranslateModule } from '@ngx-translate/core';
 
 
@@ -12,7 +12,7 @@ import { TranslateModule } from '@ngx-translate/core';
   imports: [CommonModule, ScrollVisibilityDirective, TranslateModule],
   templateUrl: './intro.component.html',
   styleUrl: './intro.component.scss',
-  animations: [slideInLeft, fadeIn]
+  animations: [slideInLeft, fadeIn, buttonScaleAnimation]
 })
 /**
  * Represents the introduction section of the application.
@@ -23,6 +23,7 @@ export class IntroComponent implements AfterViewInit {
 
   /** Tracks the visibility state of the component. */
   isVisible = false;
+  isHovered = false;
 
   /**
    * Lifecycle hook called after the component's view has been fully initialized.
@@ -63,6 +64,14 @@ export class IntroComponent implements AfterViewInit {
         element.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }, 100);
+  }
+
+  onMouseEnter() {
+    this.isHovered = true;
+  }
+
+  onMouseLeave() {
+    this.isHovered = false;
   }
 
   /**

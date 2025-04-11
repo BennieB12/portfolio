@@ -1,25 +1,28 @@
-<section id="skillset">
-  <h4>{{ "skills.headline" | translate }}</h4>
-  <div
-    class="skillset-content"
-    appScrollVisibility
-    (isVisibleChange)="isVisible = $event"
-    [@slideInFromBottom]="isVisible ? 'visible' : 'hidden'"
-    [@fadeIn]="isVisible ? 'visible' : 'hidden'"
-  >
+
+  <section id="skillset">
+    <h4>{{ "skills.headline" | translate }}</h4>
     <div
-      class="content-item"
-      *ngFor="let skill of skills"
-      (mouseenter)="handleMouseEnter(skill.name)"
-      (mouseleave)="handleMouseLeave(skill.name)"
-      (touchstart)="handleTouchStart(skill.name)"
+      class="skillset-content"
+      appScrollVisibility
+      (isVisibleChange)="isVisible = $event"
+      [@slideInFromBottom]="isVisible ? 'visible' : 'hidden'"
+      [@fadeIn]="isVisible ? 'visible' : 'hidden'"
     >
-      <img
-        [src]="skill.image"
-        [alt]="skill.name"
-        [@hoverTimeoutAnimation]="hoverStates[skill.name] || 'normal'"
-      />
-      <span [@fontWeightAnimation]="fontStates[skill.name] || 'normal'">{{ skill.name }}</span>
+      <div
+        class="content-item"
+        *ngFor="let skill of skills"
+        (mouseenter)="handleMouseEnter(skill.name)"
+        (mouseleave)="handleMouseLeave(skill.name)"
+        (touchstart)="handleTouchStart(skill.name)"
+      >
+        <img
+          [src]="skill.image"
+          [alt]="skill.name"
+          [@hoverTimeoutAnimation]="hoverStates[skill.name] || 'normal'"
+        />
+        <span [@fontWeightAnimation]="fontStates[skill.name] || 'normal'">{{
+          skill.name
+        }}</span>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
