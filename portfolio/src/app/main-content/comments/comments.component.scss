@@ -1,11 +1,8 @@
 @import "../../../mixins.scss";
 
 #comments {
-  @include background;
   width: 100%;
-  // max-width: $max-width;
   height: 532px;
-  margin: 0;
 
   .headline-comments {
     height: 140px;

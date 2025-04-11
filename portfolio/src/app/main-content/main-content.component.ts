@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AtfComponent } from './atf/atf.component';
 import { IntroComponent } from './intro/intro.component';
@@ -24,5 +24,6 @@ import { BlubberComponent } from '../animations/blubber/blubber.component';
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss',
 })
-export class MainContentComponent {
+export class MainContentComponent{
+
 }

@@ -1,67 +1,74 @@
-<section id="projects">
-  <div class="headl-projects">
-    <h5>{{ "projects.headline" | translate }}</h5>
-    <span>{{ "projects.subHeadline" | translate }}</span>
-  </div>
-  <div class="ellipse"></div>
-  <div class="ellipse2"></div>
-</section>
+<div class="bg">
+  <section id="projects" class="no-select container">
+    <div class="headl-projects">
+      <h5>{{ "projects.headline" | translate }}</h5>
+      <span>{{ "projects.subHeadline" | translate }}</span>
+    </div>
+    <div class="ellipse"></div>
+    <div class="ellipse2"></div>
+  </section>
 
-<div class="projects-container">
-  <div class="ellipse3" ></div>
-  <div class="ellipse4"></div>
-  <div class="ellipse5"></div>
-  <div class="ellipse6"></div>
-  <div
-    class="project"
-    *ngFor="let project of projects; let i = index"
-    [ngClass]="{ 'reverse-layout': isMiddleProject(i) }"
-    appScrollVisibility
-    (isVisibleChange)="onVisibilityChange(i, $event)"
-  >
-    <img
-      [src]="project.imageSrc"
-      [alt]="project.imageAlt"
-      class="project-image"
-      loading="lazy"
-      [@slideInLeft]="visibleProjects[i] ? 'visible' : 'hidden'"
-      [@fadeIn]="visibleProjects[i] ? 'visible' : 'hidden'"
-      [@hoverAnimation]="hoverStates[i] || 'normal'"
-      (mouseenter)="onMouseEnter(i)"
-      (mouseleave)="onMouseLeave(i)"
-      (touchstart)="setupTouchHandlers(i)"
-    />
-
+  <div class="projects-container">
+    <div class="ellipse3"></div>
+    <div class="ellipse4"></div>
+    <div class="ellipse5"></div>
+    <div class="ellipse6"></div>
     <div
-      class="project-info"
-      [@slideInLeft]="visibleProjects[i] ? 'visible' : 'hidden'"
-      [@fadeIn]="visibleProjects[i] ? 'visible' : 'hidden'"
+      class="project"
+      *ngFor="let project of projects; let i = index"
+      [ngClass]="{ 'reverse-layout': isMiddleProject(i) }"
+      appScrollVisibility
+      (isVisibleChange)="onVisibilityChange(i, $event)"
     >
-      <h5>{{ "projects.projects." + i + ".title" | translate }}</h5>
-      <h6>{{ "projects.projects." + i + ".subtitle" | translate }}</h6>
-      <span>{{ "projects.projects." + i + ".description" | translate }}</span>
+      <img
+        [src]="project.imageSrc"
+        [alt]="project.imageAlt"
+        class="project-image"
+        loading="lazy"
+        [@slideInLeft]="visibleProjects[i] ? 'visible' : 'hidden'"
+        [@fadeIn]="visibleProjects[i] ? 'visible' : 'hidden'"
+        [@hoverAnimation]="hoverStates[i] || 'normal'"
+        (mouseenter)="onMouseEnter(i)"
+        (mouseleave)="onMouseLeave(i)"
+        (touchstart)="setupTouchHandlers(i)"
+      />
 
-      <div class="btn-box">
-        <a *ngIf="project.gitLink" [href]="project.gitLink" target="_blank">
-          <button
-          id="btn-git"
-          [@buttonScaleAnimation]="buttonGitStates[i] || 'normal'"
-          (mouseenter)="onButtonHoverStateChange('git', i, 'enter')"
-          (mouseleave)="onButtonHoverStateChange('git', i, 'leave')">
-          {{ "projects.projects." + i + ".btngit" | translate }}
-        </button>
-        </a>
+      <div
+        class="project-info no-select"
+        [@slideInLeft]="visibleProjects[i] ? 'visible' : 'hidden'"
+        [@fadeIn]="visibleProjects[i] ? 'visible' : 'hidden'"
+      >
+        <h5>{{ "projects.projects." + i + ".title" | translate }}</h5>
+        <h6>{{ "projects.projects." + i + ".subtitle" | translate }}</h6>
+        <span>{{ "projects.projects." + i + ".description" | translate }}</span>
 
-        
-        <a *ngIf="project.testLink" [attr.href]="project.testLink" target="_blank">
-          <button
-            id="btn-test"
-            [@buttonScaleAnimation]="buttonTestStates[i] || 'normal'"
-            (mouseenter)="onButtonHoverStateChange('test', i, 'enter')"
-            (mouseleave)="onButtonHoverStateChange('test', i, 'leave')">
-            {{ "projects.projects." + i + ".btntest" | translate }}
-          </button>
-        </a>
+        <div class="btn-box">
+          <a *ngIf="project.gitLink" [href]="project.gitLink" target="_blank">
+            <button
+              id="btn-git"
+              [@buttonScaleAnimation]="buttonGitStates[i] || 'normal'"
+              (mouseenter)="onButtonHoverStateChange('git', i, 'enter')"
+              (mouseleave)="onButtonHoverStateChange('git', i, 'leave')"
+            >
+              {{ "projects.projects." + i + ".btngit" | translate }}
+            </button>
+          </a>
+
+          <a
+            *ngIf="project.testLink"
+            [attr.href]="project.testLink"
+            target="_blank"
+          >
+            <button
+              id="btn-test"
+              [@buttonScaleAnimation]="buttonTestStates[i] || 'normal'"
+              (mouseenter)="onButtonHoverStateChange('test', i, 'enter')"
+              (mouseleave)="onButtonHoverStateChange('test', i, 'leave')"
+            >
+              {{ "projects.projects." + i + ".btntest" | translate }}
+            </button>
+          </a>
+        </div>
       </div>
     </div>
   </div>

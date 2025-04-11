@@ -1,39 +1,50 @@
-<section id="section-atf">
-  <div class="ellipse"></div>
-  <div class="atf-top">
-    <h1 class="mar-uni" appScrollAnimate [@fadeIn]="sectionState">
-      {{ "atf.greeting" | translate }}
-    </h1>
-    <h2 [@fadeIn]="profImgState">{{ "atf.role" | translate }}</h2>
-  </div>
-
-  <div class="atf-btm">
-    <img
-      id="prof-img"
-      src="../../../assets/img/prof.png"
-      alt="profile-image"
-      [@fadeIn]="profImgState"
-    />
-
-    <div class="atf-scroll" appScrollAnimate [@fadeIn]="sectionState">
-      <div class="horizontal-line"></div>
-      <span class="atf-span">{{ "atf.scroll" | translate }}</span>
+<div class="bg">
+  <section id="section-atf" class="container">
+    <div class="ellipse"></div>
+    <div class="atf-top no-select">
+      <h1 class="mar-uni" appScrollAnimate [@fadeIn]="sectionState">
+        {{ "atf.greeting" | translate }}
+      </h1>
+      <h2 [@fadeIn]="profImgState">{{ "atf.role" | translate }}</h2>
     </div>
 
-    <div class="atf-scroll-res" appScrollAnimate [@fadeIn]="sectionState">
-      <span class="atf-span-res">{{ "atf.scroll-res" | translate }}</span>
-    </div>
+    <div class="atf-btm">
+      <img
+        id="prof-img"
+        class="no-select"
+        src="../../../assets/img/prof.png"
+        alt="profile-image"
+        [@fadeIn]="profImgState"
+      />
 
-    <div class="social-links" appScrollAnimate [@fadeIn]="sectionState">
-      <a href="https://www.linkedin.com/in/ben-kloss" target="_blank">
-        <img src="../../assets/img/Linkedin button s2.png" />
-      </a>
-      <a href="mailto:Benjaminkloss@outlook.de">
-        <img src="../../assets/img/Email button s2.png" />
-      </a>
-      <a href="https://github.com/BennieB12" target="_blank">
-        <img src="../../assets/img/Github button s2.png" />
-      </a>
+      <div
+        class="atf-scroll no-select"
+        appScrollAnimate
+        [@fadeIn]="sectionState"
+      >
+        <div class="horizontal-line"></div>
+        <span class="atf-span">{{ "atf.scroll" | translate }}</span>
+      </div>
+
+      <div
+        class="atf-scroll-res no-select"
+        appScrollAnimate
+        [@fadeIn]="sectionState"
+      >
+        <span class="atf-span-res">{{ "atf.scroll-res" | translate }}</span>
+      </div>
+
+      <div class="social-links" appScrollAnimate [@fadeIn]="sectionState">
+        <a href="https://www.linkedin.com/in/ben-kloss" target="_blank">
+          <img src="../../assets/img/Linkedin button s2.png" />
+        </a>
+        <a href="mailto:Benjaminkloss@outlook.de">
+          <img src="../../assets/img/Email button s2.png" />
+        </a>
+        <a href="https://github.com/BennieB12" target="_blank">
+          <img src="../../assets/img/Github button s2.png" />
+        </a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>

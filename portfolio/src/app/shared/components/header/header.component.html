@@ -1,27 +1,27 @@
-<header id="header">
-  <div class="img-logo">
+<header id="header" class="container">
+  <div class="img-logo no-select">
     <a href="">
       <img id="logo" src="../../assets/img/logo-bk.png" />
     </a>
   </div>
 
-  <div class="burger-menu" (click)="toggleMenu()">
+  <div class="burger-menu" id="burger-menu" (click)="toggleMenu()">
     <div></div>
     <div></div>
     <div></div>
   </div>
 
   <div class="side-menu" [class.open]="menuOpen">
-    <a href="#" (click)="toggleMenu(); scrollToSection('intro')">{{
-      "header.aboutMe" | translate
-    }}</a>
-    <a href="#" (click)="toggleMenu(); scrollToSection('skillset')">{{
+    <a (click)="scrollToSection('intro')">{{ "header.aboutMe" | translate }}</a>
+    <a (click)="scrollToSection('skillset')">{{
       "header.skillSet" | translate
     }}</a>
-    <a href="#" (click)="toggleMenu(); scrollToSection('projects')">{{
+    <a (click)="scrollToSection('projects')">{{
       "header.myWork" | translate
     }}</a>
-    <a href="#" (click)="toggleMenu(); scrollToSection('headl-contact')">{{ "header.contact" | translate }}</a>
+    <a (click)="scrollToSection('headl-contact')">{{
+      "header.contact" | translate
+    }}</a>
     <div class="header-langu">
       <div
         (click)="switchLanguage('en')"
@@ -47,8 +47,6 @@
         ></object>
       </div>
     </div>
-    
-      
   </div>
 
   <nav [class.hidden]="menuOpen">

@@ -3,7 +3,9 @@
 
     <h3>{{ 'privacy-policy.responsible.title' | translate }}</h3>
 
-    <a class="privacy-arrow" [routerLink]="'/'">
+    <a class="privacy-arrow" [routerLink]="'/'"
+        (click)="scrollToSection('header')"
+    >
         <img src="../../assets/img/arrow-up.png" alt="arrowUp" />
       </a>
 

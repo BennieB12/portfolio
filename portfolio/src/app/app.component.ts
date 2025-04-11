@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/components/header/header.component';
@@ -29,8 +29,22 @@ import { TranslateModule } from '@ngx-translate/core';
  * This component manages the main structure of the app, including the header, footer,
  * and the ability to switch between languages.
  */
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'portfolio';
+  ngOnInit(): void {
+    window.onload = () => {
+      this.scrollToSection('header');
+    };
+  }
+
+  scrollToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      setTimeout(() => {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  }
 
     /**
    * Creates an instance of the AppComponent and injects the TranslationService.

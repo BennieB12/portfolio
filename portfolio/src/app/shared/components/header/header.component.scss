@@ -8,6 +8,10 @@ header {
   justify-content: space-between;
 }
 
+a:focus {
+  outline: none;
+}
+
 .img-logo {
   z-index: 1001;
   cursor: pointer;
@@ -47,7 +51,7 @@ nav {
 
 .header-langu div {
   cursor: pointer;
-@include flex-center;
+  @include flex-center;
 
   object {
     pointer-events: none;
@@ -62,7 +66,7 @@ nav div.active object {
 
 .burger-menu {
   display: none;
-  flex-direction:column;
+  flex-direction: column;
   gap: 5px;
   position: fixed;
   top: 20px;
@@ -96,10 +100,14 @@ nav div.active object {
   right: -100%;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(179.99deg, rgba(255, 255, 255, 0.8) 12.89%, rgba(234, 240, 255, 0.8) 91.39%);
+  background: linear-gradient(
+    179.99deg,
+    rgba(255, 255, 255, 1) 12.89%,
+    rgba(234, 240, 255, 0.9) 91.39%
+  );
   transition: 0.3s ease-in-out;
-@include column;
-@include flex-center;
+  @include column;
+  @include flex-center;
   padding: 20px;
   z-index: 1000;
 }
@@ -119,20 +127,22 @@ nav div.active object {
 }
 
 @media (max-width: 1040px) {
-nav {
-  margin-right: 10px;
-}}
+  nav {
+    margin-right: 10px;
+  }
+}
 
 @media (max-width: 840px) {
   nav {
     gap: 20px;
-  }}
+  }
+}
 
 @media (max-width: 768px) {
   header {
     position: fixed;
     top: 0;
-    left:0;
+    left: 0;
     max-width: 100%;
     height: 10vh;
     z-index: 1500000;

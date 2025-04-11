@@ -1,5 +1,4 @@
 $color: rgba(89, 136, 255, 1);
-$max-width: 1440px;
 $background: linear-gradient(179.99deg, #ffffff 12.89%, #eaf0ff 91.39%);
 
 @mixin margin-font {
@@ -25,8 +24,29 @@ $background: linear-gradient(179.99deg, #ffffff 12.89%, #eaf0ff 91.39%);
   pointer-events: none;
 }
 
+.bg {
+  background: $background;
+}
+
+.bg-dark {
+  background: linear-gradient(128.94deg, #5988FF -33.96%, #5988FF 36.71%, #0043F0 112.25%);
+}
+
+.container{
+width: 100%;
+max-width: 1440px;
+margin: 0 auto;
+}
+
 @mixin background {
   background: linear-gradient(128.94deg, #5988FF -33.96%, #5988FF 36.71%, #0043F0 112.25%);
+}
+
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;    /* für Firefox */
+  -ms-user-select: none;     /* für IE/Edge */
 }
 
 @mixin button {
@@ -41,99 +61,8 @@ $background: linear-gradient(179.99deg, #ffffff 12.89%, #eaf0ff 91.39%);
     border-radius: 10px;
     border: 2px solid rgba(89, 136, 255, 1);
     color: rgba(89, 136, 255, 1);
-    transition: transform 120ms ease-out;
-    &:hover {
-      cursor: pointer;
-      border: unset;
-      animation: gradientToBlue 120ms forwards, growButton 120ms ease-in forwards;
-    }
-    &:not(:hover) {
-      animation: shrinkButton 120ms ease-out forwards;
-    }
 }
 
-@keyframes gradientToBlue {
-  0% {
-    background: linear-gradient(
-      104.85deg,
-      #5988ff -90.22%,
-      #5988ff -49.45%,
-      #0043f0 27.88%,
-      #ffffff 33.64%,
-      #ffffff 39.44%,
-      #ffffff 90.08%
-    );
-    color: rgba(89, 136, 255, 1);
-  }
-  80% {
-    background: linear-gradient(
-      104.4deg,
-      #5988ff 9.21%,
-      #5988ff 27.52%,
-      #0043f0 62.24%,
-      #ffffff 64.83%,
-      #ffffff 67.43%,
-      #ffffff 90.18%
-    );
-  }
-  100% {
-    background: radial-gradient(
-      74.22% 74.22% at 19.79% 22.42%,
-      #5988ff 6.25%,
-      #5988ff 51.56%,
-      #0043f0 100%
-    );
-
-    color: white;
-  }
-}
-
-@keyframes gradientback {
-  100% {
-    background: radial-gradient(
-      74.22% 74.22% at 19.79% 22.42%,
-      #5988ff 6.25%,
-      #5988ff 51.56%,
-      #0043f0 100%
-    );
-
-    color: white;
-  }
-
-  0% {
-    background: linear-gradient(
-      104.85deg,
-      #5988ff -90.22%,
-      #5988ff -49.45%,
-      #0043f0 27.88%,
-      #ffffff 33.64%,
-      #ffffff 39.44%,
-      #ffffff 90.08%
-    );
-    color: rgba(89, 136, 255, 1);
-  }
-}
-
-@keyframes growButton {
-  0% {
-    transform: translate(0, 0) scale(1);
-    transform-origin: top left;
-  }
-  100% {
-    transform: translate(0px, 0px) scale(1.2, 1.2);
-    transform-origin: top left;
-  }
-}
-@keyframes shrinkButton {
-  0% {
-    transform: translate(0, 0) scale(1.2);
-    transform-origin: top left;
-  }
-  100% {
-    transform: translate(0, 0) scale(1);
-    transform-origin: top left;
-  }
-}
 
 @mixin absolute-position($top: null, $left: null, $right: null, $bottom: null) {
   position: absolute;

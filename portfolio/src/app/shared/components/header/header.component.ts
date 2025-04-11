@@ -38,7 +38,7 @@ export class HeaderComponent {
           }
         }, 100);
       });
-    } else {
+    } else {  
       setTimeout(() => {
         const element = document.getElementById(id);
         if (element) {

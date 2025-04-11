@@ -1,9 +1,11 @@
-<div id="headl-contact">
+<div class="bg">
+<div id="headl-contact" class="no-select ">
   <h5>{{ "contact.headline" | translate }}</h5>
   <div class="ellipse"></div>
 </div>
 <section
   id="contact"
+  class="container"
   appScrollVisibility
   (isVisibleChange)="onVisibilityChange($event)"
 >
@@ -11,7 +13,7 @@
 <div class="ellipse3"></div>
   <div
     id="contact-left"
-    class="contact-left"
+    class="contact-left no-select"
     [@slideInLeft]="isVisible ? 'visible' : 'hidden'"
     [@fadeIn]="isVisible ? 'visible' : 'hidden'"
   >
@@ -111,7 +113,9 @@
       (mouseenter)="highlightPrivacyCheckbox()"
         for="privacy-checkbox">
         {{ "contact.policy-1" | translate }}
-        <a routerLink="/privacy-policy">
+        <a routerLink="/privacy-policy"
+        (click)="scrollToSection('header')"
+        >
           {{ "contact.policy-link" | translate }}
         </a>
         {{ "contact.policy-2" | translate }}
@@ -139,3 +143,5 @@
     <img src="../../../assets/img/arrow-up.png" alt="arrowUp" />
   </a>
 </section>
+
+</div>
