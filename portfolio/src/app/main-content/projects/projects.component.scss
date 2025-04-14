@@ -95,16 +95,17 @@
   flex-direction: row-reverse;
   img {
     box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
-    object-fit: fill;
+    width: 640px;
   }
 }
 
 .project-image {
   width: 640px;
-  height: 420px;
-  object-fit: fill;
-  transition: transform 0.3s ease-in-out;
+  object-fit: cover;
+  border-radius: 12px;
   box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
+
+  overflow: hidden;
 }
 
 .project-info {
@@ -293,10 +294,7 @@
   .project.reverse-layout {
     gap: 16px;
   }
-  .project-image {
-    width: 390px;
-    height: 275px;
-  }
+
   .project-info {
     h5 {
       font-size: 32px;

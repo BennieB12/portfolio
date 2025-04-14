@@ -40,6 +40,10 @@
       transform: translateY(0);
     }
 
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
     .commentarys-content {
       color: rgb(255, 255, 255);
       font-weight: 400;
