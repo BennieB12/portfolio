@@ -20,7 +20,7 @@
     "location": "in Düsseldorf, Deutschland",
     "remote": "bereit für Remote-Arbeit",
     "relocate": "bereit für einen Umzug",
-    "description": "Ich bin ein Front-End-Entwickler aus Düsseldorf, Deutschland, leidenschaftlich darin, Probleme zu lösen und Herausforderungen anzunehmen. Ich engagiere mich für kontinuierliches Wachstum und lerne gerne neue Fähigkeiten, um sinnvolle Lösungen zu schaffen. Ich freue mich darauf, mit Teams zusammenzuarbeiten, um innovative Ideen zum Leben zu erwecken. Ich suche eine Junior-Entwicklerposition, in der ich mich weiterentwickeln und zu wirkungsvollen Projekten beitragen kann. Meine lösungsorientierte Denkweise und Leidenschaft für Programmierung würden mich zu einer wertvollen Bereicherung für Ihr Team machen.",
+    "description": "Ich bin ein Frontend-Entwickler aus Düsseldorf. Ich bin leidenschaftlich darin, Probleme zu lösen und Herausforderungen anzunehmen und engagiere mich für kontinuierliches Wachstum und lerne gerne neue Fähigkeiten, um sinnvolle Lösungen zu schaffen. Ich freue mich darauf, mit Teams zusammenzuarbeiten, um innovative Ideen zum Leben zu erwecken. Ich suche eine Junior-Entwicklerposition, in der ich mich weiterentwickeln und zu wirkungsvollen Projekten beitragen kann. Meine lösungsorientierte Denkweise und Leidenschaft für Programmierung würden mich zu einer wertvollen Bereicherung für Ihr Team machen.",
     "button": "Nachricht senden"
   },
   "skills": {
@@ -63,7 +63,7 @@
       {
         "title": "Pokédex",
         "subtitle": "JavaScript | HTML | CSS | API",
-        "description": "Basierend auf der PokéAPI eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.",
+        "description": "Basierend auf der PokéAPI. Eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.",
         "btngit": "Github",
         "btntest": "Testen"
       }

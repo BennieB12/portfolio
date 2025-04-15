@@ -19,7 +19,7 @@
     "location": "in Duesseldorf, Germany",
     "remote": "open to remote work",
     "relocate": "open to move",
-    "description": "I’m a Front-end developer based in Duesseldorf, Germany, passionate about solving problems and embracing challenges. I’m committed to continuous growth and love learning new skills to create meaningful solutions. I’m excited to collaborate with teams to bring innovative ideas to life.\n\nI’m seeking a junior developer position where I can grow and contribute to impactful projects. My problem-solving mindset and passion for programming would make me a valuable asset to your team.\n\n",
+    "description": "I’m a Frontend developer based in Duesseldorf, Germany. I am passionate about solving problems and embracing challenges and committed to continuous growth and love learning new skills to create meaningful solutions. I’m excited to collaborate with teams to bring innovative ideas to life.\n\nI’m seeking a junior developer position where I can grow and contribute to impactful projects. My problem-solving mindset and passion for programming would make me a valuable asset to your team.\n\n",
     "button": "Send a message"
   },
   "skills": {
@@ -62,7 +62,7 @@
       {
         "title": "Pokédex",
         "subtitle": "JavaScript | HTML | CSS | API",
-        "description": "Based on the PokéAPI, a simple library that provides and catalogues Pokémon information.",
+        "description": "Based on the PokéAPI. A simple library that provides and catalogues Pokémon information.",
         "btngit": "Github",
         "btntest": "Live test"
       }
