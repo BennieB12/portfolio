@@ -3,11 +3,12 @@ import { TranslationService } from '../../translation.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { fontWeightAnimation } from '../../../animations/animations';
 import { Router, RouterLink } from '@angular/router';
+import { ScrollToDirective } from '../../../main-content/directives/scrollto.directive';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [TranslateModule, RouterLink],
+  imports: [TranslateModule, RouterLink, ScrollToDirective],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
   animations: [fontWeightAnimation],
@@ -20,39 +21,6 @@ export class HeaderComponent {
 
 
   constructor(private translationService: TranslationService, private router: Router) {}
-
-  /**
-   * Scrolls to a specific section on the page identified by the provided ID.
-   * This method performs a smooth scroll to the target element.
-   *
-   * @param {string} id - The ID of the target element to scroll to.
-   * @returns {void} - No return value.
-   */
-  scrollToSection(id: string) {
-    if (this.router.url !== '/') {
-      this.router.navigateByUrl('/').then(() => {
-        setTimeout(() => {
-          const element = document.getElementById(id);
-          if (element) {
-            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-        }, 100);
-      });
-    } else {  
-      setTimeout(() => {
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }, 50);
-    }
-  
-    if (window.innerWidth < 768) {
-      this.toggleMenu();
-    }
-  }
-  
-
 
   /**
    * Switches the application's language by invoking the `changeLanguage` method from the TranslationService.

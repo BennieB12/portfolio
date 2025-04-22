@@ -114,7 +114,7 @@
           for="privacy-checkbox"
         >
           {{ "contact.policy-1" | translate }}
-          <a routerLink="/privacy-policy" (click)="scrollToSection('header')">
+          <a routerLink="/privacy-policy" [appScrollTo]="'header'">
             {{ "contact.policy-link" | translate }}
           </a>
           {{ "contact.policy-2" | translate }}
@@ -138,7 +138,7 @@
       </p>
     </form>
 
-    <a class="contact-arrow" href="#" (click)="scrollToSection('atf-section')">
+    <a class="contact-arrow" href="#" [appScrollTo]="'atf-section'">
       <img src="../../../assets/img/arrow-up.png" alt="arrowUp" />
     </a>
   </section>

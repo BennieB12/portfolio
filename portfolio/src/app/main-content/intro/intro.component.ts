@@ -1,5 +1,5 @@
 import { Component, AfterViewInit} from '@angular/core';
-
+import { ScrollToDirective } from '../directives/scrollto.directive';
 import { CommonModule } from '@angular/common';
 import { ScrollVisibilityDirective } from '.././directives/scroll-visibility.directive';
 import { slideInLeft, fadeIn, buttonScaleAnimation } from '../../animations/animations';
@@ -9,7 +9,7 @@ import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-intro',
   standalone: true,
-  imports: [CommonModule, ScrollVisibilityDirective, TranslateModule],
+  imports: [CommonModule, ScrollVisibilityDirective, TranslateModule, ScrollToDirective],
   templateUrl: './intro.component.html',
   styleUrl: './intro.component.scss',
   animations: [slideInLeft, fadeIn, buttonScaleAnimation]
@@ -50,20 +50,6 @@ export class IntroComponent implements AfterViewInit {
         }
       });
     });
-  }
-
-  /**
-   * Smoothly scrolls the page to a specified section by its ID.
-   * 
-   * @param {string} id - The ID of the target section.
-   */
-  scrollToSection(id: string): void {
-    setTimeout(() => {
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }, 100);
   }
 
   onMouseEnter() {

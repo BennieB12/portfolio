@@ -12,14 +12,14 @@
   </div>
 
   <div class="side-menu" [class.open]="menuOpen">
-    <a (click)="scrollToSection('intro')">{{ "header.aboutMe" | translate }}</a>
-    <a (click)="scrollToSection('skillset')">{{
+    <a [appScrollTo]="'intro'" [closeMenuFn]="toggleMenu.bind(this)">{{ "header.aboutMe" | translate }}</a>
+    <a [appScrollTo]="'skillSet'" [closeMenuFn]="toggleMenu.bind(this)">{{
       "header.skillSet" | translate
     }}</a>
-    <a (click)="scrollToSection('projects')">{{
+    <a [appScrollTo]="'projects'" [closeMenuFn]="toggleMenu.bind(this)">{{
       "header.myWork" | translate
     }}</a>
-    <a (click)="scrollToSection('headl-contact')">{{
+    <a [appScrollTo]="'headl-contact'" [closeMenuFn]="toggleMenu.bind(this)">{{
       "header.contact" | translate
     }}</a>
     <div class="header-langu">
@@ -54,7 +54,7 @@
       (mouseenter)="toggleHover(true, 0)"
       (mouseleave)="toggleHover(false, 0)"
       [@fontWeightAnimation]="hoveredIndex === 0 ? 'bold' : 'normal'"
-      (click)="scrollToSection('intro')"
+      [appScrollTo]="'intro'"
     >
       {{ "header.aboutMe" | translate }}
     </a>
@@ -62,7 +62,7 @@
       (mouseenter)="toggleHover(true, 1)"
       (mouseleave)="toggleHover(false, 1)"
       [@fontWeightAnimation]="hoveredIndex === 1 ? 'bold' : 'normal'"
-      (click)="scrollToSection('skillset')"
+      [appScrollTo]="'skillSet'"
     >
       {{ "header.skillSet" | translate }}
     </a>
@@ -70,7 +70,7 @@
       (mouseenter)="toggleHover(true, 2)"
       (mouseleave)="toggleHover(false, 2)"
       [@fontWeightAnimation]="hoveredIndex === 2 ? 'bold' : 'normal'"
-      (click)="scrollToSection('projects')"
+      [appScrollTo]="'projects'"
     >
       {{ "header.myWork" | translate }}
     </a>

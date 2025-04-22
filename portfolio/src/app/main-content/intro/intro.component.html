@@ -54,9 +54,8 @@
       [@buttonScaleAnimation]="isHovered ? 'hover' : 'normal'"
       (mouseenter)="onMouseEnter()"
       (mouseleave)="onMouseLeave()"
-      (touchstart)="onMouseEnter(); scrollToSection('headl-contact')"
       (touchend)="onMouseLeave()"
-      (click)="scrollToSection('headl-contact')"
+      [appScrollTo]="'headl-contact'"
     >
       {{ "intro.button" | translate }}
     </button>

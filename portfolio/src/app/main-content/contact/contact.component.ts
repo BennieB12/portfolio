@@ -9,6 +9,7 @@ import {
   ReactiveFormsModule,
 } from '@angular/forms';
 import { ScrollVisibilityDirective } from '.././directives/scroll-visibility.directive';
+import { ScrollToDirective } from '../directives/scrollto.directive';
 import { slideInLeft, fadeIn } from '../../animations/animations';
 import { EmailService } from '../../../app/services/mail-service';
 import { TranslateModule } from '@ngx-translate/core';
@@ -27,6 +28,7 @@ import { TranslateModule } from '@ngx-translate/core';
     NgIf,
     NgClass,
     TranslateModule,
+    ScrollToDirective
   ],
   animations: [slideInLeft, fadeIn],
 })
@@ -143,20 +145,6 @@ export class ContactComponent {
     const privacyCheckbox = document.getElementById('privacy-checkbox');
     if (privacyCheckbox) {
       privacyCheckbox.classList.remove('highlight-blue');
-    }
-  }
-
-  /**
-   * Scrolls to a specific section on the page identified by the provided ID.
-   * This method performs a smooth scroll to the target element.
-   *
-   * @param {string} id - The ID of the target element to scroll to.
-   * @returns {void} - No return value.
-   */
-  scrollToSection(id: string) {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
 }
