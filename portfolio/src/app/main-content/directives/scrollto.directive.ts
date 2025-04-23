@@ -16,26 +16,34 @@ export class ScrollToDirective {
    */
   @Input() closeMenuFn?: () => void;
 
+  @Input() targetRoute?: string;
+
+
   private router = inject(Router);
 
   @HostListener('click')
-  async onClick(): Promise<void> {
-    const scroll = () => {
-      const element = document.getElementById(this.scrollTargetId);
-      if (element) {
+async onClick(): Promise<void> {
+  const scroll = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    const element = document.getElementById(this.scrollTargetId);
+    if (element) {
+      setTimeout(() => {
         element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    };
-
-    if (this.router.url !== '/') {
-      await this.router.navigateByUrl('/');
-      setTimeout(scroll, 200);
-    } else {
-      setTimeout(scroll, 50);
+      }, 300);
     }
+  };
 
-    if (window.innerWidth < 768 && this.closeMenuFn) {
-      this.closeMenuFn();
-    }
+  if (this.targetRoute && this.router.url !== this.targetRoute) {
+    await this.router.navigateByUrl(this.targetRoute);
+    setTimeout(scroll, 100);
+  } else {
+    scroll();
   }
+
+  if (window.innerWidth < 768 && this.closeMenuFn) {
+    this.closeMenuFn();
+  }
+}
+
 }

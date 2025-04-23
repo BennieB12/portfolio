@@ -13,12 +13,4 @@ import { ScrollToDirective } from '../main-content/directives/scrollto.directive
   styleUrl: './privacy-policy.component.scss'
 })
 export class PrivacyPolicyComponent {
-
-
-  scrollToSection(sectionId: string): void {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
 }

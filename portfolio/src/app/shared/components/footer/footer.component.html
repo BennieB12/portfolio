@@ -9,11 +9,12 @@
     <div class="legal-notice no-select">
       <p>&copy; Benjamin Kloss 2025</p>
       <a
+        routerLink="/legal-notice"
+        [targetRoute]="'/legal-notice'"
+        [appScrollTo]="'header'"
         (mouseenter)="toggleHover(true)"
         (mouseleave)="toggleHover(false)"
         [@fontWeightAnimation]="fontWeightState"
-        routerLink="/legal-notice"
-        [appScrollTo]="'header'"
       >
         {{ "legal-footer.legalNotice" | translate }}
       </a>

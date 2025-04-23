@@ -1,6 +1,7 @@
 <header id="header" class="container">
   <div class="img-logo no-select">
-    <a [routerLink]="'/'">
+    <a [routerLink]="'/'"
+    >
       <img id="logo" src="../../assets/img/logo-bk.png" />
     </a>
   </div>
@@ -12,16 +13,18 @@
   </div>
 
   <div class="side-menu" [class.open]="menuOpen">
-    <a [appScrollTo]="'intro'" [closeMenuFn]="toggleMenu.bind(this)">{{ "header.aboutMe" | translate }}</a>
-    <a [appScrollTo]="'skillSet'" [closeMenuFn]="toggleMenu.bind(this)">{{
-      "header.skillSet" | translate
-    }}</a>
-    <a [appScrollTo]="'projects'" [closeMenuFn]="toggleMenu.bind(this)">{{
-      "header.myWork" | translate
-    }}</a>
-    <a [appScrollTo]="'headl-contact'" [closeMenuFn]="toggleMenu.bind(this)">{{
-      "header.contact" | translate
-    }}</a>
+    <a [appScrollTo]="'intro'" [targetRoute]="'/'" [closeMenuFn]="toggleMenu.bind(this)">
+      {{ "header.aboutMe" | translate }}
+    </a>
+    <a [appScrollTo]="'skillSet'" [targetRoute]="'/'" [closeMenuFn]="toggleMenu.bind(this)">
+      {{ "header.skillSet" | translate }}
+    </a>
+    <a [appScrollTo]="'projects'" [targetRoute]="'/'" [closeMenuFn]="toggleMenu.bind(this)">
+      {{ "header.myWork" | translate }}
+    </a>
+    <a [appScrollTo]="'headl-contact'" [targetRoute]="'/'" [closeMenuFn]="toggleMenu.bind(this)">
+      {{ "header.contact" | translate }}
+    </a>
     <div class="header-langu">
       <div
         (click)="switchLanguage('en')"
@@ -55,6 +58,7 @@
       (mouseleave)="toggleHover(false, 0)"
       [@fontWeightAnimation]="hoveredIndex === 0 ? 'bold' : 'normal'"
       [appScrollTo]="'intro'"
+      [targetRoute]="'/'"
     >
       {{ "header.aboutMe" | translate }}
     </a>
@@ -63,6 +67,7 @@
       (mouseleave)="toggleHover(false, 1)"
       [@fontWeightAnimation]="hoveredIndex === 1 ? 'bold' : 'normal'"
       [appScrollTo]="'skillSet'"
+      [targetRoute]="'/'"
     >
       {{ "header.skillSet" | translate }}
     </a>
@@ -71,6 +76,7 @@
       (mouseleave)="toggleHover(false, 2)"
       [@fontWeightAnimation]="hoveredIndex === 2 ? 'bold' : 'normal'"
       [appScrollTo]="'projects'"
+      [targetRoute]="'/'"
     >
       {{ "header.myWork" | translate }}
     </a>
