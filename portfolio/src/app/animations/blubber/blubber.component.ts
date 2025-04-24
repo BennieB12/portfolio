@@ -49,18 +49,10 @@ export class BlubberComponent implements AfterViewInit {
   private setRandomPosition(blubber: HTMLElement) {
     const containerWidth = this.blubberContainer.offsetWidth;
     const containerHeight = this.blubberContainer.offsetHeight;
-
+  
     const x = Math.random() * (containerWidth - 220);
-    let y: number;
-
-    if (window.innerWidth <= 768) {
-      y = Math.random() * (containerHeight + 6000);
-    } else if (window.innerWidth <= 1040) {
-      y = Math.random() * (containerHeight + 5000);
-    } else {
-      y = Math.random() * (containerHeight + 4500);
-    }
-
+    const y = Math.random() * (containerHeight + 220);
+  
     this.renderer.setStyle(blubber, 'left', `${x}px`);
     this.renderer.setStyle(blubber, 'top', `${y}px`);
   }

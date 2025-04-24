@@ -6,7 +6,6 @@ import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { CommentsComponent } from './comments/comments.component';
 import { ContactComponent } from './contact/contact.component';
-import { BlubberComponent } from '../animations/blubber/blubber.component';
 
 @Component({
   selector: 'app-main-content',
@@ -19,7 +18,6 @@ import { BlubberComponent } from '../animations/blubber/blubber.component';
     ProjectsComponent,
     CommentsComponent,
     ContactComponent,
-    BlubberComponent,
   ],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss',

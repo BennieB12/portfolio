@@ -2,12 +2,13 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { fadeIn} from '../../animations/animations';
+import { BlubberComponent } from '../../animations/blubber/blubber.component';
 
 
 @Component({
   selector: 'app-atf',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [CommonModule, TranslateModule, BlubberComponent],
   templateUrl: './atf.component.html',
   styleUrl: './atf.component.scss',
   animations: [fadeIn]
